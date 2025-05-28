@@ -8,7 +8,7 @@
 		"build": "vite build",
 		"preview": "vite preview",
 		"test": "vitest",
-		"check": "npx @biomejs/biome check --write ./src"
+		"check": "tsc --noEmit && npx @biomejs/biome check --write ./src"
 	},
 	"dependencies": {
 		"@react-three/fiber": "^9.1.2",

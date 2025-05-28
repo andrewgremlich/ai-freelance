@@ -1,6 +1,6 @@
 import { H1, P } from "summit-kit/react";
 
-export * from "./vibe-coding";
+export * from "./vibe-coding.tsx";
 
 export const Leveraging = () => {
 	return (

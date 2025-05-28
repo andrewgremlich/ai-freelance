@@ -1,7 +1,7 @@
 import { H1, P } from "summit-kit/react";
 
-export * from "./finding";
-export * from "./research";
+export * from "./finding.tsx";
+export * from "./research.tsx";
 
 export const TheProject = () => {
 	return (

@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router";
-import slides from "../slides";
+import slides from "../slides/index.tsx";
 
+import type { Slide } from "../types/slide.ts";
 import classes from "./NavigationMap.module.css";
 
 /**
@@ -29,7 +30,7 @@ export const NavigationMap = () => {
 		if (isChild && slides[parentIndex]?.children) {
 			const childPath = `/${pathParts[pathParts.length - 1]}`;
 			childIndex = slides[parentIndex].children.findIndex(
-				(child) => child.path === childPath,
+				(child: Slide) => child.path === childPath,
 			);
 		}
 
@@ -55,7 +56,7 @@ export const NavigationMap = () => {
 			{slides[currentPosition.parentIndex]?.children && (
 				<div className={classes.childMap}>
 					{slides[currentPosition.parentIndex].children?.map(
-						(childSlide, index) => (
+						(childSlide: Slide, index: number) => (
 							<div
 								key={childSlide.path}
 								className={`${classes.childMarker} ${

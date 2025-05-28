@@ -1,6 +1,6 @@
 import { H1, P } from "summit-kit/react";
 
-export * from "./knowing";
+export * from "./knowing.tsx";
 
 export const Mastering = () => {
 	return (

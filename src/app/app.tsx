@@ -21,7 +21,7 @@ import { SpellCast } from "./components/SpellCast.tsx";
 import { TogglePresentation } from "./components/TogglePresentation.tsx";
 import { useWhooshes } from "./hooks/useWhooshes.tsx";
 import slides, { flattenedSlides } from "./slides/index.tsx";
-import type { Direction } from "./types/slide.ts";
+import type { Direction, Slide } from "./types/slide.ts";
 
 function App() {
 	const { whooshIncrement, src } = useWhooshes({ amount: 2 });
@@ -73,7 +73,7 @@ function App() {
 		// Get last path segment (child path)
 		const childPath = `/${currentPathParts[currentPathParts.length - 1]}`;
 		currentChildIndex = currentParentSlide.children.findIndex(
-			(child) => child.path === childPath,
+			(child: Slide) => child.path === childPath,
 		);
 	}
 

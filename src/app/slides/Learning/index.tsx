@@ -1,7 +1,7 @@
 import { H1, P } from "summit-kit/react";
 
-export * from "./3d-tech";
-export * from "./slicer";
+export * from "./3d-tech.tsx";
+export * from "./slicer.tsx";
 
 export const Learning = () => {
 	return (

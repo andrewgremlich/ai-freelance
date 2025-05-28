@@ -1,11 +1,12 @@
 import { useLocation } from "react-router";
-import { flattenedSlides } from "../slides";
+import { flattenedSlides } from "../slides/index.tsx";
+import type { Slide } from "../types/slide.ts";
 import classes from "./SpeakerNotes.module.css";
 
 export const SpeakerNotes = () => {
 	const location = useLocation();
 	const current = flattenedSlides.find(
-		(slide) => slide.path === location.pathname,
+		(slide: Slide) => slide.path === location.pathname,
 	);
 	if (!current?.notes) return null;
 	return (

@@ -1,14 +1,14 @@
-import type { Slide } from "../types/slide";
-import { NotFound } from "./404";
-import { TheFinale } from "./Finale";
-import { GithubActions } from "./GithubActions";
-import { Learning, Slicer, ThreeDTech } from "./Learning";
-import { Leveraging, VibeCoding } from "./Leveraging";
-import { AIRant } from "./Leveraging/ai-rant";
-import { Knowing, Mastering } from "./Mastering";
-import { PresentationLink, Social } from "./PresentationInfo";
-import { Finding, ProjectStory, TheProject } from "./TheProject";
-import { Title } from "./title";
+import type { Slide } from "../types/slide.tsx";
+import { NotFound } from "./404.tsx";
+import { TheFinale } from "./Finale/index.tsx";
+import { GithubActions } from "./GithubActions/index.tsx";
+import { Learning, Slicer, ThreeDTech } from "./Learning/index.tsx";
+import { AIRant } from "./Leveraging/ai-rant.tsx";
+import { Leveraging, VibeCoding } from "./Leveraging/index.tsx";
+import { Knowing, Mastering } from "./Mastering/index.tsx";
+import { PresentationLink, Social } from "./PresentationInfo/index.ts";
+import { Finding, ProjectStory, TheProject } from "./TheProject/index.tsx";
+import { Title } from "./title.tsx";
 
 const slides: Slide[] = [
 	{
@@ -105,7 +105,7 @@ export const flattenedSlides = slides.flatMap((slide) => {
 
 	if (slide.children && slide.children.length > 0) {
 		newSlides.push(
-			...slide.children.map(({ path, element }) => ({
+			...slide.children.map(({ path, element }: Slide) => ({
 				path: `${slide.path}${path}`,
 				element,
 			})),

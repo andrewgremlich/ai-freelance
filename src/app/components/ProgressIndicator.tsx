@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router";
-import slides from "../slides";
+import slides from "../slides/index.tsx";
 
+import type { Slide } from "../types/slide.ts";
 import classes from "./ProgressIndicator.module.css";
 
 /**
@@ -39,7 +40,7 @@ export const ProgressIndicator = () => {
 			// Calculate extra progress for being on a child slide
 			const childPath = `/${pathParts[pathParts.length - 1]}`;
 			const childIndex = slides[currentParentSlideIndex].children.findIndex(
-				(child) => child.path === childPath,
+				(child: Slide) => child.path === childPath,
 			);
 
 			// The child slide progress is a fraction of the gap between this parent and the next
