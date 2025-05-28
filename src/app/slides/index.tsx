@@ -1,0 +1,116 @@
+import type { Slide } from "../types/slide";
+import { NotFound } from "./404";
+import { TheFinale } from "./Finale";
+import { GithubActions } from "./GithubActions";
+import { Learning, Slicer, ThreeDTech } from "./Learning";
+import { Leveraging, VibeCoding } from "./Leveraging";
+import { AIRant } from "./Leveraging/ai-rant";
+import { Knowing, Mastering } from "./Mastering";
+import { PresentationLink, Social } from "./PresentationInfo";
+import { Finding, ProjectStory, TheProject } from "./TheProject";
+import { Title } from "./title";
+
+const slides: Slide[] = [
+	{
+		path: "/home",
+		element: <Title />,
+		notes: "Welcome! Introduce yourself and the topic.",
+	},
+	{
+		path: "/presentation",
+		element: <PresentationLink />,
+		children: [{ path: "/social", element: <Social /> }],
+	},
+	{
+		path: "/the-project",
+		element: <TheProject />,
+		notes: "Explain the project background and goals.",
+		children: [
+			{
+				path: "/finding",
+				element: <Finding />,
+				notes: "Describe how the project idea was found.",
+			},
+			{
+				path: "/project-story",
+				element: <ProjectStory />,
+				notes: "Share the story behind the project.",
+			},
+		],
+	},
+	{
+		path: "/learning",
+		element: <Learning />,
+		children: [
+			{
+				path: "/3d-tech",
+				element: <ThreeDTech />,
+			},
+			{
+				path: "/slicer",
+				element: <Slicer />,
+			},
+			{
+				path: "/github-actions",
+				element: <GithubActions />,
+			},
+			{
+				path: "/use-whooshes",
+				element: <div>Use Whooshes</div>,
+				notes:
+					"Discuss the use of whooshes in the project and how AI didn't help. It was a basic React mistake by putting an array in an useEffect dependency.",
+			},
+		],
+	},
+	{
+		path: "/leveraging",
+		element: <Leveraging />,
+		children: [
+			{
+				path: "/vibe-coding",
+				element: <VibeCoding />,
+			},
+			{
+				path: "/ai-rant",
+				element: <AIRant />,
+			},
+		],
+	},
+	{
+		path: "/mastering",
+		element: <Mastering />,
+		children: [
+			{
+				path: "/knowing",
+				element: <Knowing />,
+			},
+		],
+	},
+	{
+		path: "/finale",
+		element: <TheFinale />,
+	},
+	{ path: "/social", element: <Social /> },
+	{
+		path: "/*",
+		element: <NotFound />,
+	},
+];
+
+const withRemovedNotFound = slides.filter((slide) => slide.path !== "/*");
+export default withRemovedNotFound;
+
+export const flattenedSlides = slides.flatMap((slide) => {
+	const newSlides = [slide];
+
+	if (slide.children && slide.children.length > 0) {
+		newSlides.push(
+			...slide.children.map(({ path, element }) => ({
+				path: `${slide.path}${path}`,
+				element,
+			})),
+		);
+	}
+
+	return newSlides;
+});

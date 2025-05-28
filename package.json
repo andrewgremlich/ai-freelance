@@ -1,0 +1,35 @@
+{
+	"name": "ai-freelance",
+	"version": "0.0.1",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"build": "vite build",
+		"preview": "vite preview",
+		"test": "vitest",
+		"check": "npx @biomejs/biome check --write ./src"
+	},
+	"dependencies": {
+		"@react-three/fiber": "^9.1.2",
+		"dexie": "^4.0.11",
+		"framer-motion": "^12.15.0",
+		"react": "^19.1.0",
+		"react-dom": "^19.1.0",
+		"react-qr-code": "^2.0.15",
+		"summit-kit": "^2.0.8",
+		"wawa-vfx": "^1.0.15"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.9.4",
+		"@types/node": "^22.15.24",
+		"@types/react": "^19.1.6",
+		"@types/react-dom": "^19.1.5",
+		"@types/react-router": "^5.1.20",
+		"@vercel/react-router": "^1.1.1",
+		"@vitejs/plugin-react-swc": "^3.10.0",
+		"typescript": "^5.8.3",
+		"vite": "^6.3.5",
+		"vitest": "^3.1.4"
+	}
+}

@@ -1,0 +1,46 @@
+/* Navigation map styles */
+.container {
+	position: fixed;
+	bottom: 1rem;
+	right: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.5rem;
+	padding: 0.5rem;
+	background-color: rgba(0, 0, 0, 0.2);
+	border-radius: 1rem;
+	z-index: 10;
+}
+
+.parentMap {
+	display: flex;
+	gap: 0.5rem;
+}
+
+.childMap {
+	display: flex;
+	gap: 0.25rem;
+}
+
+.slideMarker {
+	width: 0.75rem;
+	height: 0.75rem;
+	border-radius: 50%;
+	background-color: rgba(255, 255, 255, 0.5);
+	transition: all 0.2s ease;
+}
+
+.childMarker {
+	width: 0.5rem;
+	height: 0.5rem;
+	border-radius: 50%;
+	background-color: rgba(200, 200, 200, 0.3);
+	transition: all 0.2s ease;
+}
+
+.active {
+	background-color: white;
+	transform: scale(1.2);
+	box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}

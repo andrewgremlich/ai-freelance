@@ -1,0 +1,134 @@
+/* Slide explorer styles */
+.explorerButton {
+	position: fixed;
+	bottom: 1rem;
+	left: 1rem;
+	z-index: 31;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: transparent;
+	padding: 0;
+	margin: 0;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	transition: all 0.1s ease-in-out;
+	width: 2rem;
+	height: 2rem;
+}
+
+.explorerButton:hover {
+	background-color: rgba(0, 0, 0, 0.5);
+	transform: scale(1.1);
+}
+
+.explorerOverlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.7);
+	z-index: 30;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	backdrop-filter: blur(5px);
+}
+
+.explorerContent {
+	background-color: rgba(30, 30, 30, 0.9);
+	border-radius: 0.5rem;
+	width: 80%;
+	max-width: 1000px;
+	max-height: 80vh;
+	overflow-y: auto;
+	padding: 1.5rem;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.explorerContent h2 {
+	margin-top: 0;
+	color: white;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+	padding-bottom: 0.5rem;
+}
+
+.slideGrid {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.slideGroup {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+.slideItem {
+	display: flex;
+	align-items: center;
+	background-color: rgba(60, 60, 60, 0.8);
+	border-radius: 0.25rem;
+	padding: 0.75rem 1rem;
+	color: white;
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	cursor: pointer;
+	transition: all 0.2s ease;
+	text-align: left;
+}
+
+.slideItem:hover {
+	background-color: rgba(80, 80, 80, 0.8);
+	transform: translateX(5px);
+}
+
+.slideNumber {
+	font-weight: bold;
+	background-color: rgba(255, 255, 255, 0.2);
+	border-radius: 50%;
+	width: 2rem;
+	height: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-right: 0.75rem;
+	flex-shrink: 0;
+}
+
+.slideName {
+	font-size: 1rem;
+}
+
+.childrenContainer {
+	display: flex;
+	flex-direction: column;
+	gap: 0.25rem;
+	margin-left: 2rem;
+}
+
+.childItem {
+	display: flex;
+	align-items: center;
+	background-color: rgba(50, 50, 50, 0.5);
+	border-radius: 0.25rem;
+	padding: 0.5rem 1rem;
+	color: white;
+	border: 1px solid rgba(255, 255, 255, 0.05);
+	cursor: pointer;
+	transition: all 0.2s ease;
+	text-align: left;
+}
+
+.childItem:hover {
+	background-color: rgba(70, 70, 70, 0.5);
+	transform: translateX(5px);
+}
+
+.childName {
+	font-size: 0.9rem;
+	color: rgba(255, 255, 255, 0.9);
+}
