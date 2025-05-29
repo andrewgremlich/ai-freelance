@@ -1,6 +1,6 @@
 import { useRef } from "react";
-import { Icon } from "summit-kit/react";
-import { useKeyPress } from "summit-kit/react/client";
+import { Icon } from "summit-kit";
+import { useKeyPress } from "summit-kit/client";
 
 import classes from "./ToggleFullScreen.module.css";
 

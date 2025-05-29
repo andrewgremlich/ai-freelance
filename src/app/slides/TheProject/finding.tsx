@@ -1,4 +1,4 @@
-import { H1, Link, P } from "summit-kit/react";
+import { H1, Link, P } from "summit-kit";
 
 export const Finding = () => {
 	return (

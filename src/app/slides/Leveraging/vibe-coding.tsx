@@ -1,4 +1,4 @@
-import { H1 } from "summit-kit/react";
+import { H1 } from "summit-kit";
 
 export const VibeCoding = () => {
 	return (

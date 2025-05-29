@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router";
-import { Icon } from "summit-kit/react";
+import { Icon } from "summit-kit";
 
 import slides from "../slides/index.tsx";
 import classes from "./SlideExplorer.module.css";

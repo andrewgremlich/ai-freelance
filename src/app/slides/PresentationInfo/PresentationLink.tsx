@@ -1,5 +1,5 @@
 import QRCode from "react-qr-code";
-import { H1, P } from "summit-kit/react";
+import { H1, P } from "summit-kit";
 
 import classes from "./Social.module.css";
 

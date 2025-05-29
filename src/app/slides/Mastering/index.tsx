@@ -1,4 +1,4 @@
-import { H1, P } from "summit-kit/react";
+import { H1, P } from "summit-kit";
 
 export * from "./knowing.tsx";
 

@@ -1,4 +1,4 @@
-import { H1, Quote } from "summit-kit/react";
+import { H1, Quote } from "summit-kit";
 
 export const TheFinale = () => {
 	return (

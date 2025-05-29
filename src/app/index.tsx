@@ -1,4 +1,4 @@
-import "summit-kit/react/styles";
+import "summit-kit/styles";
 
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
@@ -9,7 +9,7 @@ import {
 	useLocation,
 	useNavigate,
 } from "react-router";
-import { PageTurner, useAudio, useKeyPress } from "summit-kit/react/client";
+import { PageTurner, useAudio, useKeyPress } from "summit-kit/client";
 import { v4 } from "uuid";
 
 import { KeyboardGuide } from "./components/KeyboardGuide.tsx";
@@ -45,12 +45,7 @@ function App() {
 		{
 			shortcutKey: "Control+Shift+M",
 			action: () => {
-				if (volume === 0) {
-					setVolume(1);
-				} else {
-					setVolume(0);
-				}
-
+				setVolume(volume === 0 ? 1 : 0);
 				setSpellEffectsEnabled((prev) => !prev);
 			},
 		},

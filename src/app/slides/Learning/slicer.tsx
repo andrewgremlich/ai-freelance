@@ -1,4 +1,4 @@
-import { H1, Li, P, Ul } from "summit-kit/react";
+import { H1, Li, P, Ul } from "summit-kit";
 
 export const Slicer = () => {
 	return (

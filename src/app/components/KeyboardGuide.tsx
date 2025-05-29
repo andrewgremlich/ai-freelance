@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Icon } from "summit-kit/react";
+import { Icon } from "summit-kit";
 
 import classes from "./KeyboardGuide.module.css";
 
