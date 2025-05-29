@@ -24,10 +24,11 @@ import slides, { flattenedSlides } from "./slides/index.tsx";
 import type { Direction, Slide } from "./types/slide.ts";
 
 function App() {
-	const { whooshIncrement, src } = useWhooshes({ amount: 2 });
+	const { whooshIncrement, whooshSrc } = useWhooshes({ amount: 2 });
 	const [spellTrigger, setSpellTrigger] = useState(false);
+	const [spellEffectsEnabled, setSpellEffectsEnabled] = useState(false);
 	const { setStereo, setVolume, volume } = useAudio({
-		src,
+		src: whooshSrc,
 		volume: 0,
 		stereo: 0,
 		autoplay: true,
@@ -39,6 +40,7 @@ function App() {
 		forward: true,
 	});
 
+	// Toggle spell effects and volume with Control+Shift+M
 	useKeyPress([
 		{
 			shortcutKey: "Control+Shift+M",
@@ -48,6 +50,8 @@ function App() {
 				} else {
 					setVolume(0);
 				}
+
+				setSpellEffectsEnabled((prev) => !prev);
 			},
 		},
 	]);
@@ -183,6 +187,7 @@ function App() {
 					axis={transitionDirection.axis}
 					forward={transitionDirection.forward}
 					trigger={spellTrigger}
+					enabled={spellEffectsEnabled} // Pass enabled prop
 				/>
 			</div>
 			<ProgressIndicator />

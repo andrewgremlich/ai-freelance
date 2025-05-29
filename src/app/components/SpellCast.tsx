@@ -1,15 +1,20 @@
 import { Canvas } from "@react-three/fiber";
+import { useMemo } from "react";
 import { AppearanceMode, RenderMode, VFXEmitter, VFXParticles } from "wawa-vfx";
 
 export const SpellCast = ({
 	forward,
 	trigger,
 	axis = "horizontal",
+	enabled = true,
 }: {
 	forward: boolean;
 	trigger: boolean;
 	axis?: "horizontal" | "vertical";
+	enabled?: boolean;
 }) => {
+	if (!enabled) return null;
+
 	// Compute start/end based on axis
 	type EmitterConfig = {
 		startPositionMin: [number, number, number];
@@ -17,7 +22,10 @@ export const SpellCast = ({
 		directionMin: [number, number, number];
 	};
 
-	const axisConfigs: Record<string, { start: EmitterConfig; end: EmitterConfig }> = {
+	const axisConfigs: Record<
+		string,
+		{ start: EmitterConfig; end: EmitterConfig }
+	> = {
 		horizontal: {
 			start: {
 				startPositionMin: [-10, 0, -5],
@@ -43,13 +51,15 @@ export const SpellCast = ({
 			},
 		},
 	};
-	const { start, end } = axisConfigs[axis] || axisConfigs.horizontal;
+	const { start, end } = useMemo(
+		() => axisConfigs[axis] || axisConfigs.horizontal,
+		[axis],
+	);
 
 	return (
 		<Canvas>
 			<ambientLight intensity={0.5} />
 			<pointLight position={[10, 10, 10]} />
-			{/* Add your 3D scene components here */}
 			<mesh>
 				{/* Step 1: Define your particle system */}
 				<VFXParticles

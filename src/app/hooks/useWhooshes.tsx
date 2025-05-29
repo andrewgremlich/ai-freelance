@@ -17,6 +17,6 @@ export const useWhooshes = ({ amount }: { amount: number }) => {
 
 	return {
 		whooshIncrement,
-		src,
+		whooshSrc: src,
 	};
 };
