@@ -4,17 +4,46 @@ import { AppearanceMode, RenderMode, VFXEmitter, VFXParticles } from "wawa-vfx";
 export const SpellCast = ({
 	forward,
 	trigger,
-}: { forward: boolean; trigger: boolean }) => {
-	const start: { [key: string]: [number, number, number] } = {
-		startPositionMin: [-10, 0, -5],
-		startPositionMax: [0, -10, 0],
-		directionMin: [1, 1, -1],
+	axis = "horizontal",
+}: {
+	forward: boolean;
+	trigger: boolean;
+	axis?: "horizontal" | "vertical";
+}) => {
+	// Compute start/end based on axis
+	type EmitterConfig = {
+		startPositionMin: [number, number, number];
+		startPositionMax: [number, number, number];
+		directionMin: [number, number, number];
 	};
-	const end: { [key: string]: [number, number, number] } = {
-		startPositionMin: [10, 0, -5],
-		startPositionMax: [0, -10, 0],
-		directionMin: [-1, 1, -1],
+
+	const axisConfigs: Record<string, { start: EmitterConfig; end: EmitterConfig }> = {
+		horizontal: {
+			start: {
+				startPositionMin: [-10, 0, -5],
+				startPositionMax: [0, -10, 0],
+				directionMin: [1, 1, -1],
+			},
+			end: {
+				startPositionMin: [10, 0, -5],
+				startPositionMax: [0, -10, 0],
+				directionMin: [-1, 1, -1],
+			},
+		},
+		vertical: {
+			start: {
+				startPositionMin: [5, -10, -5],
+				startPositionMax: [-5, -5, 0],
+				directionMin: [0, 1, 0], // upward
+			},
+			end: {
+				startPositionMin: [5, 10, -5],
+				startPositionMax: [-5, 5, 0],
+				directionMin: [0, -1, 0], // downward
+			},
+		},
 	};
+	const { start, end } = axisConfigs[axis] || axisConfigs.horizontal;
 
 	return (
 		<Canvas>
@@ -56,7 +85,6 @@ export const SpellCast = ({
 							startRotationMin: [0, 0, 0],
 							rotationSpeedMin: [0, 0, 0],
 							rotationSpeedMax: [0, 0, 0],
-							directionMax: [0, 0, 0],
 							...(forward ? end : start), // Use the start or end configuration based on the forward prop
 						}}
 					/>

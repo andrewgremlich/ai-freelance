@@ -7,7 +7,7 @@ export const Title = () => {
 			<P>Slicing Through Challenges with Education and Tenacity</P>
 			<P>
 				This is a very rough presentation and a work in progress until UtahJS
-				Lehi in September!
+				Conference in September!
 			</P>
 		</>
 	);

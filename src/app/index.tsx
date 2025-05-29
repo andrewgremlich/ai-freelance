@@ -146,6 +146,8 @@ function App() {
 			currentParentSlide.children.length > 0
 		) {
 			whooshIncrement();
+			setSpellTrigger(true);
+			setTimeout(() => setSpellTrigger(false), 100); // Reset trigger after short delay
 
 			setTransitionDirection({
 				axis: "vertical",
@@ -161,6 +163,8 @@ function App() {
 		// If we're in a child slide, navigate up to parent
 		if (isChildSlide) {
 			whooshIncrement();
+			setSpellTrigger(true);
+			setTimeout(() => setSpellTrigger(false), 100); // Reset trigger after short delay
 
 			setTransitionDirection({
 				axis: "vertical",
@@ -176,6 +180,7 @@ function App() {
 		<>
 			<div id="canvas-container">
 				<SpellCast
+					axis={transitionDirection.axis}
 					forward={transitionDirection.forward}
 					trigger={spellTrigger}
 				/>
