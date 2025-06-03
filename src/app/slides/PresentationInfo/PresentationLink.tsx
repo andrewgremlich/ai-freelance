@@ -13,12 +13,12 @@ export const PresentationLink = () => {
 			<ul className={classes["social-list"]}>
 				<li>
 					<a
-						href="https://ai-freelance-dev.gremlich.dev/"
+						href="https://ai-freelance.gremlich.dev/"
 						target="_blank"
 						rel="noopener noreferrer"
 					>
 						<figure>
-							<QRCode value="https://ai-freelance-dev.gremlich.dev/" />
+							<QRCode value="https://ai-freelance.gremlich.dev/" />
 							<figcaption>View Presentation</figcaption>
 						</figure>
 					</a>

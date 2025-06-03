@@ -8,17 +8,17 @@ export const Social = () => {
 		<div>
 			<div className={classes["social-header"]}>
 				<H1>Social</H1>
-				<P>Connect with me on social media!</P>
+				<P>Follow me on social media!</P>
 			</div>
 			<ul className={classes["social-list"]}>
 				<li>
 					<a
-						href="https://bsky.app/profile/agremlich.bsky.social"
+						href="https://bsky.app/profile/gremlich.dev"
 						target="_blank"
 						rel="noopener noreferrer"
 					>
 						<figure>
-							<QRCode value="https://bsky.app/profile/agremlich.bsky.social" />
+							<QRCode value="https://bsky.app/profile/gremlich.dev" />
 							<figcaption>Follow me on BlueSky</figcaption>
 						</figure>
 					</a>
