@@ -12,6 +12,8 @@ import {
 import { PageTurner, useAudio, useKeyPress } from "summit-kit/client";
 import { v4 } from "uuid";
 
+// import SerialConnector from "./components/SerialConnector.tsx";
+import { Fireworks } from "./components/Fireworks.tsx";
 import { KeyboardGuide } from "./components/KeyboardGuide.tsx";
 import { NavigationMap } from "./components/NavigationMap.tsx";
 import { ProgressIndicator } from "./components/ProgressIndicator.tsx";
@@ -22,8 +24,6 @@ import { TogglePresentation } from "./components/TogglePresentation.tsx";
 import { useWhooshes } from "./hooks/useWhooshes.tsx";
 import slides, { flattenedSlides } from "./slides/index.tsx";
 import type { Direction, Slide } from "./types/slide.ts";
-// import SerialConnector from "./components/SerialConnector.tsx";
-import { Fireworks } from "./components/fireworks.tsx";
 
 function App() {
 	const { whooshIncrement, whooshSrc } = useWhooshes({ amount: 2 });
