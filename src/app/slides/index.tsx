@@ -86,11 +86,11 @@ const slides: Slide[] = [
 			},
 		],
 	},
+	{ path: "/social", element: <Social /> },
 	{
 		path: "/finale",
 		element: <TheFinale />,
 	},
-	{ path: "/social", element: <Social /> },
 	{
 		path: "/*",
 		element: <NotFound />,

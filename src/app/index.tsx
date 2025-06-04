@@ -1,7 +1,7 @@
 import "summit-kit/styles";
 
 import { AnimatePresence, motion } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
 	Navigate,
 	Route,
@@ -22,12 +22,14 @@ import { TogglePresentation } from "./components/TogglePresentation.tsx";
 import { useWhooshes } from "./hooks/useWhooshes.tsx";
 import slides, { flattenedSlides } from "./slides/index.tsx";
 import type { Direction, Slide } from "./types/slide.ts";
-import SerialConnector from "./components/SerialConnector.tsx";
+// import SerialConnector from "./components/SerialConnector.tsx";
+import { Fireworks } from "./components/fireworks.tsx";
 
 function App() {
 	const { whooshIncrement, whooshSrc } = useWhooshes({ amount: 2 });
 	const [spellTrigger, setSpellTrigger] = useState(false);
 	const [spellEffectsEnabled, setSpellEffectsEnabled] = useState(false);
+	const { play, stop } = useAudio({ src: "muffled.webm", volume: 0.1 });
 	const { setStereo, setVolume, volume } = useAudio({
 		src: whooshSrc,
 		volume: 0,
@@ -176,6 +178,14 @@ function App() {
 		}
 	};
 
+	useEffect(() => {
+		if (location.pathname === "/finale" && spellEffectsEnabled) {
+			play();
+		} else {
+			stop();
+		}
+	}, [location.pathname, play, stop, spellEffectsEnabled]);
+
 	return (
 		<>
 			<div id="canvas-container">
@@ -185,6 +195,8 @@ function App() {
 					trigger={spellTrigger}
 					enabled={spellEffectsEnabled} // Pass enabled prop
 				/>
+
+				{location.pathname === "/finale" && <Fireworks />}
 			</div>
 			<ProgressIndicator />
 			<PageTurner

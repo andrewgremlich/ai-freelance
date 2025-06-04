@@ -40,14 +40,14 @@ export const SpellCast = ({
 		},
 		vertical: {
 			start: {
-				startPositionMin: [5, -10, -5],
-				startPositionMax: [-5, -5, 0],
-				directionMin: [0, 1, 0], // upward
-			},
-			end: {
 				startPositionMin: [5, 10, -5],
 				startPositionMax: [-5, 5, 0],
 				directionMin: [0, -1, 0], // downward
+			},
+			end: {
+				startPositionMin: [5, -10, -5],
+				startPositionMax: [-5, -5, 0],
+				directionMin: [0, 1, 0], // upward
 			},
 		},
 	};
