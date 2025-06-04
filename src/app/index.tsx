@@ -22,6 +22,7 @@ import { TogglePresentation } from "./components/TogglePresentation.tsx";
 import { useWhooshes } from "./hooks/useWhooshes.tsx";
 import slides, { flattenedSlides } from "./slides/index.tsx";
 import type { Direction, Slide } from "./types/slide.ts";
+import SerialConnector from "./components/SerialConnector.tsx";
 
 function App() {
 	const { whooshIncrement, whooshSrc } = useWhooshes({ amount: 2 });
@@ -217,6 +218,7 @@ function App() {
 					</motion.div>
 				</AnimatePresence>
 			</PageTurner>
+			{/* <SerialConnector /> */}
 			<TogglePresentation presentationPath="/" />
 			<NavigationMap />
 			<KeyboardGuide />
