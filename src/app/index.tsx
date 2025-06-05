@@ -29,7 +29,7 @@ function App() {
 	const { whooshIncrement, whooshSrc } = useWhooshes({ amount: 2 });
 	const [spellTrigger, setSpellTrigger] = useState(false);
 	const [spellEffectsEnabled, setSpellEffectsEnabled] = useState(false);
-	const { play, stop } = useAudio({ src: "muffled.webm", volume: 0.1 });
+	const { play, stop } = useAudio({ src: "muffled.webm", volume: 1 }); // TODO: implement a fade in
 	const { setStereo, setVolume, volume } = useAudio({
 		src: whooshSrc,
 		volume: 0,
@@ -48,7 +48,7 @@ function App() {
 		{
 			shortcutKey: "Control+Shift+M",
 			action: () => {
-				setVolume(volume === 0 ? 1 : 0);
+				setVolume(volume === 0 ? 0.75 : 0);
 				setSpellEffectsEnabled((prev) => !prev);
 			},
 		},
@@ -189,14 +189,18 @@ function App() {
 	return (
 		<>
 			<div id="canvas-container">
-				<SpellCast
-					axis={transitionDirection.axis}
-					forward={transitionDirection.forward}
-					trigger={spellTrigger}
-					enabled={spellEffectsEnabled} // Pass enabled prop
-				/>
+				{location.pathname !== "/finale" && (
+					<SpellCast
+						axis={transitionDirection.axis}
+						forward={transitionDirection.forward}
+						trigger={spellTrigger}
+						enabled={spellEffectsEnabled} // Pass enabled prop
+					/>
+				)}
 
-				{location.pathname === "/finale" && <Fireworks />}
+				{location.pathname === "/finale" && (
+					<Fireworks enabled={spellEffectsEnabled} />
+				)}
 			</div>
 			<ProgressIndicator />
 			<PageTurner

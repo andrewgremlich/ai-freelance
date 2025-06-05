@@ -65,7 +65,7 @@ export const SpellCast = ({
 				<VFXParticles
 					name="particles" // A unique identifier for this particle system
 					settings={{
-						nbParticles: 100000, // Maximum number of particles to allocate
+						nbParticles: 10000, // Maximum number of particles to allocate
 						intensity: 3, // Brightness multiplier
 						renderMode: RenderMode.Billboard, // "billboard" or "mesh" or "stretchBillboard"
 						fadeSize: [0, 0], // Size fade in/out settings

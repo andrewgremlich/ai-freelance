@@ -2,8 +2,9 @@ import { Canvas } from "@react-three/fiber";
 import { v4 } from "uuid";
 import { AppearanceMode, RenderMode, VFXEmitter, VFXParticles } from "wawa-vfx";
 
-export const Fireworks = () => {
-	console.log("Fireworks component rendered");
+export const Fireworks = ({ enabled }: { enabled: boolean }) => {
+	if (!enabled) return null;
+
 	return (
 		<Canvas camera={{ position: [0, 0, 20], fov: 60 }}>
 			<ambientLight intensity={0.5} />
@@ -11,7 +12,7 @@ export const Fireworks = () => {
 			<VFXParticles
 				name="fireworkParticles"
 				settings={{
-					nbParticles: 10000,
+					nbParticles: 5000,
 					intensity: 4,
 					renderMode: RenderMode.Billboard,
 					fadeSize: [0.2, 0.8],
@@ -21,48 +22,55 @@ export const Fireworks = () => {
 				}}
 			/>
 
-			{Array.from({ length: 5 }).map((_, i) => (
-				<VFXEmitter
-					key={v4()}
-					emitter="fireworkParticles"
-					settings={{
-						duration: 0.1,
-						nbParticles: 500,
-						loop: true,
-						colorStart: [
-							"#ff0040",
-							"#ff8000",
-							"#ffff00",
-							"#00ff00",
-							"#00ffff",
-							"#0000ff",
-							"#ff00ff",
-						],
-						colorEnd: ["#000000"],
-						particlesLifetime: [1.2, 2.2],
-						speed: [5, 10],
-						spawnMode: "burst",
-						delay: Math.random() * 2,
-						size: [0.08, 0.18],
-						startRotationMin: [0, 0, 0],
-						startRotationMax: [0, Math.PI * 2, 0],
-						rotationSpeedMin: [0, 0, 0],
-						rotationSpeedMax: [0, 0, 0],
-						startPositionMin: [
-							-6 + Math.random() * 12,
-							2 + Math.random() * 6,
-							-4 + Math.random() * 8,
-						],
-						startPositionMax: [
-							-6 + Math.random() * 12,
-							2 + Math.random() * 6,
-							-4 + Math.random() * 8,
-						],
-						directionMin: [-1, 1, -1],
-						directionMax: [1, 1, 1],
-					}}
-				/>
-			))}
+			<VFXEmitter
+				debug={false}
+				emitter="fireworkParticles"
+				settings={{
+					duration: 0.1,
+					delay: 0.2,
+					nbParticles: 50,
+					spawnMode: "time",
+					loop: true,
+					startPositionMin: [0, -8.1, 1],
+					startPositionMax: [0, -8, 0],
+					startRotationMin: [0, 0, 0],
+					startRotationMax: [0, 0, 0],
+					particlesLifetime: [3.4, 4.8],
+					speed: [5, 12],
+					directionMin: [-1, 1, 0],
+					directionMax: [-0.5, 0, 0],
+					rotationSpeedMin: [0, 0, 0],
+					rotationSpeedMax: [0, 0, 0],
+					colorStart: ["#fc2e61", "#ff8000"],
+					colorEnd: ["#ff5353", "#fcb169"],
+					size: [0.36, 0.5],
+				}}
+			/>
+
+			<VFXEmitter
+				debug={false}
+				emitter="fireworkParticles"
+				settings={{
+					duration: 0.1,
+					delay: 0.7,
+					nbParticles: 50,
+					spawnMode: "time",
+					loop: true,
+					startPositionMin: [0, -8.1, 1],
+					startPositionMax: [0, -8, 0],
+					startRotationMin: [0, 0, 0],
+					startRotationMax: [0, 0, 0],
+					particlesLifetime: [3.4, 4.8],
+					speed: [5, 12],
+					directionMin: [1, 1, 0],
+					directionMax: [0.5, 0, 0],
+					rotationSpeedMin: [0, 0, 0],
+					rotationSpeedMax: [0, 0, 0],
+					colorStart: ["#2dfcfc", "#4ff74d"],
+					colorEnd: ["#00ffff", "#8bfc89"],
+					size: [0.36, 0.5],
+				}}
+			/>
 		</Canvas>
 	);
 };
