@@ -29,7 +29,11 @@ function App() {
 	const { whooshIncrement, whooshSrc } = useWhooshes({ amount: 2 });
 	const [spellTrigger, setSpellTrigger] = useState(false);
 	const [spellEffectsEnabled, setSpellEffectsEnabled] = useState(false);
-	const { play, stop } = useAudio({ src: "muffled.webm", volume: 1 }); // TODO: implement a fade in
+	const { play, stop } = useAudio({
+		src: "muffled.webm",
+		volume: 1,
+		fadeInDuration: 30,
+	});
 	const { setStereo, setVolume, volume } = useAudio({
 		src: whooshSrc,
 		volume: 0,
