@@ -48,7 +48,7 @@ function App() {
 		{
 			shortcutKey: "Control+Shift+M",
 			action: () => {
-				setVolume(volume === 0 ? 0.75 : 0);
+				setVolume(volume === 0 ? 1 : 0);
 				setSpellEffectsEnabled((prev) => !prev);
 			},
 		},
