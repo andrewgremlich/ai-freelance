@@ -5,3 +5,6 @@
 - Swap magic mode over to use Dexie for app data.
 - Bluetooth powerpoint clicker.
 - put in a reference to Magic 2.0 Series?
+
+Notes on presenting creatively while being professional!
+https://chatgpt.com/c/684360ad-61e8-800d-ac8b-b10cceb76aff
