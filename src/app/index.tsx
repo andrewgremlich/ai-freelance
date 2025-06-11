@@ -12,7 +12,6 @@ import {
 import { PageTurner, useAudio, useKeyPress } from "summit-kit/client";
 import { v4 } from "uuid";
 
-// import SerialConnector from "./components/SerialConnector.tsx";
 import { Fireworks } from "./components/Fireworks.tsx";
 import { KeyboardGuide } from "./components/KeyboardGuide.tsx";
 import { NavigationMap } from "./components/NavigationMap.tsx";
@@ -24,13 +23,14 @@ import { TogglePresentation } from "./components/TogglePresentation.tsx";
 import { useWhooshes } from "./hooks/useWhooshes.tsx";
 import slides, { flattenedSlides } from "./slides/index.tsx";
 import type { Direction, Slide } from "./types/slide.ts";
+import { ConnectToController } from "./components/ConnectToController.tsx";
 
 function App() {
 	const { whooshIncrement, whooshSrc } = useWhooshes({ amount: 2 });
 	const [spellTrigger, setSpellTrigger] = useState(false);
 	const [spellEffectsEnabled, setSpellEffectsEnabled] = useState(false);
-	const { play, stop } = useAudio({
-		src: "muffled.webm",
+	const { play, stop, seek } = useAudio({
+		src: "beat_outro.mp3", // seek to 0:47 // use for intro too?
 		volume: 1,
 		fadeInDuration: 30,
 	});
@@ -184,6 +184,7 @@ function App() {
 
 	useEffect(() => {
 		if (location.pathname === "/finale" && spellEffectsEnabled) {
+			// seek(47); // Seek to 0:47 for the finale
 			play();
 		} else {
 			stop();
@@ -238,12 +239,21 @@ function App() {
 					</motion.div>
 				</AnimatePresence>
 			</PageTurner>
-			{/* <SerialConnector /> */}
+			<ConnectToController
+				onNext={hasNextSlide ? goNext : undefined}
+				onPrev={hasPrevSlide ? goPrev : undefined}
+				onDown={hasChildren ? goDown : undefined}
+				onUp={isChildSlide ? goUp : undefined}
+				activate={() => {
+					setVolume(volume === 0 ? 1 : 0);
+					setSpellEffectsEnabled((prev) => !prev);
+				}}
+			/>
 			<TogglePresentation presentationPath="/" />
 			<NavigationMap />
 			<KeyboardGuide />
 			<SlideExplorer />
-			<SpeakerNotes />
+			{/* <SpeakerNotes /> */}
 		</>
 	);
 }

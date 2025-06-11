@@ -1,0 +1,29 @@
+.placement {
+  position: fixed;
+  top: 70px;
+  left: 20px;
+  z-index: 1000;
+}
+
+.placement button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 24px;
+}
+.placement button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+.placement button:focus {
+  outline: none;
+}
+.placement button:active {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.placement .icon {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+}
