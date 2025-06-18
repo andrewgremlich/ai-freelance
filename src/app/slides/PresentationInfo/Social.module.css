@@ -1,25 +1,36 @@
 .social-header {
-	margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 
 .social-list {
-	display: flex;
-	gap: 5rem;
+  display: flex;
+  gap: 5rem;
 
-	& li {
-		list-style: none;
-		padding: 5px 10px;
+  & li {
+    list-style: none;
+    padding: 5px 10px;
 
-		&:hover {
-			background-color: var(--green-900);
-			border-radius: 5px;
-		}
-	}
+    &:hover {
+      background-color: var(--green-900);
+      border-radius: 5px;
+    }
+  }
 
-	& a {
-		text-decoration: none;
-		color: var(--color-text);
-		font-size: 1.5rem;
-		transition: color 0.3s ease;
-	}
+  & a {
+    text-decoration: none;
+    color: var(--color-text);
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+  }
+}
+
+.figcaption {
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & svg {
+    margin-left: 0.5rem;
+  }
 }

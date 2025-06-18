@@ -253,7 +253,7 @@ function App() {
 			<NavigationMap />
 			<KeyboardGuide />
 			<SlideExplorer />
-			{/* <SpeakerNotes /> */}
+			<SpeakerNotes />
 		</>
 	);
 }

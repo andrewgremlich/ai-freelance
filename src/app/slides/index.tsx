@@ -1,3 +1,4 @@
+import { H1, Quote } from "summit-kit";
 import type { Slide } from "../types/slide.tsx";
 import { NotFound } from "./404.tsx";
 import { TheFinale } from "./Finale/index.tsx";
@@ -7,13 +8,13 @@ import { AIRant } from "./Leveraging/ai-rant.tsx";
 import { Leveraging, VibeCoding } from "./Leveraging/index.tsx";
 import { Knowing, Mastering } from "./Mastering/index.tsx";
 import { PresentationLink, Social } from "./PresentationInfo/index.ts";
-import { Finding, ProjectStory, TheProject } from "./TheProject/index.tsx";
-import { Title } from "./title.tsx";
+import classes from "./Slides.module.css";
+import { ProvelPrint } from "./ProvelPrint/index.tsx";
 
 const slides: Slide[] = [
 	{
 		path: "/home",
-		element: <Title />,
+		element: <H1>AI-Powered Freelance Development</H1>,
 		notes: "Welcome! Introduce yourself and the topic.",
 	},
 	{
@@ -23,20 +24,8 @@ const slides: Slide[] = [
 	},
 	{
 		path: "/the-project",
-		element: <TheProject />,
+		element: <ProvelPrint />,
 		notes: "Explain the project background and goals.",
-		children: [
-			{
-				path: "/finding",
-				element: <Finding />,
-				notes: "Describe how the project idea was found.",
-			},
-			{
-				path: "/project-story",
-				element: <ProjectStory />,
-				notes: "Share the story behind the project.",
-			},
-		],
 	},
 	{
 		path: "/learning",
@@ -85,6 +74,15 @@ const slides: Slide[] = [
 				element: <Knowing />,
 			},
 		],
+	},
+	{
+		path: "/inspire",
+		element: (
+			<Quote classes={[classes.legible]}>
+				When you're hiking, those little steps might not seem like much — but
+				they're exactly what get you to the top.
+			</Quote>
+		),
 	},
 	{ path: "/social", element: <Social /> },
 	{

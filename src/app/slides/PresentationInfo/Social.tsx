@@ -1,5 +1,6 @@
 import QRCode from "react-qr-code";
-import { H1, P } from "summit-kit";
+import { H1, P, Icon } from "summit-kit";
+import { RiBlueskyLine } from "react-icons/ri";
 
 import classes from "./Social.module.css";
 
@@ -19,7 +20,9 @@ export const Social = () => {
 					>
 						<figure>
 							<QRCode value="https://bsky.app/profile/gremlich.dev" />
-							<figcaption>Follow me on BlueSky</figcaption>
+							<figcaption className={classes.figcaption}>
+								Follow me on BlueSky <RiBlueskyLine size="30px" />
+							</figcaption>
 						</figure>
 					</a>
 				</li>
@@ -31,7 +34,9 @@ export const Social = () => {
 					>
 						<figure>
 							<QRCode value="https://www.linkedin.com/in/agremlich/" />
-							<figcaption>Follow me on LinkedIn</figcaption>
+							<figcaption className={classes.figcaption}>
+								Follow me on LinkedIn <Icon name="FiLinkedin" />
+							</figcaption>
 						</figure>
 					</a>
 				</li>
