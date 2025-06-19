@@ -1,8 +1,9 @@
 import { useEffect } from "react";
 import { Icon } from "summit-kit";
-import { useSerial } from "../hooks/useSerial.tsx";
 
 import classes from "./ConnectToController.module.css";
+import { useJoycon } from "../hooks/useJoycon.tsx";
+import type { JoyConDataPacket } from "joy-con-webhid";
 
 type ConnectToControllerProps = {
 	onNext?: () => void;
@@ -19,42 +20,33 @@ export const ConnectToController = ({
 	onDown,
 	activate,
 }: ConnectToControllerProps) => {
-	const { connect, disconnect, isConnected, output } = useSerial();
+	const { connect, isConnected, controller } = useJoycon();
 
 	// biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
 	useEffect(() => {
-		const handleData = (data: string) => {
-			if (data.includes("RIGHT")) {
-				onNext?.();
-			} else if (data.includes("LEFT")) {
-				onPrev?.();
-			} else if (data.includes("UP")) {
-				onUp?.();
-			} else if (data.includes("DOWN")) {
-				onDown?.();
-			} else if (data.includes("BUTTON")) {
-				activate?.();
-			}
+		const handleData = (data: JoyConDataPacket) => {
+			console.log("Data received:", data);
+			// onNext?.();
+			// onPrev?.();
+			// onUp?.();
+			// onDown?.();
+			// activate?.();
 		};
 
-		if (output) {
-			handleData(output);
+		if (controller) {
+			handleData(controller);
 		}
 		// Cleanup function to avoid memory leaks
 		return () => {
 			// If you need to clean up listeners or other resources, do it here
 		};
-	}, [output]);
+	}, [controller]);
 
 	return (
 		<div className={classes.placement}>
-			{!isConnected ? (
+			{!isConnected && (
 				<button onClick={connect} type="button">
 					<Icon name="FiBluetooth" size={32} color="white" />
-				</button>
-			) : (
-				<button onClick={disconnect} type="button">
-					<Icon name="FiX" size={32} color="white" />
 				</button>
 			)}
 
