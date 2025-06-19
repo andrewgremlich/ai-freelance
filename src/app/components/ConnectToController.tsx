@@ -20,36 +20,38 @@ export const ConnectToController = ({
 	onDown,
 	activate,
 }: ConnectToControllerProps) => {
-	const { connect, isConnected, controller } = useJoycon();
+	const { connectAndListen, isConnected, controller } = useJoycon();
 
-	// biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
 	useEffect(() => {
 		const handleData = (data: JoyConDataPacket) => {
-			console.log("Data received:", data);
-			// onNext?.();
-			// onPrev?.();
-			// onUp?.();
-			// onDown?.();
-			// activate?.();
+			if (data.buttonStatus.right || data.buttonStatus.a) {
+				onNext?.();
+			} else if (data.buttonStatus.left || data.buttonStatus.y) {
+				onPrev?.();
+			} else if (data.buttonStatus.up || data.buttonStatus.x) {
+				onUp?.();
+			} else if (data.buttonStatus.down || data.buttonStatus.b) {
+				onDown?.();
+			} else if (data.buttonStatus.leftStick || data.buttonStatus.rightStick) {
+				activate?.();
+			}
 		};
 
 		if (controller) {
 			handleData(controller);
 		}
-		// Cleanup function to avoid memory leaks
 		return () => {
-			// If you need to clean up listeners or other resources, do it here
+			// Cleanup if needed
 		};
-	}, [controller]);
+	}, [controller, onNext, onPrev, onUp, onDown, activate]);
 
 	return (
 		<div className={classes.placement}>
 			{!isConnected && (
-				<button onClick={connect} type="button">
+				<button onClick={connectAndListen} type="button">
 					<Icon name="FiBluetooth" size={32} color="white" />
 				</button>
 			)}
-
 			{/* <pre>{output}</pre> */}
 		</div>
 	);

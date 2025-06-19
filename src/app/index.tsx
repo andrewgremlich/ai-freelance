@@ -17,7 +17,7 @@ import { KeyboardGuide } from "./components/KeyboardGuide.tsx";
 import { NavigationMap } from "./components/NavigationMap.tsx";
 import { ProgressIndicator } from "./components/ProgressIndicator.tsx";
 import { SlideExplorer } from "./components/SlideExplorer.tsx";
-// import { SpeakerNotes } from "./components/SpeakerNotes.tsx";
+import { SpeakerNotes } from "./components/SpeakerNotes.tsx";
 import { SpellCast } from "./components/SpellCast.tsx";
 import { TogglePresentation } from "./components/TogglePresentation.tsx";
 import { useWhooshes } from "./hooks/useWhooshes.tsx";
