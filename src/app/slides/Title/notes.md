@@ -16,16 +16,20 @@ _CHANGE SLIDE: CostumeChange_
 
 Speaking of fun, I want to recognize that we are in a movie theater. This is a place where people come to be told inspirational stories, and occasionally people dress up to participate in that story. I've never had that experience of dressing up for a movie premiere, so I want to take that opportunity now.
 
-_PULL OUT WIZARD OUTFIT AND JOYCON_
+_PULL OUT WIZARD OUTFIT_
 
-I am dressed in a wizard outfit! I hope this doesn't distract from my presentation too much, so I will try and make this presentation professional as possible still.
+I'm in a wizard outfit! I hope this doesn't distract from my presentation too much, so I will try and make this presentation professional as possible still.
 
-But still, I think there needs to be a little _magic_.
+And yet, if I'm in a wizard outfit, I think there needs to be a little bit of _magic_ in this presentation.
 
-I have hear my _wand_.
+I have here my _wand_.
+
+_PULL OUT JOYCON_
+
+It's taken me some time to learn how to use this to produce magic, but I believe I can have a go at it.
 
 _ACTIVATE MAGIC MODE_
 
-Very good. Let's move on.
+Ah it's working. Very good. Let's move on.
 
 _CHANGE SLIDE: ProvelPrint_
