@@ -1,5 +1,5 @@
-import { H1, Quote } from "summit-kit";
-import type { Slide } from "../types/slide.tsx";
+import { Quote } from "summit-kit";
+
 import { NotFound } from "./404.tsx";
 import { TheFinale } from "./Finale/index.tsx";
 import { GithubActions } from "./GithubActions/index.tsx";
@@ -8,19 +8,25 @@ import { AIRant } from "./Leveraging/ai-rant.tsx";
 import { Leveraging, VibeCoding } from "./Leveraging/index.tsx";
 import { Knowing, Mastering } from "./Mastering/index.tsx";
 import { PresentationLink, Social } from "./PresentationInfo/index.ts";
-import classes from "./Slides.module.css";
 import { ProvelPrint } from "./ProvelPrint/index.tsx";
+import { TheWhy } from "./TheWhy/index.tsx";
+import { CostumeChange, Title } from "./Title/index.tsx";
+
+import type { Slide } from "../types/slide.tsx";
+
+import classes from "./Slides.module.css";
 
 const slides: Slide[] = [
 	{
 		path: "/home",
-		element: <H1>AI-Powered Freelance Development</H1>,
+		element: <Title />,
 		notes: "Welcome! Introduce yourself and the topic.",
-	},
-	{
-		path: "/presentation",
-		element: <PresentationLink />,
-		children: [{ path: "/social", element: <Social /> }],
+		children: [
+			{
+				path: "/costume-change",
+				element: <CostumeChange />,
+			},
+		],
 	},
 	{
 		path: "/the-project",
@@ -54,16 +60,7 @@ const slides: Slide[] = [
 	{
 		path: "/leveraging",
 		element: <Leveraging />,
-		children: [
-			{
-				path: "/vibe-coding",
-				element: <VibeCoding />,
-			},
-			{
-				path: "/ai-rant",
-				element: <AIRant />,
-			},
-		],
+		children: [],
 	},
 	{
 		path: "/mastering",
@@ -76,6 +73,21 @@ const slides: Slide[] = [
 		],
 	},
 	{
+		path: "/the-why",
+		element: <TheWhy />,
+		notes: "Discuss the motivation behind using AI in freelance development.",
+		children: [
+			{
+				path: "/vibe-coding",
+				element: <VibeCoding />,
+			},
+			{
+				path: "/ai-rant",
+				element: <AIRant />,
+			},
+		],
+	},
+	{
 		path: "/inspire",
 		element: (
 			<Quote classes={[classes.legible]}>
@@ -84,7 +96,11 @@ const slides: Slide[] = [
 			</Quote>
 		),
 	},
-	{ path: "/social", element: <Social /> },
+	{
+		path: "/presentation",
+		element: <PresentationLink />,
+		children: [{ path: "/social", element: <Social /> }],
+	},
 	{
 		path: "/finale",
 		element: <TheFinale />,

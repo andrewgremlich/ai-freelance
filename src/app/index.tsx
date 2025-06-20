@@ -23,14 +23,19 @@ import { TogglePresentation } from "./components/TogglePresentation.tsx";
 import { useWhooshes } from "./hooks/useWhooshes.tsx";
 import slides, { flattenedSlides } from "./slides/index.tsx";
 import type { Direction, Slide } from "./types/slide.ts";
-import { ConnectToController } from "./components/ConnectToController.tsx";
+// import { ConnectToController } from "./components/ConnectToController.tsx";
 
 function App() {
 	const { whooshIncrement, whooshSrc } = useWhooshes({ amount: 2 });
 	const [spellTrigger, setSpellTrigger] = useState(false);
 	const [spellEffectsEnabled, setSpellEffectsEnabled] = useState(false);
+	const { play: activateMagic } = useAudio({
+		src: "magic-activate.webm",
+		volume: 1,
+		autoplay: true,
+	});
 	const { play, stop, seek } = useAudio({
-		src: "beat_outro.mp3", // seek to 0:47 // use for intro too?
+		src: "beat_outro.webm", // seek to 0:47 // use for intro too?
 		volume: 1,
 		fadeInDuration: 30,
 	});
@@ -52,6 +57,9 @@ function App() {
 		{
 			shortcutKey: "Control+Shift+M",
 			action: () => {
+				if (!spellEffectsEnabled) {
+					activateMagic();
+				}
 				setVolume(volume === 0 ? 1 : 0);
 				setSpellEffectsEnabled((prev) => !prev);
 			},
@@ -239,7 +247,7 @@ function App() {
 					</motion.div>
 				</AnimatePresence>
 			</PageTurner>
-			<ConnectToController
+			{/* <ConnectToController
 				onNext={hasNextSlide ? goNext : undefined}
 				onPrev={hasPrevSlide ? goPrev : undefined}
 				onDown={hasChildren ? goDown : undefined}
@@ -248,7 +256,7 @@ function App() {
 					setVolume(volume === 0 ? 1 : 0);
 					setSpellEffectsEnabled((prev) => !prev);
 				}}
-			/>
+			/> */}
 			<TogglePresentation presentationPath="/" />
 			<NavigationMap />
 			<KeyboardGuide />

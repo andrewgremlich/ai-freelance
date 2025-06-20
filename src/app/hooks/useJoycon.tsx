@@ -10,29 +10,35 @@ export const useJoycon = () => {
 	const [controller, setController] = useState<JoyConDataPacket | null>(null);
 	const latestPacketRef = useRef<JoyConDataPacket | null>(null);
 	const attachedJoyCons = useRef(new WeakSet()).current;
-	const rafIdRef = useRef<number | null>(null);
+	const intervalIdRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
 	// Call this to prompt the user to connect a Joy-Con and start listening
 	const connectAndListen = useCallback(async () => {
 		await connectJoyCon();
+
 		setIsConnected(true);
+
 		for (const joyCon of connectedJoyCons.values()) {
 			if (attachedJoyCons.has(joyCon)) continue;
+
 			attachedJoyCons.add(joyCon);
+
 			await joyCon.enableVibration();
+
 			joyCon.on("hidinput", (event: { detail: JoyConDataPacket }) => {
 				latestPacketRef.current = event.detail;
 			});
 		}
 
 		const update = () => {
-			if (latestPacketRef.current) {
-				setController(latestPacketRef.current);
-			}
-			rafIdRef.current = requestAnimationFrame(update);
+			intervalIdRef.current = setInterval(() => {
+				if (latestPacketRef.current) {
+					setController(latestPacketRef.current);
+				}
+			}, 1000);
 		};
 
-		if (!rafIdRef.current) {
+		if (!intervalIdRef.current) {
 			update();
 		}
 	}, [attachedJoyCons]);
