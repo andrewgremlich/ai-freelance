@@ -1,7 +1,7 @@
 import "summit-kit/styles";
 
 import { AnimatePresence, motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import {
 	Navigate,
 	Route,
@@ -22,13 +22,30 @@ import { SpellCast } from "./components/SpellCast.tsx";
 import { TogglePresentation } from "./components/TogglePresentation.tsx";
 import { useWhooshes } from "./hooks/useWhooshes.tsx";
 import slides, { flattenedSlides } from "./slides/index.tsx";
-import type { Direction, Slide } from "./types/slide.ts";
+import type { Slide } from "./types/slide.ts";
+import usePresentationStore from "./hooks/store.tsx";
+import { useShallow } from "zustand/shallow";
 // import { ConnectToController } from "./components/ConnectToController.tsx";
 
 function App() {
+	const {
+		spellTrigger,
+		transitionDirection,
+		spellEffectsEnabled,
+		toggleSpellEffectsEnabled,
+		setTransitionDirection,
+		toggleSpellTrigger,
+	} = usePresentationStore(
+		useShallow((state) => ({
+			spellTrigger: state.spellTrigger,
+			transitionDirection: state.transitionDirection,
+			spellEffectsEnabled: state.spellEffectsEnabled,
+			toggleSpellEffectsEnabled: state.toggleSpellEffectsEnabled,
+			setTransitionDirection: state.setTransitionDirection,
+			toggleSpellTrigger: state.toggleSpellTrigger,
+		})),
+	);
 	const { whooshIncrement, whooshSrc } = useWhooshes({ amount: 2 });
-	const [spellTrigger, setSpellTrigger] = useState(false);
-	const [spellEffectsEnabled, setSpellEffectsEnabled] = useState(false);
 	const { play: playTestSound } = useAudio({
 		src: "test_tap_mic.webm",
 		volume: 1,
@@ -50,10 +67,6 @@ function App() {
 	});
 	const location = useLocation();
 	const navigate = useNavigate();
-	const [transitionDirection, setTransitionDirection] = useState<Direction>({
-		axis: "horizontal",
-		forward: true,
-	});
 
 	// Toggle spell effects and volume with Control+Shift+M
 	useKeyPress([
@@ -64,7 +77,7 @@ function App() {
 					activateMagic();
 				}
 				setVolume(volume === 0 ? 1 : 0);
-				setSpellEffectsEnabled((prev) => !prev);
+				toggleSpellEffectsEnabled();
 			},
 		},
 		{
@@ -110,8 +123,8 @@ function App() {
 	const goNext = async () => {
 		if (hasNextSlide) {
 			setStereo(1);
-			setSpellTrigger(true);
-			setTimeout(() => setSpellTrigger(false), 100); // Reset trigger after short delay
+			toggleSpellTrigger();
+			setTimeout(() => toggleSpellTrigger(), 100); // Reset trigger after short delay
 			whooshIncrement();
 
 			setTransitionDirection({
@@ -137,8 +150,8 @@ function App() {
 	const goPrev = async () => {
 		if (hasPrevSlide) {
 			setStereo(-1);
-			setSpellTrigger(true);
-			setTimeout(() => setSpellTrigger(false), 100); // Reset trigger after short delay
+			toggleSpellTrigger();
+			setTimeout(() => toggleSpellTrigger(), 100); // Reset trigger after short delay
 			whooshIncrement();
 
 			setTransitionDirection({
@@ -167,8 +180,8 @@ function App() {
 			currentParentSlide.children.length > 0
 		) {
 			whooshIncrement();
-			setSpellTrigger(true);
-			setTimeout(() => setSpellTrigger(false), 100); // Reset trigger after short delay
+			toggleSpellTrigger();
+			setTimeout(() => toggleSpellTrigger(), 100); // Reset trigger after short delay
 
 			setTransitionDirection({
 				axis: "vertical",
@@ -184,8 +197,8 @@ function App() {
 		// If we're in a child slide, navigate up to parent
 		if (isChildSlide) {
 			whooshIncrement();
-			setSpellTrigger(true);
-			setTimeout(() => setSpellTrigger(false), 100); // Reset trigger after short delay
+			toggleSpellTrigger();
+			setTimeout(() => toggleSpellTrigger(), 100); // Reset trigger after short delay
 
 			setTransitionDirection({
 				axis: "vertical",
@@ -208,6 +221,7 @@ function App() {
 
 	return (
 		<>
+			{/** biome-ignore lint/nursery/useUniqueElementIds: this is for styling */}
 			<div id="canvas-container">
 				{location.pathname !== "/finale" && (
 					<SpellCast
