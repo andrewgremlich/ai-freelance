@@ -22,27 +22,30 @@ import { SpellCast } from "./components/SpellCast.tsx";
 import { TogglePresentation } from "./components/TogglePresentation.tsx";
 import { useWhooshes } from "./hooks/useWhooshes.tsx";
 import slides, { flattenedSlides } from "./slides/index.tsx";
-import type { Slide } from "./types/slide.ts";
 import usePresentationStore from "./hooks/store.tsx";
 import { useShallow } from "zustand/shallow";
 // import { ConnectToController } from "./components/ConnectToController.tsx";
 
 function App() {
-	const {
-		spellTrigger,
-		transitionDirection,
-		spellEffectsEnabled,
-		toggleSpellEffectsEnabled,
-		setTransitionDirection,
-		toggleSpellTrigger,
-	} = usePresentationStore(
+	console.log("APP RENDERING");
+
+	const store = usePresentationStore(
 		useShallow((state) => ({
 			spellTrigger: state.spellTrigger,
 			transitionDirection: state.transitionDirection,
 			spellEffectsEnabled: state.spellEffectsEnabled,
+			currentParentSlideIndex: state.currentParentSlideIndex,
+			slideHasChildren: state.slideHasChildren,
+			isChildSlide: state.isChildSlide,
+			currentParentSlide: state.currentParentSlide,
+			currentChildIndex: state.currentChildIndex,
+			hasNextSlide: state.hasNextSlide,
+			hasPrevSlide: state.hasPrevSlide,
 			toggleSpellEffectsEnabled: state.toggleSpellEffectsEnabled,
 			setTransitionDirection: state.setTransitionDirection,
 			toggleSpellTrigger: state.toggleSpellTrigger,
+			findCurrentSlidesState: state.findCurrentSlidesState,
+			doesSlideHasChildren: state.doesSlideHasChildren,
 		})),
 	);
 	const { whooshIncrement, whooshSrc } = useWhooshes({ amount: 2 });
@@ -59,7 +62,11 @@ function App() {
 		volume: 1,
 		fadeInDuration: 30,
 	});
-	const { setStereo, setVolume, volume } = useAudio({
+	const {
+		setStereo,
+		setVolume: setWhooshVolume,
+		volume,
+	} = useAudio({
 		src: whooshSrc,
 		volume: 0,
 		stereo: 0,
@@ -68,16 +75,19 @@ function App() {
 	const location = useLocation();
 	const navigate = useNavigate();
 
+	store.findCurrentSlidesState(location);
+	store.doesSlideHasChildren();
+
 	// Toggle spell effects and volume with Control+Shift+M
 	useKeyPress([
 		{
 			shortcutKey: "Control+Shift+M",
 			action: () => {
-				if (!spellEffectsEnabled) {
+				if (!store.spellEffectsEnabled) {
 					activateMagic();
 				}
-				setVolume(volume === 0 ? 1 : 0);
-				toggleSpellEffectsEnabled();
+				setWhooshVolume(volume === 0 ? 1 : 0);
+				store.toggleSpellEffectsEnabled();
 			},
 		},
 		{
@@ -86,121 +96,89 @@ function App() {
 		},
 	]);
 
-	const currentParentSlideIndex = slides.findIndex((s) =>
-		location.pathname.includes(s.path),
-	);
-
-	// Check if current slide has children for deep-dive capability
-	const hasChildren =
-		slides[currentParentSlideIndex]?.children &&
-		slides[currentParentSlideIndex].children.length > 0;
-
-	// Check if we're on a child slide
 	const currentPathParts = location.pathname.split("/");
-	const isChildSlide = currentPathParts.length > 2; // /parent/child vs /parent
-
-	// Find current child index if we're on a child slide
-	const currentParentSlide = slides[currentParentSlideIndex];
-	let currentChildIndex = -1;
-
-	if (isChildSlide && currentParentSlide?.children) {
-		// Get last path segment (child path)
-		const childPath = `/${currentPathParts[currentPathParts.length - 1]}`;
-		currentChildIndex = currentParentSlide.children.findIndex(
-			(child: Slide) => child.path === childPath,
-		);
-	}
-
-	// Navigation availability checks
-	const hasNextSlide = isChildSlide
-		? currentChildIndex < (currentParentSlide?.children?.length ?? 0) - 1
-		: !!slides[currentParentSlideIndex + 1];
-
-	const hasPrevSlide = isChildSlide
-		? currentChildIndex > 0
-		: !!slides[currentParentSlideIndex - 1];
 
 	const goNext = async () => {
-		if (hasNextSlide) {
+		if (store.hasNextSlide) {
 			setStereo(1);
-			toggleSpellTrigger();
-			setTimeout(() => toggleSpellTrigger(), 100); // Reset trigger after short delay
+			store.toggleSpellTrigger();
+			setTimeout(() => store.toggleSpellTrigger(), 100); // Reset trigger after short delay
 			whooshIncrement();
 
-			setTransitionDirection({
+			store.setTransitionDirection({
 				axis: "horizontal",
 				forward: true,
 			});
 
 			// If we're on a child slide, navigate to the next child
-			if (isChildSlide && currentParentSlide?.children) {
-				const nextChildIndex = currentChildIndex + 1;
-				if (nextChildIndex < currentParentSlide.children.length) {
+			if (store.isChildSlide && store.currentParentSlide?.children) {
+				const nextChildIndex = store.currentChildIndex + 1;
+				if (nextChildIndex < store.currentParentSlide.children.length) {
 					const nextChildPath =
-						currentParentSlide.children[nextChildIndex].path;
-					navigate(`${currentParentSlide.path}${nextChildPath}`);
+						store.currentParentSlide.children[nextChildIndex].path;
+					navigate(`${store.currentParentSlide.path}${nextChildPath}`);
 				}
 			} else {
 				// Regular navigation to next parent slide
-				navigate(slides[currentParentSlideIndex + 1].path);
+				navigate(slides[store.currentParentSlideIndex + 1].path);
 			}
 		}
 	};
 
 	const goPrev = async () => {
-		if (hasPrevSlide) {
+		if (store.hasPrevSlide) {
 			setStereo(-1);
-			toggleSpellTrigger();
-			setTimeout(() => toggleSpellTrigger(), 100); // Reset trigger after short delay
+			store.toggleSpellTrigger();
+			setTimeout(() => store.toggleSpellTrigger(), 100); // Reset trigger after short delay
 			whooshIncrement();
 
-			setTransitionDirection({
+			store.setTransitionDirection({
 				axis: "horizontal",
 				forward: false,
 			});
 
 			// If we're on a child slide, navigate to the previous child
-			if (isChildSlide && currentParentSlide?.children) {
-				const prevChildIndex = currentChildIndex - 1;
+			if (store.isChildSlide && store.currentParentSlide?.children) {
+				const prevChildIndex = store.currentChildIndex - 1;
 				if (prevChildIndex >= 0) {
 					const prevChildPath =
-						currentParentSlide.children[prevChildIndex].path;
-					navigate(`${currentParentSlide.path}${prevChildPath}`);
+						store.currentParentSlide.children[prevChildIndex].path;
+					navigate(`${store.currentParentSlide.path}${prevChildPath}`);
 				}
 			} else {
 				// Regular navigation to previous parent slide
-				navigate(slides[currentParentSlideIndex - 1].path);
+				navigate(slides[store.currentParentSlideIndex - 1].path);
 			}
 		}
 	};
 
 	const goDown = async () => {
 		if (
-			currentParentSlide?.children &&
-			currentParentSlide.children.length > 0
+			store.currentParentSlide?.children &&
+			store.currentParentSlide.children.length > 0
 		) {
 			whooshIncrement();
-			toggleSpellTrigger();
-			setTimeout(() => toggleSpellTrigger(), 100); // Reset trigger after short delay
+			store.toggleSpellTrigger();
+			setTimeout(() => store.toggleSpellTrigger(), 100); // Reset trigger after short delay
 
-			setTransitionDirection({
+			store.setTransitionDirection({
 				axis: "vertical",
 				forward: true,
 			});
 			navigate(
-				`${currentParentSlide.path}${currentParentSlide.children[0].path}`,
+				`${store.currentParentSlide.path}${store.currentParentSlide.children[0].path}`,
 			);
 		}
 	};
 
 	const goUp = async () => {
 		// If we're in a child slide, navigate up to parent
-		if (isChildSlide) {
+		if (store.isChildSlide) {
 			whooshIncrement();
-			toggleSpellTrigger();
-			setTimeout(() => toggleSpellTrigger(), 100); // Reset trigger after short delay
+			store.toggleSpellTrigger();
+			setTimeout(() => store.toggleSpellTrigger(), 100); // Reset trigger after short delay
 
-			setTransitionDirection({
+			store.setTransitionDirection({
 				axis: "vertical",
 				forward: false,
 			});
@@ -211,13 +189,13 @@ function App() {
 	};
 
 	useEffect(() => {
-		if (location.pathname === "/finale" && spellEffectsEnabled) {
+		if (location.pathname === "/finale" && store.spellEffectsEnabled) {
 			// seek(47); // Seek to 0:47 for the finale
 			play();
 		} else {
 			stop();
 		}
-	}, [location.pathname, play, stop, spellEffectsEnabled]);
+	}, [location.pathname, play, stop, store.spellEffectsEnabled]);
 
 	return (
 		<>
@@ -225,37 +203,49 @@ function App() {
 			<div id="canvas-container">
 				{location.pathname !== "/finale" && (
 					<SpellCast
-						axis={transitionDirection.axis}
-						forward={transitionDirection.forward}
-						trigger={spellTrigger}
-						enabled={spellEffectsEnabled} // Pass enabled prop
+						axis={store.transitionDirection.axis}
+						forward={store.transitionDirection.forward}
+						trigger={store.spellTrigger}
+						enabled={store.spellEffectsEnabled} // Pass enabled prop
 					/>
 				)}
 
 				{location.pathname === "/finale" && (
-					<Fireworks enabled={spellEffectsEnabled} />
+					<Fireworks enabled={store.spellEffectsEnabled} />
 				)}
 			</div>
 			<ProgressIndicator />
 			<PageTurner
-				onNext={hasNextSlide ? goNext : undefined}
-				onPrev={hasPrevSlide ? goPrev : undefined}
-				onDown={hasChildren ? goDown : undefined}
-				onUp={isChildSlide ? goUp : undefined}
+				onNext={store.hasNextSlide ? goNext : undefined}
+				onPrev={store.hasPrevSlide ? goPrev : undefined}
+				onDown={store.slideHasChildren ? goDown : undefined}
+				onUp={store.isChildSlide ? goUp : undefined}
 			>
 				<AnimatePresence mode="wait">
 					<motion.div
 						key={location.pathname}
 						initial={
-							transitionDirection.axis === "horizontal"
-								? { x: transitionDirection.forward ? 300 : -300, opacity: 0 }
-								: { y: transitionDirection.forward ? 300 : -300, opacity: 0 }
+							store.transitionDirection.axis === "horizontal"
+								? {
+										x: store.transitionDirection.forward ? 300 : -300,
+										opacity: 0,
+									}
+								: {
+										y: store.transitionDirection.forward ? 300 : -300,
+										opacity: 0,
+									}
 						}
 						animate={{ x: 0, y: 0, opacity: 1 }}
 						exit={
-							transitionDirection.axis === "horizontal"
-								? { x: transitionDirection.forward ? -300 : 300, opacity: 0 }
-								: { y: transitionDirection.forward ? -300 : 300, opacity: 0 }
+							store.transitionDirection.axis === "horizontal"
+								? {
+										x: store.transitionDirection.forward ? -300 : 300,
+										opacity: 0,
+									}
+								: {
+										y: store.transitionDirection.forward ? -300 : 300,
+										opacity: 0,
+									}
 						}
 						transition={{ duration: 0.2 }}
 					>
