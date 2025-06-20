@@ -29,6 +29,10 @@ function App() {
 	const { whooshIncrement, whooshSrc } = useWhooshes({ amount: 2 });
 	const [spellTrigger, setSpellTrigger] = useState(false);
 	const [spellEffectsEnabled, setSpellEffectsEnabled] = useState(false);
+	const { play: playTestSound } = useAudio({
+		src: "test_tap_mic.webm",
+		volume: 1,
+	});
 	const { play: activateMagic } = useAudio({
 		src: "magic-activate.webm",
 		volume: 1,
@@ -62,6 +66,10 @@ function App() {
 				setVolume(volume === 0 ? 1 : 0);
 				setSpellEffectsEnabled((prev) => !prev);
 			},
+		},
+		{
+			shortcutKey: "Control+Shift+T",
+			action: () => playTestSound(),
 		},
 	]);
 

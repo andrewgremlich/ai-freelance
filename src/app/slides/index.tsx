@@ -4,7 +4,7 @@ import { NotFound } from "./404.tsx";
 import { TheFinale } from "./Finale/index.tsx";
 import { GithubActions } from "./GithubActions/index.tsx";
 import { Learning, Slicer, ThreeDTech, Whooshes } from "./Learning/index.tsx";
-import { Leveraging, VibeCoding } from "./Leveraging/index.tsx";
+import { Leveraging } from "./Leveraging/index.tsx";
 import { Knowing, Mastering } from "./Mastering/index.tsx";
 import { PresentationLink, Social } from "./PresentationInfo/index.ts";
 import { ProvelPrint } from "./ProvelPrint/index.tsx";
