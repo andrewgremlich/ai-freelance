@@ -2,13 +2,7 @@ import "summit-kit/styles";
 
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect } from "react";
-import {
-	Navigate,
-	Route,
-	Routes,
-	useLocation,
-	useNavigate,
-} from "react-router";
+import { Navigate, Route, Routes, useLocation } from "react-router";
 import { PageTurner, useAudio, useKeyPress } from "summit-kit/client";
 import { v4 } from "uuid";
 
@@ -21,33 +15,18 @@ import { SpeakerNotes } from "./components/SpeakerNotes.tsx";
 import { SpellCast } from "./components/SpellCast.tsx";
 import { TogglePresentation } from "./components/TogglePresentation.tsx";
 import { useWhooshes } from "./hooks/useWhooshes.tsx";
-import slides, { flattenedSlides } from "./slides/index.tsx";
-import usePresentationStore from "./hooks/store.tsx";
+import { useNavigation } from "./hooks/useNavigation.tsx";
+import { flattenedSlides } from "./slides/index.tsx";
+import usePresentationStore, { selectEffectsState } from "./hooks/store.tsx";
 import { useShallow } from "zustand/shallow";
-// import { ConnectToController } from "./components/ConnectToController.tsx";
 
 function App() {
-	console.log("APP RENDERING");
-
-	const store = usePresentationStore(
-		useShallow((state) => ({
-			spellTrigger: state.spellTrigger,
-			transitionDirection: state.transitionDirection,
-			spellEffectsEnabled: state.spellEffectsEnabled,
-			currentParentSlideIndex: state.currentParentSlideIndex,
-			slideHasChildren: state.slideHasChildren,
-			isChildSlide: state.isChildSlide,
-			currentParentSlide: state.currentParentSlide,
-			currentChildIndex: state.currentChildIndex,
-			hasNextSlide: state.hasNextSlide,
-			hasPrevSlide: state.hasPrevSlide,
-			toggleSpellEffectsEnabled: state.toggleSpellEffectsEnabled,
-			setTransitionDirection: state.setTransitionDirection,
-			toggleSpellTrigger: state.toggleSpellTrigger,
-			findCurrentSlidesState: state.findCurrentSlidesState,
-			doesSlideHasChildren: state.doesSlideHasChildren,
-		})),
+	const navigation = useNavigation();
+	const effects = usePresentationStore(useShallow(selectEffectsState));
+	const setCurrentSlideFromLocation = usePresentationStore(
+		(state) => state.setCurrentSlideFromLocation,
 	);
+
 	const { whooshIncrement, whooshSrc } = useWhooshes({ amount: 2 });
 	const { play: playTestSound } = useAudio({
 		src: "test_tap_mic.webm",
@@ -57,7 +36,7 @@ function App() {
 		src: "magic-activate.webm",
 		volume: 1,
 	});
-	const { play, stop, seek } = useAudio({
+	const { play, stop } = useAudio({
 		src: "beat_outro.webm", // seek to 0:47 // use for intro too?
 		volume: 1,
 		fadeInDuration: 30,
@@ -73,21 +52,22 @@ function App() {
 		autoplay: true,
 	});
 	const location = useLocation();
-	const navigate = useNavigate();
 
-	store.findCurrentSlidesState(location);
-	store.doesSlideHasChildren();
+	// Update store when location changes
+	useEffect(() => {
+		setCurrentSlideFromLocation(location);
+	}, [location, setCurrentSlideFromLocation]);
 
 	// Toggle spell effects and volume with Control+Shift+M
 	useKeyPress([
 		{
 			shortcutKey: "Control+Shift+M",
 			action: () => {
-				if (!store.spellEffectsEnabled) {
+				if (!effects.spellEffectsEnabled) {
 					activateMagic();
 				}
 				setWhooshVolume(volume === 0 ? 1 : 0);
-				store.toggleSpellEffectsEnabled();
+				effects.toggleSpellEffectsEnabled();
 			},
 		},
 		{
@@ -96,106 +76,55 @@ function App() {
 		},
 	]);
 
-	const currentPathParts = location.pathname.split("/");
-
 	const goNext = async () => {
-		if (store.hasNextSlide) {
+		if (navigation.hasNextSlide) {
 			setStereo(1);
-			store.toggleSpellTrigger();
-			setTimeout(() => store.toggleSpellTrigger(), 100); // Reset trigger after short delay
+			effects.toggleSpellTrigger();
+			setTimeout(() => effects.toggleSpellTrigger(), 100);
 			whooshIncrement();
 
-			store.setTransitionDirection({
-				axis: "horizontal",
-				forward: true,
-			});
-
-			// If we're on a child slide, navigate to the next child
-			if (store.isChildSlide && store.currentParentSlide?.children) {
-				const nextChildIndex = store.currentChildIndex + 1;
-				if (nextChildIndex < store.currentParentSlide.children.length) {
-					const nextChildPath =
-						store.currentParentSlide.children[nextChildIndex].path;
-					navigate(`${store.currentParentSlide.path}${nextChildPath}`);
-				}
-			} else {
-				// Regular navigation to next parent slide
-				navigate(slides[store.currentParentSlideIndex + 1].path);
-			}
+			navigation.goNext();
 		}
 	};
 
 	const goPrev = async () => {
-		if (store.hasPrevSlide) {
+		if (navigation.hasPrevSlide) {
 			setStereo(-1);
-			store.toggleSpellTrigger();
-			setTimeout(() => store.toggleSpellTrigger(), 100); // Reset trigger after short delay
+			effects.toggleSpellTrigger();
+			setTimeout(() => effects.toggleSpellTrigger(), 100);
 			whooshIncrement();
 
-			store.setTransitionDirection({
-				axis: "horizontal",
-				forward: false,
-			});
-
-			// If we're on a child slide, navigate to the previous child
-			if (store.isChildSlide && store.currentParentSlide?.children) {
-				const prevChildIndex = store.currentChildIndex - 1;
-				if (prevChildIndex >= 0) {
-					const prevChildPath =
-						store.currentParentSlide.children[prevChildIndex].path;
-					navigate(`${store.currentParentSlide.path}${prevChildPath}`);
-				}
-			} else {
-				// Regular navigation to previous parent slide
-				navigate(slides[store.currentParentSlideIndex - 1].path);
-			}
+			navigation.goPrev();
 		}
 	};
 
 	const goDown = async () => {
-		if (
-			store.currentParentSlide?.children &&
-			store.currentParentSlide.children.length > 0
-		) {
+		if (navigation.slideHasChildren) {
 			whooshIncrement();
-			store.toggleSpellTrigger();
-			setTimeout(() => store.toggleSpellTrigger(), 100); // Reset trigger after short delay
+			effects.toggleSpellTrigger();
+			setTimeout(() => effects.toggleSpellTrigger(), 100);
 
-			store.setTransitionDirection({
-				axis: "vertical",
-				forward: true,
-			});
-			navigate(
-				`${store.currentParentSlide.path}${store.currentParentSlide.children[0].path}`,
-			);
+			navigation.goDown();
 		}
 	};
 
 	const goUp = async () => {
-		// If we're in a child slide, navigate up to parent
-		if (store.isChildSlide) {
+		if (navigation.isChildSlide) {
 			whooshIncrement();
-			store.toggleSpellTrigger();
-			setTimeout(() => store.toggleSpellTrigger(), 100); // Reset trigger after short delay
+			effects.toggleSpellTrigger();
+			setTimeout(() => effects.toggleSpellTrigger(), 100);
 
-			store.setTransitionDirection({
-				axis: "vertical",
-				forward: false,
-			});
-			// Extract the parent path (everything before the last segment)
-			const parentPath = currentPathParts.slice(0, -1).join("/");
-			navigate(parentPath);
+			navigation.goUp();
 		}
 	};
 
 	useEffect(() => {
-		if (location.pathname === "/finale" && store.spellEffectsEnabled) {
-			// seek(47); // Seek to 0:47 for the finale
+		if (location.pathname === "/finale" && effects.spellEffectsEnabled) {
 			play();
 		} else {
 			stop();
 		}
-	}, [location.pathname, play, stop, store.spellEffectsEnabled]);
+	}, [location.pathname, play, stop, effects.spellEffectsEnabled]);
 
 	return (
 		<>
@@ -203,47 +132,47 @@ function App() {
 			<div id="canvas-container">
 				{location.pathname !== "/finale" && (
 					<SpellCast
-						axis={store.transitionDirection.axis}
-						forward={store.transitionDirection.forward}
-						trigger={store.spellTrigger}
-						enabled={store.spellEffectsEnabled} // Pass enabled prop
+						axis={effects.transitionDirection.axis}
+						forward={effects.transitionDirection.forward}
+						trigger={effects.spellTrigger}
+						enabled={effects.spellEffectsEnabled}
 					/>
 				)}
 
 				{location.pathname === "/finale" && (
-					<Fireworks enabled={store.spellEffectsEnabled} />
+					<Fireworks enabled={effects.spellEffectsEnabled} />
 				)}
 			</div>
 			<ProgressIndicator />
 			<PageTurner
-				onNext={store.hasNextSlide ? goNext : undefined}
-				onPrev={store.hasPrevSlide ? goPrev : undefined}
-				onDown={store.slideHasChildren ? goDown : undefined}
-				onUp={store.isChildSlide ? goUp : undefined}
+				onNext={navigation.hasNextSlide ? goNext : undefined}
+				onPrev={navigation.hasPrevSlide ? goPrev : undefined}
+				onDown={navigation.slideHasChildren ? goDown : undefined}
+				onUp={navigation.isChildSlide ? goUp : undefined}
 			>
 				<AnimatePresence mode="wait">
 					<motion.div
 						key={location.pathname}
 						initial={
-							store.transitionDirection.axis === "horizontal"
+							effects.transitionDirection.axis === "horizontal"
 								? {
-										x: store.transitionDirection.forward ? 300 : -300,
+										x: effects.transitionDirection.forward ? 300 : -300,
 										opacity: 0,
 									}
 								: {
-										y: store.transitionDirection.forward ? 300 : -300,
+										y: effects.transitionDirection.forward ? 300 : -300,
 										opacity: 0,
 									}
 						}
 						animate={{ x: 0, y: 0, opacity: 1 }}
 						exit={
-							store.transitionDirection.axis === "horizontal"
+							effects.transitionDirection.axis === "horizontal"
 								? {
-										x: store.transitionDirection.forward ? -300 : 300,
+										x: effects.transitionDirection.forward ? -300 : 300,
 										opacity: 0,
 									}
 								: {
-										y: store.transitionDirection.forward ? -300 : 300,
+										y: effects.transitionDirection.forward ? -300 : 300,
 										opacity: 0,
 									}
 						}
@@ -258,16 +187,6 @@ function App() {
 					</motion.div>
 				</AnimatePresence>
 			</PageTurner>
-			{/* <ConnectToController
-				onNext={hasNextSlide ? goNext : undefined}
-				onPrev={hasPrevSlide ? goPrev : undefined}
-				onDown={hasChildren ? goDown : undefined}
-				onUp={isChildSlide ? goUp : undefined}
-				activate={() => {
-					setVolume(volume === 0 ? 1 : 0);
-					setSpellEffectsEnabled((prev) => !prev);
-				}}
-			/> */}
 			<TogglePresentation presentationPath="/" />
 			<NavigationMap />
 			<KeyboardGuide />
