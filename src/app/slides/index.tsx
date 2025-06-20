@@ -3,8 +3,7 @@ import { Quote } from "summit-kit";
 import { NotFound } from "./404.tsx";
 import { TheFinale } from "./Finale/index.tsx";
 import { GithubActions } from "./GithubActions/index.tsx";
-import { Learning, Slicer, ThreeDTech } from "./Learning/index.tsx";
-import { AIRant } from "./Leveraging/ai-rant.tsx";
+import { Learning, Slicer, ThreeDTech, Whooshes } from "./Learning/index.tsx";
 import { Leveraging, VibeCoding } from "./Leveraging/index.tsx";
 import { Knowing, Mastering } from "./Mastering/index.tsx";
 import { PresentationLink, Social } from "./PresentationInfo/index.ts";
@@ -20,7 +19,6 @@ const slides: Slide[] = [
 	{
 		path: "/home",
 		element: <Title />,
-		notes: "Welcome! Introduce yourself and the topic.",
 		children: [
 			{
 				path: "/costume-change",
@@ -31,7 +29,6 @@ const slides: Slide[] = [
 	{
 		path: "/the-project",
 		element: <ProvelPrint />,
-		notes: "Explain the project background and goals.",
 	},
 	{
 		path: "/learning",
@@ -51,9 +48,7 @@ const slides: Slide[] = [
 			},
 			{
 				path: "/use-whooshes",
-				element: <div>Use Whooshes</div>,
-				notes:
-					"Discuss the use of whooshes in the project and how AI didn't help. It was a basic React mistake by putting an array in an useEffect dependency.",
+				element: <Whooshes />,
 			},
 		],
 	},
@@ -75,17 +70,6 @@ const slides: Slide[] = [
 	{
 		path: "/the-why",
 		element: <TheWhy />,
-		notes: "Discuss the motivation behind using AI in freelance development.",
-		children: [
-			{
-				path: "/vibe-coding",
-				element: <VibeCoding />,
-			},
-			{
-				path: "/ai-rant",
-				element: <AIRant />,
-			},
-		],
 	},
 	{
 		path: "/inspire",

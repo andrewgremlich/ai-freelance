@@ -32,7 +32,6 @@ function App() {
 	const { play: activateMagic } = useAudio({
 		src: "magic-activate.webm",
 		volume: 1,
-		autoplay: true,
 	});
 	const { play, stop, seek } = useAudio({
 		src: "beat_outro.webm", // seek to 0:47 // use for intro too?

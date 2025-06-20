@@ -27,3 +27,5 @@ I have hear my _wand_.
 _ACTIVATE MAGIC MODE_
 
 Very good. Let's move on.
+
+_CHANGE SLIDE: ProvelPrint_
