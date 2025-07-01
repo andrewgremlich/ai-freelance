@@ -48,7 +48,9 @@ As it turned out, about one year ago David reached out to me again asking if I w
 
 _CHANGE SLIDE: Learning_
 
-I had no idea how to approach this project. I had to learn several different things: 3D Tech, Slicing, and Github Actions. My first approach to learn how to do these things was manually looking up the work that other people have done.
+I had no idea how to approach this project. I had to learn several different things: 3D Tech, Slicing, and Github Actions.
+
+My first approach to learn about 3D was to look up the work that other people have done. I found several slicer software, custom independently made and professionally made slicers.
 
 _CHANGE SLIDE: ThreeDTech_
 
@@ -61,3 +63,16 @@ _CHANGE SLIDE: Whooshes_
 Discuss the use of whooshes in the project and how AI didn't help. It was a basic React mistake by putting an array in an useEffect dependency.
 
 _CHANGE SLIDE: Leveraging_
+
+_CHANGE SLIDE: Mastering_
+
+_CHANGE SLIDE: Knowing_
+
+_CHANGE SLIDE: The Why_
+
+_CHANGE SLIDE: Inspire_
+
+_CHANGE SLIDE: Presentation_
+
+_CHANGE SLIDE: Finale_
+
