@@ -32,11 +32,10 @@
 		"@types/react-router": "^5.1.20",
 		"@types/w3c-web-serial": "^1.0.8",
 		"@types/web": "^0.0.245",
-		"@types/web-bluetooth": "^0.0.21",
 		"@vercel/react-router": "^1.1.2",
 		"@vitejs/plugin-react-swc": "^3.10.2",
 		"typescript": "^5.8.3",
-		"vite": "^7.0.2",
+		"vite": "^6.3.5",
 		"vitest": "^3.2.4"
 	}
 }
