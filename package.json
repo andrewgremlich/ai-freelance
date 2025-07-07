@@ -35,7 +35,7 @@
 		"@vercel/react-router": "^1.1.2",
 		"@vitejs/plugin-react-swc": "^3.10.2",
 		"typescript": "^5.8.3",
-		"vite": "^7.0.2",
+		"vite": "^6.3.5",
 		"vitest": "^3.2.4"
 	}
 }
