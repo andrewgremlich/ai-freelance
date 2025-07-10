@@ -3,7 +3,7 @@ import { Icon } from "summit-kit";
 
 import classes from "./ConnectToController.module.css";
 import { useJoycon } from "../hooks/useJoycon.tsx";
-import type { JoyConDataPacket } from "joy-con-webhid";
+import type { CompleteJoyConDataPacket } from "joy-con-webhid";
 
 type ConnectToControllerProps = {
 	onNext?: () => void;
@@ -23,7 +23,7 @@ export const ConnectToController = ({
 	const { connectAndListen, isConnected, controller } = useJoycon();
 
 	useEffect(() => {
-		const handleData = (data: JoyConDataPacket) => {
+		const handleData = (data: CompleteJoyConDataPacket) => {
 			if (data.buttonStatus.right || data.buttonStatus.a) {
 				onNext?.();
 			} else if (data.buttonStatus.left || data.buttonStatus.y) {
