@@ -32,9 +32,3 @@ export const TheWhy = () => {
 		</>
 	);
 };
-
-// NeuroChat: A Neuroadaptive AI Chatbot for Customizing Learning Experiences
-// https://arxiv.org/pdf/2503.07599
-
-// A Psychiatrist Posed As a Teen With Therapy Chatbots. The Conversations Were Alarming
-// https://time.com/7291048/ai-chatbot-therapy-kids/

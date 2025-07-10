@@ -76,3 +76,28 @@ _CHANGE SLIDE: Presentation_
 
 _CHANGE SLIDE: Finale_
 
+
+SRC:
+
+https://hbr.org/2025/05/research-gen-ai-makes-people-more-productive-and-less-motivated
+
+https://www.linkedin.com/feed/update/urn:li:activity:7340386826504876033/
+
+https://arxiv.org/pdf/2506.08872v1
+
+https://time.com/7295195/ai-chatgpt-google-learning-school/
+
+https://www.reuters.com/business/ai-slows-down-some-experienced-software-developers-study-finds-2025-07-10/
+
+- But the new METR study shows that those gains don’t apply to all software development scenarios. In particular, this study showed that experienced developers intimately familiar with the quirks and requirements of large, established open source codebases experienced a slowdown.
+- https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/
+
+https://arxiv.org/abs/2302.06590
+
+https://economics.mit.edu/sites/default/files/inline-files/draft_copilot_experiments.pdf
+
+NeuroChat: A Neuroadaptive AI Chatbot for Customizing Learning Experiences
+https://arxiv.org/pdf/2503.07599
+
+A Psychiatrist Posed As a Teen With Therapy Chatbots. The Conversations Were Alarming
+https://time.com/7291048/ai-chatbot-therapy-kids/
