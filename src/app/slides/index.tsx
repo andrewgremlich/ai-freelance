@@ -11,6 +11,7 @@ import { ProvelPrint } from "./ProvelPrint/index.tsx";
 import classes from "./Slides.module.css";
 import { TheWhy } from "./TheWhy/index.tsx";
 import { CostumeChange, Title } from "./Title/index.tsx";
+import { PresentationController } from "./Controller.tsx";
 
 const slides: Slide[] = [
 	{
@@ -92,8 +93,10 @@ const slides: Slide[] = [
 	},
 ];
 
-const withRemovedNotFound = slides.filter((slide) => slide.path !== "/*");
-export default withRemovedNotFound;
+const presentationSlides = slides.filter(
+	(slide) => ["/controller", "/*"].includes(slide.path) === false,
+);
+export default presentationSlides;
 
 export const flattenedSlides = slides.flatMap((slide) => {
 	const newSlides = [slide];

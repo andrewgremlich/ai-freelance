@@ -1,7 +1,7 @@
 import "summit-kit/styles";
 
 import { AnimatePresence, motion } from "framer-motion";
-import { useEffect } from "react";
+import { useCallback, useEffect, useRef } from "react";
 import { Navigate, Route, Routes, useLocation } from "react-router";
 import { PageTurner, useAudio, useKeyPress } from "summit-kit/client";
 import { v4 } from "uuid";
@@ -13,7 +13,6 @@ import { ProgressIndicator } from "./components/ProgressIndicator.tsx";
 import { SlideExplorer } from "./components/SlideExplorer.tsx";
 import { SpeakerNotes } from "./components/SpeakerNotes.tsx";
 import { SpellCast } from "./components/SpellCast.tsx";
-import { TogglePresentation } from "./components/TogglePresentation.tsx";
 import usePresentationStore, { selectEffectsState } from "./hooks/store.tsx";
 import { useNavigation } from "./hooks/useNavigation.tsx";
 import { useWhooshes } from "./hooks/useWhooshes.tsx";
@@ -128,6 +127,105 @@ function App() {
 		}
 	}, [location.pathname, play, stop, effects.spellEffectsEnabled]);
 
+	const connectionRef = useRef<PresentationConnection | null>(null);
+	const handlersRef = useRef({
+		goNext,
+		goPrev,
+		goUp,
+		goDown,
+		activateMagicFn,
+		playTestSound,
+		navigation
+	});
+
+	// Update handlers ref on each render
+	useEffect(() => {
+		handlersRef.current = {
+			goNext,
+			goPrev,
+			goUp,
+			goDown,
+			activateMagicFn,
+			playTestSound,
+			navigation
+		};
+	});
+
+	const addConnection = useCallback((connection: PresentationConnection) => {
+		if (!connectionRef.current) {
+			console.log("Adding new connection", connection);
+			connectionRef.current = connection;
+
+			connection.onmessage = (message: MessageEvent) => {
+				try {
+					const messageObj = JSON.parse(message.data);
+					console.log('Received command:', messageObj);
+					
+					const handlers = handlersRef.current;
+					
+					// Handle navigation commands from controller
+					if (messageObj.action) {
+						switch (messageObj.action) {
+							case 'next':
+								if (handlers.navigation.hasNextSlide) handlers.goNext();
+								break;
+							case 'prev':
+								if (handlers.navigation.hasPrevSlide) handlers.goPrev();
+								break;
+							case 'up':
+								if (handlers.navigation.isChildSlide) handlers.goUp();
+								break;
+							case 'down':
+								if (handlers.navigation.slideHasChildren) handlers.goDown();
+								break;
+							case 'activate':
+								handlers.activateMagicFn();
+								break;
+							case 'testSound':
+								handlers.playTestSound();
+								break;
+							default:
+								console.log('Unknown action:', messageObj.action);
+						}
+					}
+				} catch (error) {
+					console.error("Error parsing message:", error);
+				}
+			};
+
+			connection.onclose = () => {
+				console.log("Connection closed");
+				connectionRef.current = null;
+			};
+
+			connection.onterminate = () => {
+				console.log("Connection terminated");
+				connectionRef.current = null;
+			};
+		}
+	}, []);
+
+	useEffect(() => {
+		const nav = navigator as Navigator & {
+			presentation?: {
+				receiver?: PresentationReceiver;
+			};
+		};
+		
+		if (nav.presentation?.receiver) {
+			nav.presentation.receiver.connectionList.then((list: PresentationConnectionList) => {
+				list.connections.forEach((connection: PresentationConnection) => {
+					addConnection(connection);
+				});
+
+				list.onconnectionavailable = (evt: PresentationConnectionAvailableEvent) => {
+					console.log("New connection available:", evt.connection);
+					addConnection(evt.connection);
+				};
+			});
+		}
+	}, [addConnection]);
+
 	return (
 		<>
 			<div id="canvas-container">
@@ -196,7 +294,6 @@ function App() {
 				activate={activateMagicFn}
 				testSound={playTestSound}
 			/>
-			<TogglePresentation presentationPath="/" />
 			<NavigationMap />
 			<KeyboardGuide />
 			<SlideExplorer />

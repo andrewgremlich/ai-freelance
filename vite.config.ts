@@ -21,6 +21,10 @@ export default defineConfig(() => ({
     emptyOutDir: true,
     reportCompressedSize: true,
     rollupOptions: {
+      input: {
+        main: "index.html",
+        controller: "controller.html",
+      },
       output: {
         entryFileNames: "assets/[name].js",
         chunkFileNames: "assets/[name].js",

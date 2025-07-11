@@ -4,16 +4,20 @@ import { useKeyPress } from "summit-kit/client";
 
 import classes from "./ToggleFullScreen.module.css";
 
-export const TogglePresentation = (props: { presentationPath?: string }) => {
-	// biome-ignore lint/suspicious/noExplicitAny: don't know the type of PresentationRequest
-	const presentationRef = useRef<any>(null);
+interface TogglePresentationProps { 
+	presentationPath?: string;
+	onConnectionEstablished?: (connection: PresentationConnection) => void;
+}
+
+export const TogglePresentation = (props: TogglePresentationProps) => {
+	const presentationConnectionRef = useRef<PresentationConnection | null>(null);
 
 	useKeyPress([
 		{
 			shortcutKey: "Escape",
 			action: async () => {
-				if (presentationRef.current?.connection) {
-					await presentationRef.current.connection.close();
+				if (presentationConnectionRef.current) {
+					await presentationConnectionRef.current.terminate();
 					console.log("Exiting full screen mode");
 				}
 			},
@@ -21,24 +25,57 @@ export const TogglePresentation = (props: { presentationPath?: string }) => {
 	]);
 
 	const startPresentation = async (url: string) => {
-		if ("PresentationRequest" in window) {
-			// @ts-ignore
-			const request = new window.PresentationRequest(url);
-			presentationRef.current = request;
-			try {
-				const connection = await request.start();
-				presentationRef.current.connection = connection;
-				connection.onconnect = () => {
-					console.log("Presentation connected");
+		const presentationUrl =
+			window.location.origin + (url.startsWith("/") ? url : "/" + url);
+		
+		const win = window as Window & {
+			PresentationRequest?: {
+				new (urls: string[]): PresentationRequest;
+			};
+		};
+		
+		const PresentationRequestClass = win.PresentationRequest;
+		if (!PresentationRequestClass) {
+			console.warn("Presentation API not supported");
+			return;
+		}
+		
+		const request = new PresentationRequestClass([presentationUrl]);
+
+		try {
+			const connection = await request.start();
+			presentationConnectionRef.current = connection;
+
+			connection.onconnect = () => {
+				console.log("Presentation connected");
+				
+				// Notify parent component about the connection
+				if (props.onConnectionEstablished) {
+					props.onConnectionEstablished(connection);
+				}
+
+				connection.onmessage = (message: MessageEvent) => {
+					console.log(`Received message: ${message.data}`);
 				};
-				connection.onclose = () => {
-					console.log("Presentation closed");
-				};
-			} catch (e) {
-				console.warn("Unable to start presentation:", e);
-			}
-		} else {
-			alert("Presentation API is not supported in this browser.");
+
+				// Send initial connection confirmation
+				connection.send(JSON.stringify({ 
+					type: 'controller-ready',
+					timestamp: Date.now() 
+				}));
+			};
+
+			connection.onclose = () => {
+				console.log("Presentation closed");
+				presentationConnectionRef.current = null;
+			};
+
+			connection.onterminate = () => {
+				console.log("Presentation terminated");
+				presentationConnectionRef.current = null;
+			};
+		} catch (e) {
+			console.warn("Unable to start presentation:", e);
 		}
 	};
 
@@ -47,13 +84,13 @@ export const TogglePresentation = (props: { presentationPath?: string }) => {
 			<button
 				type="button"
 				onClick={async () => {
-					await startPresentation(props.presentationPath || "/");
+					await startPresentation(props.presentationPath || "/home");
 				}}
 				aria-label="Open Presentation on Second Screen"
 				title="Open Presentation on Second Screen"
 				style={{ marginLeft: 8 }}
 			>
-				<Icon name="FiMonitor" size={32} color="white" />
+				<Icon name="FiMonitor" size={32} color="black" />
 			</button>
 		</div>
 	);
