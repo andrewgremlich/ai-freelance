@@ -14,7 +14,7 @@
 		"@react-three/fiber": "^9.2.0",
 		"dexie": "^4.0.11",
 		"framer-motion": "^12.23.3",
-		"joy-con-webhid": "^0.9.0",
+		"joy-con-webhid": "^0.10.0",
 		"react": "^19.1.0",
 		"react-dom": "^19.1.0",
 		"react-icons": "^5.5.0",
