@@ -1,7 +1,3 @@
 export const Knowing = () => {
-	return (
-		<>
-			<h1>Knowing</h1>
-		</>
-	);
+	return <h1>Knowing</h1>;
 };

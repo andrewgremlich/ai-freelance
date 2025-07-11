@@ -1,5 +1,4 @@
 import { Canvas } from "@react-three/fiber";
-import { v4 } from "uuid";
 import { AppearanceMode, RenderMode, VFXEmitter, VFXParticles } from "wawa-vfx";
 
 export const Fireworks = ({ enabled }: { enabled: boolean }) => {

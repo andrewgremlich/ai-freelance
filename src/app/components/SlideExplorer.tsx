@@ -42,6 +42,7 @@ export const SlideExplorer = () => {
 					<div
 						className={classes.explorerContent}
 						onClick={(e) => e.stopPropagation()}
+						onKeyDown={(e) => e.stopPropagation()}
 						role="dialog"
 						aria-label="Slide Explorer"
 					>

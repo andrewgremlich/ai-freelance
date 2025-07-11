@@ -53,7 +53,7 @@ export const useNavigation = () => {
 		hasPrevSlide: navigation.hasPrevSlide,
 		slideHasChildren: navigation.slideHasChildren,
 		isChildSlide: navigation.isChildSlide,
-		
+
 		// Navigation actions
 		goNext: handleNext,
 		goPrev: handlePrev,

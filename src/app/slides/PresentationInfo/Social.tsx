@@ -1,6 +1,6 @@
-import QRCode from "react-qr-code";
-import { H1, P, Icon } from "summit-kit";
 import { RiBlueskyLine } from "react-icons/ri";
+import QRCode from "react-qr-code";
+import { H1, Icon, P } from "summit-kit";
 
 import classes from "./Social.module.css";
 

@@ -1,14 +1,16 @@
 import {
-	connectJoyCon,
+	type CompleteJoyConDataPacket,
 	connectedJoyCons,
-	type JoyConDataPacket,
+	connectJoyCon,
 } from "joy-con-webhid";
-import { useState, useRef, useCallback } from "react";
+import { useCallback, useRef, useState } from "react";
 
 export const useJoycon = () => {
 	const [isConnected, setIsConnected] = useState(false);
-	const [controller, setController] = useState<JoyConDataPacket | null>(null);
-	const latestPacketRef = useRef<JoyConDataPacket | null>(null);
+	const [controller, setController] = useState<CompleteJoyConDataPacket | null>(
+		null,
+	);
+	const latestPacketRef = useRef<CompleteJoyConDataPacket | null>(null);
 	const attachedJoyCons = useRef(new WeakSet()).current;
 	const intervalIdRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
@@ -25,8 +27,8 @@ export const useJoycon = () => {
 
 			await joyCon.enableVibration();
 
-			joyCon.on("hidinput", (event: { detail: JoyConDataPacket }) => {
-				latestPacketRef.current = event.detail;
+			joyCon.on("hidinput", (event) => {
+				latestPacketRef.current = event.detail as CompleteJoyConDataPacket;
 			});
 		}
 

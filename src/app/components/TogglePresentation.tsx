@@ -5,7 +5,7 @@ import { useKeyPress } from "summit-kit/client";
 import classes from "./ToggleFullScreen.module.css";
 
 export const TogglePresentation = (props: { presentationPath?: string }) => {
-	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
+	// biome-ignore lint/suspicious/noExplicitAny: don't know the type of PresentationRequest
 	const presentationRef = useRef<any>(null);
 
 	useKeyPress([

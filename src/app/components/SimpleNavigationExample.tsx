@@ -8,7 +8,16 @@ export const SimpleNavigationExample = () => {
 	const navigation = useNavigation();
 
 	return (
-		<div style={{ position: "fixed", bottom: 20, right: 20, background: "rgba(0,0,0,0.8)", padding: 10, borderRadius: 8 }}>
+		<div
+			style={{
+				position: "fixed",
+				bottom: 20,
+				right: 20,
+				background: "rgba(0,0,0,0.8)",
+				padding: 10,
+				borderRadius: 8,
+			}}
+		>
 			<button
 				type="button"
 				onClick={navigation.goUp}

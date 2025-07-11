@@ -1,4 +1,4 @@
-import { H1, Quote } from "summit-kit";
+import { H1 } from "summit-kit";
 
 import classes from "./Finale.module.css";
 

@@ -1,5 +1,5 @@
 import { Quote } from "summit-kit";
-
+import type { Slide } from "../types/slide.tsx";
 import { NotFound } from "./404.tsx";
 import { TheFinale } from "./Finale/index.tsx";
 import { GithubActions } from "./GithubActions/index.tsx";
@@ -8,12 +8,9 @@ import { Leveraging } from "./Leveraging/index.tsx";
 import { Knowing, Mastering } from "./Mastering/index.tsx";
 import { PresentationLink, Social } from "./PresentationInfo/index.ts";
 import { ProvelPrint } from "./ProvelPrint/index.tsx";
+import classes from "./Slides.module.css";
 import { TheWhy } from "./TheWhy/index.tsx";
 import { CostumeChange, Title } from "./Title/index.tsx";
-
-import type { Slide } from "../types/slide.tsx";
-
-import classes from "./Slides.module.css";
 
 const slides: Slide[] = [
 	{

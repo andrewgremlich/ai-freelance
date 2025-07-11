@@ -1,9 +1,8 @@
+import type { CompleteJoyConDataPacket } from "joy-con-webhid";
 import { useEffect } from "react";
 import { Icon } from "summit-kit";
-
-import classes from "./ConnectToController.module.css";
 import { useJoycon } from "../hooks/useJoycon.tsx";
-import type { CompleteJoyConDataPacket } from "joy-con-webhid";
+import classes from "./ConnectToController.module.css";
 
 type ConnectToControllerProps = {
 	onNext?: () => void;

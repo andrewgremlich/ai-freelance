@@ -5,7 +5,7 @@ import { useEffect } from "react";
 import { Navigate, Route, Routes, useLocation } from "react-router";
 import { PageTurner, useAudio, useKeyPress } from "summit-kit/client";
 import { v4 } from "uuid";
-
+import { useShallow } from "zustand/shallow";
 import { Fireworks } from "./components/Fireworks.tsx";
 import { KeyboardGuide } from "./components/KeyboardGuide.tsx";
 import { NavigationMap } from "./components/NavigationMap.tsx";
@@ -14,11 +14,10 @@ import { SlideExplorer } from "./components/SlideExplorer.tsx";
 import { SpeakerNotes } from "./components/SpeakerNotes.tsx";
 import { SpellCast } from "./components/SpellCast.tsx";
 import { TogglePresentation } from "./components/TogglePresentation.tsx";
-import { useWhooshes } from "./hooks/useWhooshes.tsx";
-import { useNavigation } from "./hooks/useNavigation.tsx";
-import { flattenedSlides } from "./slides/index.tsx";
 import usePresentationStore, { selectEffectsState } from "./hooks/store.tsx";
-import { useShallow } from "zustand/shallow";
+import { useNavigation } from "./hooks/useNavigation.tsx";
+import { useWhooshes } from "./hooks/useWhooshes.tsx";
+import { flattenedSlides } from "./slides/index.tsx";
 
 function App() {
 	const navigation = useNavigation();
@@ -128,7 +127,6 @@ function App() {
 
 	return (
 		<>
-			{/** biome-ignore lint/nursery/useUniqueElementIds: this is for styling */}
 			<div id="canvas-container">
 				{location.pathname !== "/finale" && (
 					<SpellCast

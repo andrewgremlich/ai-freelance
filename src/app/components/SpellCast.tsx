@@ -2,6 +2,12 @@ import { Canvas } from "@react-three/fiber";
 import { useMemo } from "react";
 import { AppearanceMode, RenderMode, VFXEmitter, VFXParticles } from "wawa-vfx";
 
+type EmitterConfig = {
+	startPositionMin: [number, number, number];
+	startPositionMax: [number, number, number];
+	directionMin: [number, number, number];
+};
+
 export const SpellCast = ({
 	forward,
 	trigger,
@@ -13,48 +19,40 @@ export const SpellCast = ({
 	axis?: "horizontal" | "vertical";
 	enabled?: boolean;
 }) => {
+	const { start, end } = useMemo(() => {
+		const axisConfigs: Record<
+			string,
+			{ start: EmitterConfig; end: EmitterConfig }
+		> = {
+			horizontal: {
+				start: {
+					startPositionMin: [-10, 0, -5],
+					startPositionMax: [0, -10, 0],
+					directionMin: [1, 1, -1],
+				},
+				end: {
+					startPositionMin: [10, 0, -5],
+					startPositionMax: [0, -10, 0],
+					directionMin: [-1, 1, -1],
+				},
+			},
+			vertical: {
+				start: {
+					startPositionMin: [5, 10, -5],
+					startPositionMax: [-5, 5, 0],
+					directionMin: [0, -1, 0], // downward
+				},
+				end: {
+					startPositionMin: [5, -10, -5],
+					startPositionMax: [-5, -5, 0],
+					directionMin: [0, 1, 0], // upward
+				},
+			},
+		};
+		return axisConfigs[axis] || axisConfigs.horizontal;
+	}, [axis]);
+
 	if (!enabled) return null;
-
-	// Compute start/end based on axis
-	type EmitterConfig = {
-		startPositionMin: [number, number, number];
-		startPositionMax: [number, number, number];
-		directionMin: [number, number, number];
-	};
-
-	const axisConfigs: Record<
-		string,
-		{ start: EmitterConfig; end: EmitterConfig }
-	> = {
-		horizontal: {
-			start: {
-				startPositionMin: [-10, 0, -5],
-				startPositionMax: [0, -10, 0],
-				directionMin: [1, 1, -1],
-			},
-			end: {
-				startPositionMin: [10, 0, -5],
-				startPositionMax: [0, -10, 0],
-				directionMin: [-1, 1, -1],
-			},
-		},
-		vertical: {
-			start: {
-				startPositionMin: [5, 10, -5],
-				startPositionMax: [-5, 5, 0],
-				directionMin: [0, -1, 0], // downward
-			},
-			end: {
-				startPositionMin: [5, -10, -5],
-				startPositionMax: [-5, -5, 0],
-				directionMin: [0, 1, 0], // upward
-			},
-		},
-	};
-	const { start, end } = useMemo(
-		() => axisConfigs[axis] || axisConfigs.horizontal,
-		[axis],
-	);
 
 	return (
 		<Canvas>

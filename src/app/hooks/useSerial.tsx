@@ -1,10 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 
-export function useSerial({
-	baudRate = 9600,
-}: {
-	baudRate?: number;
-} = {}) {
+export function useSerial({ baudRate = 9600 }: { baudRate?: number } = {}) {
 	const [port, setPort] = useState<SerialPort | null>(null);
 	const [isConnected, setIsConnected] = useState(false);
 	const [output, setOutput] = useState("");
@@ -25,7 +21,9 @@ export function useSerial({
 			textDecoderRef.current = textDecoder;
 			const abortController = new AbortController();
 			abortControllerRef.current = abortController;
-			const pipePromise = selectedPort.readable?.pipeTo(textDecoder.writable, { signal: abortController.signal });
+			const pipePromise = selectedPort.readable?.pipeTo(textDecoder.writable, {
+				signal: abortController.signal,
+			});
 			pipePromiseRef.current = pipePromise ?? null;
 			const portReader = textDecoder.readable.getReader();
 			readerRef.current = portReader;
@@ -39,7 +37,7 @@ export function useSerial({
 					setOutput(value);
 				}
 			}
-		} catch (error) {
+		} catch (_error) {
 			setIsConnected(false);
 			setPort(null);
 			readerRef.current = null;
@@ -70,7 +68,7 @@ export function useSerial({
 		if (pipePromiseRef.current) {
 			try {
 				await pipePromiseRef.current;
-			} catch (e) {
+			} catch (_e) {
 				// Ignore pipe errors on abort
 			}
 			pipePromiseRef.current = null;
@@ -83,7 +81,7 @@ export function useSerial({
 		if (port) {
 			try {
 				await port.close();
-			} catch (e) {
+			} catch (_e) {
 				// Ignore if already closed or cannot close
 			}
 		}
@@ -92,12 +90,11 @@ export function useSerial({
 		setIsConnected(false);
 	};
 
-	// biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
+	// biome-ignore lint/correctness/useExhaustiveDependencies: just a one-time cleanup
 	useEffect(() => {
 		return () => {
 			disconnect();
 		};
-		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
 	return {
