@@ -1,7 +1,8 @@
 import type { CompleteJoyConDataPacket } from "joy-con-webhid";
 import { useEffect, useRef } from "react";
 import { Icon } from "summit-kit";
-import { useJoycon } from "../hooks/useJoyCon.tsx";
+
+import { useJoycon } from "../hooks/useJoycon.tsx";
 import classes from "./ConnectToController.module.css";
 
 type ConnectToControllerProps = {
@@ -10,6 +11,7 @@ type ConnectToControllerProps = {
 	onUp?: () => void;
 	onDown?: () => void;
 	activate?: () => void;
+	testSound?: () => void;
 };
 
 export const ConnectToController = ({
@@ -18,6 +20,7 @@ export const ConnectToController = ({
 	onUp,
 	onDown,
 	activate,
+	testSound,
 }: ConnectToControllerProps) => {
 	const { connectAndListen, isConnected, controller } = useJoycon();
 	const prevButtonStatusRef = useRef<
@@ -41,12 +44,14 @@ export const ConnectToController = ({
 			onUp?.();
 		} else if (justPressed("down") || justPressed("b")) {
 			onDown?.();
-		} else if (justPressed("leftStick") || justPressed("rightStick")) {
+		} else if (justPressed("zl") || justPressed("zr")) {
 			activate?.();
+		} else if (justPressed("minus") || justPressed("plus")) {
+			testSound?.();
 		}
 
 		prevButtonStatusRef.current = curr;
-	}, [controller, onNext, onPrev, onUp, onDown, activate]);
+	}, [controller, onNext, onPrev, onUp, onDown, activate, testSound]);
 
 	return (
 		<div className={classes.placement}>

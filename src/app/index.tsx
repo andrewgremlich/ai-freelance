@@ -194,6 +194,7 @@ function App() {
 				onUp={goUp}
 				onDown={goDown}
 				activate={activateMagicFn}
+				testSound={playTestSound}
 			/>
 			<TogglePresentation presentationPath="/" />
 			<NavigationMap />
