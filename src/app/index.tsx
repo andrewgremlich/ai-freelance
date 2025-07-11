@@ -17,7 +17,6 @@ import usePresentationStore, { selectEffectsState } from "./hooks/store.tsx";
 import { useNavigation } from "./hooks/useNavigation.tsx";
 import { useWhooshes } from "./hooks/useWhooshes.tsx";
 import { flattenedSlides } from "./slides/index.tsx";
-import { ConnectToController } from "./components/ConnectToController.tsx";
 
 function App() {
 	const navigation = useNavigation();
@@ -135,7 +134,7 @@ function App() {
 		goDown,
 		activateMagicFn,
 		playTestSound,
-		navigation
+		navigation,
 	});
 
 	// Update handlers ref on each render
@@ -147,7 +146,7 @@ function App() {
 			goDown,
 			activateMagicFn,
 			playTestSound,
-			navigation
+			navigation,
 		};
 	});
 
@@ -159,33 +158,33 @@ function App() {
 			connection.onmessage = (message: MessageEvent) => {
 				try {
 					const messageObj = JSON.parse(message.data);
-					console.log('Received command:', messageObj);
-					
+					console.log("Received command:", messageObj);
+
 					const handlers = handlersRef.current;
-					
+
 					// Handle navigation commands from controller
 					if (messageObj.action) {
 						switch (messageObj.action) {
-							case 'next':
+							case "next":
 								if (handlers.navigation.hasNextSlide) handlers.goNext();
 								break;
-							case 'prev':
+							case "prev":
 								if (handlers.navigation.hasPrevSlide) handlers.goPrev();
 								break;
-							case 'up':
+							case "up":
 								if (handlers.navigation.isChildSlide) handlers.goUp();
 								break;
-							case 'down':
+							case "down":
 								if (handlers.navigation.slideHasChildren) handlers.goDown();
 								break;
-							case 'activate':
+							case "activate":
 								handlers.activateMagicFn();
 								break;
-							case 'testSound':
+							case "testSound":
 								handlers.playTestSound();
 								break;
 							default:
-								console.log('Unknown action:', messageObj.action);
+								console.log("Unknown action:", messageObj.action);
 						}
 					}
 				} catch (error) {
@@ -211,18 +210,22 @@ function App() {
 				receiver?: PresentationReceiver;
 			};
 		};
-		
-		if (nav.presentation?.receiver) {
-			nav.presentation.receiver.connectionList.then((list: PresentationConnectionList) => {
-				list.connections.forEach((connection: PresentationConnection) => {
-					addConnection(connection);
-				});
 
-				list.onconnectionavailable = (evt: PresentationConnectionAvailableEvent) => {
-					console.log("New connection available:", evt.connection);
-					addConnection(evt.connection);
-				};
-			});
+		if (nav.presentation?.receiver) {
+			nav.presentation.receiver.connectionList.then(
+				(list: PresentationConnectionList) => {
+					list.connections.forEach((connection: PresentationConnection) => {
+						addConnection(connection);
+					});
+
+					list.onconnectionavailable = (
+						evt: PresentationConnectionAvailableEvent,
+					) => {
+						console.log("New connection available:", evt.connection);
+						addConnection(evt.connection);
+					};
+				},
+			);
 		}
 	}, [addConnection]);
 
@@ -286,14 +289,6 @@ function App() {
 					</motion.div>
 				</AnimatePresence>
 			</PageTurner>
-			<ConnectToController
-				onNext={goNext}
-				onPrev={goPrev}
-				onUp={goUp}
-				onDown={goDown}
-				activate={activateMagicFn}
-				testSound={playTestSound}
-			/>
 			<NavigationMap />
 			<KeyboardGuide />
 			<SlideExplorer />

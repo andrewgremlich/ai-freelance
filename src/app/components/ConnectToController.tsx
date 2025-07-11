@@ -57,7 +57,7 @@ export const ConnectToController = ({
 		<div className={classes.placement}>
 			{!isConnected && (
 				<button onClick={connectAndListen} type="button">
-					<Icon name="FiBluetooth" size={32} color="white" />
+					<Icon name="FiBluetooth" size={32} color="black" />
 				</button>
 			)}
 			{/* <pre>{output}</pre> */}

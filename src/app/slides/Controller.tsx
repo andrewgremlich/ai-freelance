@@ -1,5 +1,6 @@
 import { useCallback, useRef, useState } from "react";
 import { TogglePresentation } from "../components/TogglePresentation.tsx";
+import { ConnectToController } from "../components/ConnectToController.tsx";
 
 export const PresentationController = () => {
 	const [connectionStatus, setConnectionStatus] =
@@ -33,10 +34,13 @@ export const PresentationController = () => {
 	}, []);
 
 	// This component acts as a controller, not a receiver
-	const handleConnectionEstablished = useCallback((connection: PresentationConnection) => {
-		console.log("Presentation connection established in controller");
-		setupConnection(connection);
-	}, [setupConnection]);
+	const handleConnectionEstablished = useCallback(
+		(connection: PresentationConnection) => {
+			console.log("Presentation connection established in controller");
+			setupConnection(connection);
+		},
+		[setupConnection],
+	);
 
 	const sendCommand = useCallback((action: string) => {
 		if (connectionRef.current && connectionRef.current.state === "connected") {
@@ -58,9 +62,17 @@ export const PresentationController = () => {
 
 	return (
 		<div style={{ padding: "20px", fontFamily: "Arial, sans-serif" }}>
-			<TogglePresentation 
-				presentationPath="/home" 
+			<TogglePresentation
+				presentationPath="/home"
 				onConnectionEstablished={handleConnectionEstablished}
+			/>
+			<ConnectToController
+				onNext={() => sendCommand("next")}
+				onPrev={() => sendCommand("prev")}
+				onUp={() => sendCommand("up")}
+				onDown={() => sendCommand("down")}
+				activate={() => sendCommand("activate")}
+				testSound={() => sendCommand("testSound")}
 			/>
 
 			<h1>Presentation Controller</h1>
@@ -155,16 +167,6 @@ export const PresentationController = () => {
 						🔊 Test Sound
 					</button>
 				</div>
-			</div>
-
-			<div style={{ marginTop: "30px", fontSize: "14px", color: "#666" }}>
-				<h3>Instructions:</h3>
-				<ul>
-					<li>Click "Open Presentation on Second Screen" to start</li>
-					<li>Use the buttons above to control the presentation</li>
-					<li>Connect a Joy-Con controller for wireless control</li>
-					<li>Press Escape to close the presentation</li>
-				</ul>
 			</div>
 		</div>
 	);

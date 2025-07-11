@@ -4,7 +4,7 @@ import { useKeyPress } from "summit-kit/client";
 
 import classes from "./ToggleFullScreen.module.css";
 
-interface TogglePresentationProps { 
+interface TogglePresentationProps {
 	presentationPath?: string;
 	onConnectionEstablished?: (connection: PresentationConnection) => void;
 }
@@ -27,19 +27,19 @@ export const TogglePresentation = (props: TogglePresentationProps) => {
 	const startPresentation = async (url: string) => {
 		const presentationUrl =
 			window.location.origin + (url.startsWith("/") ? url : "/" + url);
-		
+
 		const win = window as Window & {
 			PresentationRequest?: {
 				new (urls: string[]): PresentationRequest;
 			};
 		};
-		
+
 		const PresentationRequestClass = win.PresentationRequest;
 		if (!PresentationRequestClass) {
 			console.warn("Presentation API not supported");
 			return;
 		}
-		
+
 		const request = new PresentationRequestClass([presentationUrl]);
 
 		try {
@@ -48,7 +48,7 @@ export const TogglePresentation = (props: TogglePresentationProps) => {
 
 			connection.onconnect = () => {
 				console.log("Presentation connected");
-				
+
 				// Notify parent component about the connection
 				if (props.onConnectionEstablished) {
 					props.onConnectionEstablished(connection);
@@ -59,10 +59,12 @@ export const TogglePresentation = (props: TogglePresentationProps) => {
 				};
 
 				// Send initial connection confirmation
-				connection.send(JSON.stringify({ 
-					type: 'controller-ready',
-					timestamp: Date.now() 
-				}));
+				connection.send(
+					JSON.stringify({
+						type: "controller-ready",
+						timestamp: Date.now(),
+					}),
+				);
 			};
 
 			connection.onclose = () => {

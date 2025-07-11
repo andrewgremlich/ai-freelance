@@ -11,7 +11,6 @@ import { ProvelPrint } from "./ProvelPrint/index.tsx";
 import classes from "./Slides.module.css";
 import { TheWhy } from "./TheWhy/index.tsx";
 import { CostumeChange, Title } from "./Title/index.tsx";
-import { PresentationController } from "./Controller.tsx";
 
 const slides: Slide[] = [
 	{
