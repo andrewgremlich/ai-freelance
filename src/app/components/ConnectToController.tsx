@@ -32,6 +32,7 @@ export const ConnectToController = ({
 		const prev = prevButtonStatusRef.current;
 		const curr = controller.buttonStatus;
 
+		// edge press detection
 		const justPressed = (key: keyof typeof curr) => {
 			return curr[key] && (!prev || !prev[key]);
 		};

@@ -11,6 +11,7 @@ import { ProvelPrint } from "./ProvelPrint/index.tsx";
 import classes from "./Slides.module.css";
 import { TheWhy } from "./TheWhy/index.tsx";
 import { CostumeChange, Title } from "./Title/index.tsx";
+import { Meditate } from "./Meditate/index.tsx";
 
 const slides: Slide[] = [
 	{
@@ -22,6 +23,10 @@ const slides: Slide[] = [
 				element: <CostumeChange />,
 			},
 		],
+	},
+	{
+		path: "/meditate",
+		element: <Meditate />,
 	},
 	{
 		path: "/the-project",
