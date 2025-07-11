@@ -18,6 +18,7 @@ import usePresentationStore, { selectEffectsState } from "./hooks/store.tsx";
 import { useNavigation } from "./hooks/useNavigation.tsx";
 import { useWhooshes } from "./hooks/useWhooshes.tsx";
 import { flattenedSlides } from "./slides/index.tsx";
+import { ConnectToController } from "./components/ConnectToController.tsx";
 
 function App() {
 	const navigation = useNavigation();
@@ -57,17 +58,19 @@ function App() {
 		setCurrentSlideFromLocation(location);
 	}, [location, setCurrentSlideFromLocation]);
 
+	const activateMagicFn = () => {
+		if (!effects.spellEffectsEnabled) {
+			activateMagic();
+		}
+		setWhooshVolume(volume === 0 ? 1 : 0);
+		effects.toggleSpellEffectsEnabled();
+	};
+
 	// Toggle spell effects and volume with Control+Shift+M
 	useKeyPress([
 		{
 			shortcutKey: "Control+Shift+M",
-			action: () => {
-				if (!effects.spellEffectsEnabled) {
-					activateMagic();
-				}
-				setWhooshVolume(volume === 0 ? 1 : 0);
-				effects.toggleSpellEffectsEnabled();
-			},
+			action: activateMagicFn,
 		},
 		{
 			shortcutKey: "Control+Shift+T",
@@ -185,6 +188,13 @@ function App() {
 					</motion.div>
 				</AnimatePresence>
 			</PageTurner>
+			<ConnectToController
+				onNext={goNext}
+				onPrev={goPrev}
+				onUp={goUp}
+				onDown={goDown}
+				activate={activateMagicFn}
+			/>
 			<TogglePresentation presentationPath="/" />
 			<NavigationMap />
 			<KeyboardGuide />

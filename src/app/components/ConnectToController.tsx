@@ -1,7 +1,7 @@
 import type { CompleteJoyConDataPacket } from "joy-con-webhid";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { Icon } from "summit-kit";
-import { useJoycon } from "../hooks/useJoycon.tsx";
+import { useJoycon } from "../hooks/useJoyCon.tsx";
 import classes from "./ConnectToController.module.css";
 
 type ConnectToControllerProps = {
@@ -20,28 +20,32 @@ export const ConnectToController = ({
 	activate,
 }: ConnectToControllerProps) => {
 	const { connectAndListen, isConnected, controller } = useJoycon();
+	const prevButtonStatusRef = useRef<
+		CompleteJoyConDataPacket["buttonStatus"] | null
+	>(null);
 
 	useEffect(() => {
-		const handleData = (data: CompleteJoyConDataPacket) => {
-			if (data.buttonStatus.right || data.buttonStatus.a) {
-				onNext?.();
-			} else if (data.buttonStatus.left || data.buttonStatus.y) {
-				onPrev?.();
-			} else if (data.buttonStatus.up || data.buttonStatus.x) {
-				onUp?.();
-			} else if (data.buttonStatus.down || data.buttonStatus.b) {
-				onDown?.();
-			} else if (data.buttonStatus.leftStick || data.buttonStatus.rightStick) {
-				activate?.();
-			}
+		if (!controller) return;
+		const prev = prevButtonStatusRef.current;
+		const curr = controller.buttonStatus;
+
+		const justPressed = (key: keyof typeof curr) => {
+			return curr[key] && (!prev || !prev[key]);
 		};
 
-		if (controller) {
-			handleData(controller);
+		if (justPressed("right") || justPressed("a")) {
+			onNext?.();
+		} else if (justPressed("left") || justPressed("y")) {
+			onPrev?.();
+		} else if (justPressed("up") || justPressed("x")) {
+			onUp?.();
+		} else if (justPressed("down") || justPressed("b")) {
+			onDown?.();
+		} else if (justPressed("leftStick") || justPressed("rightStick")) {
+			activate?.();
 		}
-		return () => {
-			// Cleanup if needed
-		};
+
+		prevButtonStatusRef.current = curr;
 	}, [controller, onNext, onPrev, onUp, onDown, activate]);
 
 	return (

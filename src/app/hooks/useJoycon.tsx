@@ -37,7 +37,7 @@ export const useJoycon = () => {
 				if (latestPacketRef.current) {
 					setController(latestPacketRef.current);
 				}
-			}, 1000);
+			}, 50);
 		};
 
 		if (!intervalIdRef.current) {
