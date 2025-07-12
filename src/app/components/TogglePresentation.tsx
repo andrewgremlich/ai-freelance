@@ -26,7 +26,7 @@ export const TogglePresentation = (props: TogglePresentationProps) => {
 
 	const startPresentation = async (url: string) => {
 		const presentationUrl =
-			window.location.origin + (url.startsWith("/") ? url : "/" + url);
+			window.location.origin + (url.startsWith("/") ? url : `/${url}`);
 
 		const win = window as Window & {
 			PresentationRequest?: {

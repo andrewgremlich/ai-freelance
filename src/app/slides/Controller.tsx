@@ -1,6 +1,6 @@
 import { useCallback, useRef, useState } from "react";
-import { TogglePresentation } from "../components/TogglePresentation.tsx";
 import { ConnectToController } from "../components/ConnectToController.tsx";
+import { TogglePresentation } from "../components/TogglePresentation.tsx";
 
 export const PresentationController = () => {
 	const [connectionStatus, setConnectionStatus] =

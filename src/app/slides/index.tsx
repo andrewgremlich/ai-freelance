@@ -6,12 +6,12 @@ import { GithubActions } from "./GithubActions/index.tsx";
 import { Learning, Slicer, ThreeDTech, Whooshes } from "./Learning/index.tsx";
 import { Leveraging } from "./Leveraging/index.tsx";
 import { Knowing, Mastering } from "./Mastering/index.tsx";
+import { Meditate } from "./Meditate/index.tsx";
 import { PresentationLink, Social } from "./PresentationInfo/index.ts";
 import { ProvelPrint } from "./ProvelPrint/index.tsx";
 import classes from "./Slides.module.css";
 import { TheWhy } from "./TheWhy/index.tsx";
 import { CostumeChange, Title } from "./Title/index.tsx";
-import { Meditate } from "./Meditate/index.tsx";
 
 const slides: Slide[] = [
 	{

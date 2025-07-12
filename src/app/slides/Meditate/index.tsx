@@ -1,7 +1,9 @@
-import { H1 } from "summit-kit";
+import classes from "./Meditate.module.css";
 
 export const Meditate = () => {
 	return (
-    <H1>Meditate</H1>
+		<div className={classes.meditateContainer}>
+			<div className={classes.circle} />
+		</div>
 	);
 };

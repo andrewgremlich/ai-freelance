@@ -61,6 +61,12 @@ export const KeyboardGuide = () => {
 								</td>
 								<td>Activate Magic Mode</td>
 							</tr>
+							<tr>
+								<td>
+									<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>T</kbd>
+								</td>
+								<td>Test Sound</td>
+							</tr>
 						</tbody>
 					</table>
 				</div>

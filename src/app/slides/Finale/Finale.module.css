@@ -1,12 +1,12 @@
 .finale-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	width: 100%;
 }
 
 .finale-title {
-  font-size: 3rem;
-  font-weight: bold;
-  margin: 2rem 0;
+	font-size: 3rem;
+	font-weight: bold;
+	margin: 2rem 0;
 }

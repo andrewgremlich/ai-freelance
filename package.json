@@ -8,10 +8,11 @@
 		"build": "vite build",
 		"preview": "vite preview",
 		"test": "vitest",
-		"check": "tsc --noEmit && npx @biomejs/biome check --write ./src"
+		"check": "tsc --noEmit && npx @biomejs/biome check --write --unsafe ./src"
 	},
 	"dependencies": {
 		"@react-three/fiber": "^9.2.0",
+		"classnames": "^2.5.1",
 		"dexie": "^4.0.11",
 		"framer-motion": "^12.23.3",
 		"joy-con-webhid": "^0.10.0",
