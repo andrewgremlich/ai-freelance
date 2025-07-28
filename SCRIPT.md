@@ -1,4 +1,4 @@
-Hello and welcome to my presentation!
+Hello and welcome to my presentation! Thank you for coming!
 
 Today, I want to encourage Software Engineers everywhere to not be discouraged with the rise of AI software. If anything, I want you to learn how to ride the wave of AI technology so that you can adapt just as fast as other AI-enabled software engineers and companies.
 
@@ -14,13 +14,15 @@ I hope this presentation will be engaging, insightful, and memorable.
 
 _CHANGE SLIDE: CostumeChange_
 
-Speaking of fun, I want to recognize that we are in a movie theater. This is a place where people come to be told inspirational stories, and occasionally people dress up to participate in that story. I've never had that experience of dressing up for a movie premiere, so I want to take that opportunity now.
+Speaking of fun, I recognize that we are in a movie theater. This is a place where people come to be told inspirational stories, and occasionally people dress up to participate in that story. I've never had that experience of dressing up for a movie premiere, so I want to take that opportunity now.
 
 _PULL OUT WIZARD OUTFIT_
 
-I'm in a wizard outfit! I hope this doesn't distract from my presentation too much, so I will try and make this presentation professional as possible still.
+A few months ago I fell in love with a cloak off of Etsy, so I purchased it. Naturally I also had to purchase a wizard hat.
 
-And yet, if I'm in a wizard outfit, I think there needs to be a little bit of _magic_ in this presentation.
+I'm in a wizard outfit! I hope this doesn't distract from my presentation too much, so I will try and make this presentation professional still.
+
+And yet, if I'm in a wizard outfit, I think there needs to be a little bit of _magic_ in this presentation. I'm here to have some fun, and I hope you all have some fun as well.
 
 I have here my _wand_.
 
@@ -36,15 +38,15 @@ _CHANGE SLIDE: ProvelPrint_
 
 About a two years ago, I was visiting my in-laws in Washington. One of those in-laws was my wife's aunt and uncle. It was a nice visit; we got to talking about how life went. At one point of the conversation, my wife's aunt, Barbara, turned to me and asked if I knew anything about desktop software. This surprised me because I didn't think that Barbara knew much about software in general.
 
-I replied that I didn't know much because I haven't worked in it at all. But I imagine that I could learn pretty quick, because such is the nature of being a software engineer now-a-days.
+I replied that I didn't know much about desktop specifically because I haven't worked in it professionally. But I imagine that I could learn pretty quick, because such is the nature of being a software engineer now-a-days. On top of that, I was familiar with Electron and various frameworks that could help.
 
 Barbara told me that she discovered through a weird network connection that I could have a freelance job. That network connection was her friend's barber's other friend. Barbara asked if she could share my contact info with her friend's barber's other friend, and this friend would contact me.
 
-A little while later, I got a message from this friend's barber's other friend who introduced himself as David. He asked if I knew much about desktop applications and 3D rendering. I responded that I didn't know much in a desktop environment, but I knew more in a browser environment and I could learn more. David sighed saying that for the moment he would need to go in the direction of desktop technology.
+A little while later, I got a message from this friend who introduced himself as David. He asked if I knew much about desktop applications and 3D rendering. I responded that I didn't know much in a desktop specific environment, but I knew more related to web technology and I could learn more. David sighed saying that for the moment he would need to go in the direction of desktop technology.
 
 This meant no freelance job.
 
-As it turned out, about one year ago David reached out to me again asking if I would have interest in taking the job but with the focus on starting a browser version. This was exciting. I've never done a freelance job before, neither have I done anything with 3D rendering in the browser. By my excitement, I agreed to take the job. David would pay me hourly, and I would send him invoices for the work that I did.
+As it turned out, about one year ago David reached out to me again asking if I would still have interest in taking the job but with the focus on starting a browser version. This was exciting. I've never done a freelance job before, neither have I done anything with 3D rendering in the browser. By my excitement, I agreed to take the job. David would pay me hourly, and I would send him invoices for the work that I did. I did come to realize that my excitement was probably a little faster than my realism.
 
 _CHANGE SLIDE: Learning_
 
@@ -56,11 +58,28 @@ _CHANGE SLIDE: ThreeDTech_
 
 _CHANGE SLIDE: Slicer_
 
-_CHANGE SLIDE: GithubActions_
+### Github Actions
 
-_CHANGE SLIDE: Whooshes_
+Utilizing AI to accelerate comprehension of unfamiliar technologies and
+methodologies. I wrote a github action with the aid of AI. It didn't
+help much because I didn't know what I was doing, but it was a good
+learning.
+
+Converting a large JS file to TS was a challenge, because AI didn't
+convert the whole file. It missed some functions. I would have though
+this is a good implementation for AI, but it wasn't. I had to do it
+manually.
+
+### Whooshes
 
 Discuss the use of whooshes in the project and how AI didn't help. It was a basic React mistake by putting an array in an useEffect dependency.
+
+Utilizing AI to accelerate comprehension of unfamiliar technologies and
+methodologies.
+
+Discuss the use of whooshes in the project and how AI didn't help. It
+was a basic React mistake by putting an array in an useEffect
+dependency.
 
 _CHANGE SLIDE: Leveraging_
 

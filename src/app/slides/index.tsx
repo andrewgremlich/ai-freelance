@@ -2,8 +2,7 @@ import { Quote } from "summit-kit";
 import type { Slide } from "../types/slide.tsx";
 import { NotFound } from "./404.tsx";
 import { TheFinale } from "./Finale/index.tsx";
-import { GithubActions } from "./GithubActions/index.tsx";
-import { Learning, Slicer, ThreeDTech, Whooshes } from "./Learning/index.tsx";
+import { Learning } from "./Learning/index.tsx";
 import { Leveraging } from "./Leveraging/index.tsx";
 import { Knowing, Mastering } from "./Mastering/index.tsx";
 import { Meditate } from "./Meditate/index.tsx";
@@ -35,24 +34,6 @@ const slides: Slide[] = [
 	{
 		path: "/learning",
 		element: <Learning />,
-		children: [
-			{
-				path: "/3d-tech",
-				element: <ThreeDTech />,
-			},
-			{
-				path: "/slicer",
-				element: <Slicer />,
-			},
-			{
-				path: "/github-actions",
-				element: <GithubActions />,
-			},
-			{
-				path: "/use-whooshes",
-				element: <Whooshes />,
-			},
-		],
 	},
 	{
 		path: "/leveraging",
