@@ -34,6 +34,10 @@ _ACTIVATE MAGIC MODE_
 
 Ah it's working. Very good. Let's move on.
 
+_CHANGE SLIDE: Meditate_
+
+I hope you guys in attendance won't mind that I do this. I've programmed this orb to the timing of _box breathing_.
+
 _CHANGE SLIDE: ProvelPrint_
 
 About a two years ago, I was visiting my in-laws in Washington. One of those in-laws was my wife's aunt and uncle. It was a nice visit; we got to talking about how life went. At one point of the conversation, my wife's aunt, Barbara, turned to me and asked if I knew anything about desktop software. This surprised me because I didn't think that Barbara knew much about software in general.
@@ -50,13 +54,13 @@ As it turned out, about one year ago David reached out to me again asking if I w
 
 _CHANGE SLIDE: Learning_
 
-I had no idea how to approach this project. I had to learn several different things: 3D Tech, Slicing, and Github Actions.
+David explained that the project involved importing an STL file into the application and slicing that STL file so that a custom made 3D printer could render it. Right, I didn't know what problems I needed to solve. David talked about slicers, so I guessed I better learn the functions of a slicer. I searched around the internet for what slicers were and what projects used a slicing method. I found that a slicer was a way to divide up a 3D model into a pattern that makes it 3D-printable. This is usually done in layers at a time. In addition, I found out that infill was a way to build support for any hanging edges of a model. Some projects that I found involved Three.JS. So I would go in that direction first and use Three.JS.
+
+David gave me an STL file to play and test with. I loaded that STL file into a Three.JS scene, and I got to learn the syntax a bit.
+
+I had to learn several different things: 3D Tech, Slicing, and Github Actions.
 
 My first approach to learn about 3D was to look up the work that other people have done. I found several slicer software, custom independently made and professionally made slicers.
-
-_CHANGE SLIDE: ThreeDTech_
-
-_CHANGE SLIDE: Slicer_
 
 ### Github Actions
 
