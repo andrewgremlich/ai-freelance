@@ -1,4 +1,5 @@
 import { useCallback, useRef, useState } from "react";
+import { H1, H2, P } from "summit-kit";
 import { ConnectToController } from "../components/ConnectToController.tsx";
 import { TogglePresentation } from "../components/TogglePresentation.tsx";
 
@@ -75,8 +76,8 @@ export const PresentationController = () => {
 				testSound={() => sendCommand("testSound")}
 			/>
 
-			<h1>Presentation Controller</h1>
-			<p>
+			<H1>Presentation Controller</H1>
+			<P>
 				Status:{" "}
 				<span
 					style={{
@@ -86,10 +87,10 @@ export const PresentationController = () => {
 				>
 					{connectionStatus}
 				</span>
-			</p>
+			</P>
 
 			<div style={{ marginTop: "20px" }}>
-				<h2>Navigation Controls</h2>
+				<H2>Navigation Controls</H2>
 				<div
 					style={{
 						display: "grid",
