@@ -36,7 +36,29 @@ Ah it's working. Very good. Let's move on.
 
 _CHANGE SLIDE: Meditate_
 
-I hope you guys in attendance won't mind that I do this. I've programmed this orb to the timing of _box breathing_.
+I hope you guys in attendance won't mind that I do this next part. I've programmed this orb to the timing of _box breathing_.
+
+Box breathing is a form of breathing meditation where you inhale for 4 seconds, hold your breath for 4 seconds, exhale for 4 seconds, hold your breath for for seconds, and then repeat as many times as you like or need. Because each of the 4 steps is 4 seconds long is the reason why it's called box breathing, with a box having for equal length sides. There are other forms of breathing meditation, if you're curious to look at it later.
+
+I want to introduce box breathing because one of the benefits of meditation is stress management. When I first started my career out of college, so many new things happened to cause me stress: I was going into something new and unfamiliar, I had to learn how to work in the software engineering field, and my mother had recently passed away. It seemed as if I could explode at the stress any minute. I complained and vented to my friend, and I felt deeply that I needed to get this better handled, no matter how much I thought my stress was justified.
+
+I went to a NodeJS conference in San Francisco where a speaker promoted meditation to help stress management. This did pique my interest, so I downloaded Headspace to try meditation. After one practice session, I immediately felt how relaxed I got. With this small segment, I hope to inspire proper stress management, and all the better if it's meditation.
+
+Now allow me to explain how breathing meditation works by the two sides of the nervous system, sympathetic and parasympathetic. Sympathetic nervous system is activated in the height of stress, so the heart rate increases and other factors occur to help an individual fight or flight. The parasympathetic nervous system is activated in rest periods. This is where the parasympathetic nervous system encourages the body to rest, rebuild, and recover. A good indicator of which nervous system is activated is how fast you're breathing. If you notice your breaths are short or you're holding your breath, then you're probably in a sympathetic nervous system state. If your breaths are long and relaxed, you're probably in the parasympathetic nervous system. And it is by being aware of one's own breathing one may trigger relaxation in the nervous system.
+
+*CAN SKIP* Sympathetic starts with "S" and "S" stands for stress, and "Parasympathetic" starts with "P" and "P" stands for peace. Or for imagery, a "S" could be for sprinting where the heart rate goes faster, and "P" can be for panda where a panda is peaceful.
+
+With that explained, I would really enjoy it if I can get everyone here to do a quick one minute meditation with me following box breathing pattern.
+
+_ONE MINUTE BOX BREATHING_
+
+Thank you.
+
+You all are now under my spell!
+
+Just kidding.
+
+https://my.clevelandclinic.org/health/articles/17906-meditation
 
 _CHANGE SLIDE: ProvelPrint_
 
