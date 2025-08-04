@@ -82,14 +82,15 @@ The more I continued to explore slicers and have David explain to me what he wan
 
 Eventually, I started to teach myself some 3D animation principles, and I found out about raycasters. Raycasters are incredibly useful to help calculate intersections of light rays and 3D objects in a scene. Intersection calculation was what I needed, and Three.JS had a built-in raycaster object and intersection calculation! Taking this knowledge, I solved that I needed to place the raycaster origin at the center of an STL model and rotate the raycaster on its origin to find where the intersection point would be. After rotating the raycaster and gradually increasing in height, to imitate vase print mode, I would gather all the intersection points and process them into the desired GCode output.
 
+After a few weeks of development, spending about 5-10 hours a week on the project, I finally got to the desired output. I felt so satisfied that I followed my gut instinct on how the original solution just wouldn't work.
 
 
 
-David gave me an STL file to play and test with. I loaded that STL file into a Three.JS scene, and I got to learn the syntax a bit.
+
+
+
 
 I had to learn several different things: 3D Tech, Slicing, and Github Actions.
-
-My first approach to learn about 3D was to look up the work that other people have done. I found several slicer software, custom independently made and professionally made slicers.
 
 ### Github Actions
 
