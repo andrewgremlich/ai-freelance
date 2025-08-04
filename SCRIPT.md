@@ -1,6 +1,6 @@
 Hello and welcome to my presentation! Thank you for coming!
 
-Today, I want to encourage Software Engineers everywhere to not be discouraged with the rise of AI software. If anything, I want you to learn how to ride the wave of AI technology so that you can adapt just as fast as other AI-enabled software engineers and companies.
+Today, I want to encourage Software Engineers everywhere to not be discouraged or stressed out with the rise of AI software. If anything, I want you to learn how to ride the wave of AI technology so that you can adapt just as fast as other AI-enabled software engineers and companies.
 
 I'll share my first project as a freelance engineer and how I used AI tools, and, most importantly, how not to use AI technology. AI Technology is useful and impressive, but if it's misused it can hinder progress as a software engineer.
 
@@ -40,7 +40,7 @@ I hope you guys in attendance won't mind that I do this next part. I've programm
 
 Box breathing is a form of breathing meditation where you inhale for 4 seconds, hold your breath for 4 seconds, exhale for 4 seconds, hold your breath for for seconds, and then repeat as many times as you like or need. Because each of the 4 steps is 4 seconds long is the reason why it's called box breathing, with a box having for equal length sides. There are other forms of breathing meditation, if you're curious to look at it later.
 
-I want to introduce box breathing because one of the benefits of meditation is stress management. When I first started my career out of college, so many new things happened to cause me stress: I was going into something new and unfamiliar, I had to learn how to work in the software engineering field, and my mother had recently passed away. It seemed as if I could explode at the stress any minute. I complained and vented to my friend, and I felt deeply that I needed to get this better handled, no matter how much I thought my stress was justified.
+I want to introduce box breathing because one of the benefits of meditation is stress management. When I first started my career out of college, so many new things happened to cause me stress: I was going into something new and unfamiliar, I had to learn how to work in the software engineering field, and my mother had recently passed away. It seemed as if I could explode at the stress any minute. I complained and vented to my friends, and I felt deeply that I needed to get this handled, no matter how much I thought my stress was justified.
 
 I went to a NodeJS conference in San Francisco where a speaker promoted meditation to help stress management. This did pique my interest, so I downloaded Headspace to try meditation. After one practice session, I immediately felt how relaxed I got. With this small segment, I hope to inspire proper stress management, and all the better if it's meditation.
 
@@ -48,7 +48,7 @@ Now allow me to explain how breathing meditation works by the two sides of the n
 
 *CAN SKIP* Sympathetic starts with "S" and "S" stands for stress, and "Parasympathetic" starts with "P" and "P" stands for peace. Or for imagery, a "S" could be for sprinting where the heart rate goes faster, and "P" can be for panda where a panda is peaceful.
 
-With that explained, I would really enjoy it if I can get everyone here to do a quick one minute meditation with me following box breathing pattern.
+In today's age where the software engineering industry is in flux, things can be stressful. I would really enjoy it if I can get everyone here to do a quick one minute meditation with me following box breathing pattern in order to de-stress about the industry.
 
 _ONE MINUTE BOX BREATHING_
 
@@ -64,19 +64,26 @@ _CHANGE SLIDE: ProvelPrint_
 
 About a two years ago, I was visiting my in-laws in Washington. One of those in-laws was my wife's aunt and uncle. It was a nice visit; we got to talking about how life went. At one point of the conversation, my wife's aunt, Barbara, turned to me and asked if I knew anything about desktop software. This surprised me because I didn't think that Barbara knew much about software in general.
 
-I replied that I didn't know much about desktop specifically because I haven't worked in it professionally. But I imagine that I could learn pretty quick, because such is the nature of being a software engineer now-a-days. On top of that, I was familiar with Electron and various frameworks that could help.
+I replied that I didn't know much about desktop specifically because I haven't worked in it professionally. But I imagine that I could learn pretty quick, because such is the nature of being a software engineer now-a-days. On top of that, I was familiar with Electron and various frameworks that could potentially help.
 
-Barbara told me that she discovered through a weird network connection that I could have a freelance job. That network connection was her friend's barber's other friend. Barbara asked if she could share my contact info with her friend's barber's other friend, and this friend would contact me.
+Barbara told me that she discovered through a weird connection that I could have a freelance job. This connection was her friend's barber's other friend. Barbara asked if she could share my contact info with her friend's barber's other friend, and this friend would contact me.
 
-A little while later, I got a message from this friend who introduced himself as David. He asked if I knew much about desktop applications and 3D rendering. I responded that I didn't know much in a desktop specific environment, but I knew more related to web technology and I could learn more. David sighed saying that for the moment he would need to go in the direction of desktop technology.
-
-This meant no freelance job.
+A little while later, I got a message from this friend who introduced himself as David. He asked if I knew much about desktop applications and 3D rendering. I responded that I didn't know much in a desktop specific environment, but I knew more related to web technology and I could learn more about desktop environments. David sighed saying that for the moment he would need to go in the direction of desktop technology.
 
 As it turned out, about one year ago David reached out to me again asking if I would still have interest in taking the job but with the focus on starting a browser version. This was exciting. I've never done a freelance job before, neither have I done anything with 3D rendering in the browser. By my excitement, I agreed to take the job. David would pay me hourly, and I would send him invoices for the work that I did. I did come to realize that my excitement was probably a little faster than my realism.
 
+David called the project ProvelPrint and he explained that the project involved importing an STL file into the application and slicing that STL file so that a custom made 3D printer could render it.
+
 _CHANGE SLIDE: Learning_
 
-David explained that the project involved importing an STL file into the application and slicing that STL file so that a custom made 3D printer could render it. Right, I didn't know what problems I needed to solve. David talked about slicers, so I guessed I better learn the functions of a slicer. I searched around the internet for what slicers were and what projects used a slicing method. I found that a slicer was a way to divide up a 3D model into a pattern that makes it 3D-printable. This is usually done in layers at a time. In addition, I found out that infill was a way to build support for any hanging edges of a model. Some projects that I found involved Three.JS. So I would go in that direction first and use Three.JS.
+Right, I didn't know what problems I needed to solve. David talked about slicers, so I guessed I better learn the functions of a slicer. I searched around the internet for what slicers were and what projects used a slicing method. I found that a slicer was a way to divide up a 3D model into a pattern that makes it 3D-printable. This is usually done in layers at a time. In addition, I found out that infill was a way to build support for any hanging edges of a model. Some projects that I found involved Three.JS. So I would go in that direction first and use Three.JS.
+
+The more I continued to explore slicers and have David explain to me what he wanted, bit by bit I started to understand the task. Sadly, I still didn't completely understand how to get there. In one attempted solution, I asked ChatGPT to create a slicer function using all the points of an STL file. I ended up getting something that worked on paper, but the more I examined the GCode output the more I realized that this output could not reasonably fit the customer needs. I didn't know exactly why, I just knew that following every point in an STL file just wouldn't work for a 3D printer. The hints that told me this wasn't the right way was: the output GCode file was immensely huge, and that just could not work in transmission; the print needed to be in vase mode where the nozzle height gradually increases; and the height difference between STL points was not configurable.
+
+Eventually, I started to teach myself some 3D animation principles, and I found out about raycasters. Raycasters are incredibly useful to help calculate intersections of light rays and 3D objects in a scene. Intersection calculation was what I needed, and Three.JS had a built-in raycaster object and intersection calculation! Taking this knowledge, I solved that I needed to place the raycaster origin at the center of an STL model and rotate the raycaster on its origin to find where the intersection point would be. After rotating the raycaster and gradually increasing in height, to imitate vase print mode, I would gather all the intersection points and process them into the desired GCode output.
+
+
+
 
 David gave me an STL file to play and test with. I loaded that STL file into a Three.JS scene, and I got to learn the syntax a bit.
 
@@ -123,6 +130,8 @@ _CHANGE SLIDE: Finale_
 
 
 SRC:
+
+https://www.brainonllm.com/
 
 https://hbr.org/2025/05/research-gen-ai-makes-people-more-productive-and-less-motivated
 
