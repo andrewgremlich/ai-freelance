@@ -132,6 +132,10 @@ _CHANGE SLIDE: Finale_
 
 SRC:
 
+https://youtu.be/BYizgB2FcAQ?si=u4Ojm9dcXViEg4SZ
+
+Timestamp 26:26
+
 https://www.brainonllm.com/
 
 https://hbr.org/2025/05/research-gen-ai-makes-people-more-productive-and-less-motivated
