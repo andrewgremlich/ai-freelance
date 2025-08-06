@@ -12,7 +12,7 @@ I'll cover four key lessons.
 
 I hope this presentation will be engaging, insightful, and memorable.
 
-_CHANGE SLIDE: CostumeChange_
+## CostumeChange
 
 Speaking of fun, I recognize that we are in a movie theater. This is a place where people come to be told inspirational stories, and occasionally people dress up to participate in that story. I've never had that experience of dressing up for a movie premiere, so I want to take that opportunity now.
 
@@ -34,7 +34,7 @@ _ACTIVATE MAGIC MODE_
 
 Ah it's working. Very good. Let's move on.
 
-_CHANGE SLIDE: Meditate_
+## Meditate
 
 I hope you guys in attendance won't mind that I do this next part. I've programmed this orb to the timing of _box breathing_.
 
@@ -60,7 +60,7 @@ Just kidding.
 
 https://my.clevelandclinic.org/health/articles/17906-meditation
 
-_CHANGE SLIDE: ProvelPrint_
+## Project
 
 About a two years ago, I was visiting my in-laws in Washington. One of those in-laws was my wife's aunt and uncle. It was a nice visit; we got to talking about how life went. At one point of the conversation, my wife's aunt, Barbara, turned to me and asked if I knew anything about desktop software. This surprised me because I didn't think that Barbara knew much about software in general.
 
@@ -74,23 +74,15 @@ As it turned out, about one year ago David reached out to me again asking if I w
 
 David called the project ProvelPrint and he explained that the project involved importing an STL file into the application and slicing that STL file so that a custom made 3D printer could render it.
 
-_CHANGE SLIDE: Learning_
+## Learning
 
-Right, I didn't know what problems I needed to solve. David talked about slicers, so I guessed I better learn the functions of a slicer. I searched around the internet for what slicers were and what projects used a slicing method. I found that a slicer was a way to divide up a 3D model into a pattern that makes it 3D-printable. This is usually done in layers at a time. In addition, I found out that infill was a way to build support for any hanging edges of a model. Some projects that I found involved Three.JS. So I would go in that direction first and use Three.JS.
+Right, I didn't know what problems I needed to solve. David talked about slicers, so I guessed I better learn the functions of a slicer. I searched around the internet for what slicers were and what projects used a slicing method. I found that a slicer was a way to divide up a 3D model into a pattern that makes it 3D-printable. This is usually done in layers at a time. In addition, I found out that infill was a way to build support for any hanging edges of a model. Some projects that I found involved Three.JS, so I would go in that direction first and use Three.JS.
 
-The more I continued to explore slicers and have David explain to me what he wanted, bit by bit I started to understand the task. Sadly, I still didn't completely understand how to get there. In one attempted solution, I asked ChatGPT to create a slicer function using all the points of an STL file. I ended up getting something that worked on paper, but the more I examined the GCode output the more I realized that this output could not reasonably fit the customer needs. I didn't know exactly why, I just knew that following every point in an STL file just wouldn't work for a 3D printer. The hints that told me this wasn't the right way was: the output GCode file was immensely huge, and that just could not work in transmission; the print needed to be in vase mode where the nozzle height gradually increases; and the height difference between STL points was not configurable.
+The more I explored slicers and had David explain to me what he wanted, bit by bit I started to understand the task. At this time, I still was in over my head though. In one attempted solution, I asked ChatGPT to create a slicer function using all the points of an STL file. I ended up getting something that worked on paper, but the more I examined the GCode output the more I realized that this output could not reasonably fit the customer needs. The hints that told me this wasn't the right way was: the output GCode file was immensely huge, and that just could not work in transmission; the print needed to be in vase mode where the nozzle height gradually increases; and the height difference between STL points was not configurable. I told David that I needed to redo the slicer and he did give me some pushback. I successfully convinced him that what I was doing wasn't the right way to go and I needed to pivot.
 
 Eventually, I started to teach myself some 3D animation principles, and I found out about raycasters. Raycasters are incredibly useful to help calculate intersections of light rays and 3D objects in a scene. Intersection calculation was what I needed, and Three.JS had a built-in raycaster object and intersection calculation! Taking this knowledge, I solved that I needed to place the raycaster origin at the center of an STL model and rotate the raycaster on its origin to find where the intersection point would be. After rotating the raycaster and gradually increasing in height, to imitate vase print mode, I would gather all the intersection points and process them into the desired GCode output.
 
-After a few weeks of development, spending about 5-10 hours a week on the project, I finally got to the desired output. I felt so satisfied that I followed my gut instinct on how the original solution just wouldn't work.
-
-
-
-
-
-
-
-I had to learn several different things: 3D Tech, Slicing, and Github Actions.
+After a couple weeks of development, spending about 5-10 hours a week on the project, I finally got to the desired output. I felt so satisfied that I followed my gut instinct on how the original solution just wouldn't work. By this experience, it started to teach me the limitations of having AI do _all the work_ when I don't know myself what problem it is I needed to solve.
 
 ### Github Actions
 
@@ -115,26 +107,41 @@ Discuss the use of whooshes in the project and how AI didn't help. It
 was a basic React mistake by putting an array in an useEffect
 dependency.
 
-_CHANGE SLIDE: Leveraging_
+## Leveraging
 
-_CHANGE SLIDE: Mastering_
+## Mastering
 
-_CHANGE SLIDE: Knowing_
+Recent Hasan Minhaj had an interview with Neil deGrasse Tyson, and in one part of that interview Neil expressed his view of AI technology and how overrated the technology is becoming.
 
-_CHANGE SLIDE: The Why_
+"Be creative and find something that AI can't do, and make an industry out of that"
 
-_CHANGE SLIDE: Inspire_
+Neil deGrasse Tyson isn't worried about people not having jobs, because industries have been evolving and progressing for a while now.
 
-_CHANGE SLIDE: Presentation_
+https://youtube.com/clip/UgkxtvyDjD-1rQFmjCcGQhibDGDGPMgqw6ea?si=u63QuTDtAAPAY1i4
 
-_CHANGE SLIDE: Finale_
+I want to echo these exact same vibes. Exactly as I have learned in my freelance project and in these scientific studies, it is important to learn, leverage, and ultimately master an AI skill to speed up development.
 
+## Knowing
 
-SRC:
+## The Why
 
-https://youtu.be/BYizgB2FcAQ?si=u4Ojm9dcXViEg4SZ
+## Inspire
 
-Timestamp 26:26
+Eventually with my freelance project, I accomplished something that no other software engineer had done previously for David. He explained to me on several occasions that I was the fifth software engineer to tackle this project. All the previous software engineers had various problems with the project, and they couldn't deliver a finished product for David. David also had been working on this project for about 8 years. But even when I was discouraged from the lack of help from AI technology and lack of knowledge, I tackled the problems head on and I learned how to solve the problems. On one occasion David said this quote to me, explaining his motivation for keeping on moving. He knew that I was a hiker, so the metaphor landed well with me.
+
+> When you're hiking, those little steps might not seem like much — but they're exactly what get you to the top.
+
+The little things we do for our careers may not seem like much when compared to the massive driving force of AI technology, but it is precisely those small steps that make our own careers a human experience.
+
+## Presentation
+
+Here is a QR code for this presentation, and here are the social networking links to follow me.
+
+## Finale
+
+Thank you for coming to my presentation! Have a fantastic conference, and I hope you all enjoyed my presentation. Thank you.
+
+## Sources
 
 https://www.brainonllm.com/
 

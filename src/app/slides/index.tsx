@@ -1,13 +1,10 @@
-import { Quote } from "summit-kit";
+import { Image, Quote } from "summit-kit";
 import type { Slide } from "../types/slide.tsx";
 import { NotFound } from "./404.tsx";
-import { TheFinale } from "./Finale/index.tsx";
-import { Learning } from "./Learning/index.tsx";
 import { Leveraging } from "./Leveraging/index.tsx";
 import { Knowing, Mastering } from "./Mastering/index.tsx";
 import { Meditate } from "./Meditate/index.tsx";
 import { PresentationLink, Social } from "./PresentationInfo/index.ts";
-import { ProvelPrint } from "./ProvelPrint/index.tsx";
 import classes from "./Slides.module.css";
 import { TheWhy } from "./TheWhy/index.tsx";
 import { CostumeChange, Title } from "./Title/index.tsx";
@@ -19,7 +16,7 @@ const slides: Slide[] = [
 		children: [
 			{
 				path: "/costume-change",
-				element: <CostumeChange />,
+				element: <CostumeChange />, // TODO: a cyberpunk image of a wizard putting on his cloak.
 			},
 		],
 	},
@@ -29,11 +26,11 @@ const slides: Slide[] = [
 	},
 	{
 		path: "/the-project",
-		element: <ProvelPrint />,
+		element: <Image src="/project_time.png" alt="The Project" width="100%" />,
 	},
 	{
 		path: "/learning",
-		element: <Learning />,
+		element: <Image src="/wizard_slicing.png" alt="The Project" width="100%" />,
 	},
 	{
 		path: "/leveraging",
@@ -70,7 +67,11 @@ const slides: Slide[] = [
 	},
 	{
 		path: "/finale",
-		element: <TheFinale />,
+		element: (
+			<div style={{ textAlign: "center" }}>
+				<Image src="/wizard_hike.png" alt="The Project" width="50%" />
+			</div>
+		),
 	},
 	{
 		path: "/*",
