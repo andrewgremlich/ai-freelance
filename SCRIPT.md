@@ -155,6 +155,8 @@ https://time.com/7295195/ai-chatgpt-google-learning-school/
 
 https://www.reuters.com/business/ai-slows-down-some-experienced-software-developers-study-finds-2025-07-10/
 
+https://arstechnica.com/ai/2025/07/study-finds-ai-tools-made-open-source-software-developers-19-percent-slower/
+
 - But the new METR study shows that those gains don’t apply to all software development scenarios. In particular, this study showed that experienced developers intimately familiar with the quirks and requirements of large, established open source codebases experienced a slowdown.
 - https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/
 
