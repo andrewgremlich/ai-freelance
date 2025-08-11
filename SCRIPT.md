@@ -109,15 +109,47 @@ dependency.
 
 ## Leveraging
 
+How can I properly leverage AI technology to help my work?
+
+As I learned from my freelance job, I could only properly leverage AI technology when I knew what I wanted to do. I had no idea on the technical aspects of a slicer. But once I learned the technical aspects of a slicer, then I would properly word directions to an AI bot to generate something for me. Additionally, I found that if I had no idea what the code was doing, it took me longer to figure out where a problem was.
+
+I believe my experience in my freelance job isn't the only thing that have a say here.
+
+A research group at MIT wanted to find how students would perform when using an LLM and when not using an LLM on an essay. Students were separated into three different groups: able to use ChatGPT, able to use Google, and only write using their brain. Once the essays were written and submitted, the students were able to review their papers swapping tools. The students that used ChatGPT couldn't use ChatGPT, the people that used Google couldn't use Google, and the people that just used their brain could use ChatGPT.
+
+The group that only used an LLM in writing an essay demonstrated poor memory recall and less brain wave activity while writing and reviewig the essay. The group that did not write using an LLM but reviewed their work using an LLM showed higher memory recall and more brain activity. This study essentially found that group that defaulted to using the LLM performed worse than the group that didn't use an LLM. This does not mean that using an LLM makes you dumber, but rather in means that defaulting to an LLM first encourages you to not be invested in the work that you're doing.
+
+In the additional notes, graders found the LLM essays to be "soul-less". The essays also commonly used similar phrasing and structure patterns.
+
+https://www.brainonllm.com/
+
+https://www.linkedin.com/feed/update/urn:li:activity:7340386826504876033/
+
+What do I think this means? I think it means software engineers shouldn't default to using AI first if they want to get better at their job. A software engineer needs to learn the task they're doing, and then code the task when they are solid in the idea they want. AI technology can be used as a supped up linter to suggest coding changes.
+
+This wasn't the only thing that I found.
+
+In another study, software engineers slowed down significantly when using AI on a large codebase, because the AI could not fully grasp the complexities of a large codebase. Other studies found that AI could definitely help speed up smaller more concise tasks. Other studies found that workers were less motivated for their job when using AI.
+
+https://www.reuters.com/business/ai-slows-down-some-experienced-software-developers-study-finds-2025-07-10/
+
+https://hbr.org/2025/05/research-gen-ai-makes-people-more-productive-and-less-motivated
+
+https://arstechnica.com/ai/2025/07/study-finds-ai-tools-made-open-source-software-developers-19-percent-slower/
+
+https://arxiv.org/pdf/2506.08872v1
+
+https://arxiv.org/abs/2302.06590
+
 ## Mastering
 
 Recent Hasan Minhaj had an interview with Neil deGrasse Tyson, and in one part of that interview Neil expressed his view of AI technology and how overrated the technology is becoming.
 
+https://youtube.com/clip/UgkxtvyDjD-1rQFmjCcGQhibDGDGPMgqw6ea?si=u63QuTDtAAPAY1i4
+
 "Be creative and find something that AI can't do, and make an industry out of that"
 
 Neil deGrasse Tyson isn't worried about people not having jobs, because industries have been evolving and progressing for a while now.
-
-https://youtube.com/clip/UgkxtvyDjD-1rQFmjCcGQhibDGDGPMgqw6ea?si=u63QuTDtAAPAY1i4
 
 I want to echo these exact same vibes. Exactly as I have learned in my freelance project and in these scientific studies, it is important to learn, leverage, and ultimately master an AI skill to speed up development.
 
@@ -143,24 +175,7 @@ Thank you for coming to my presentation! Have a fantastic conference, and I hope
 
 ## Sources
 
-https://www.brainonllm.com/
-
-https://hbr.org/2025/05/research-gen-ai-makes-people-more-productive-and-less-motivated
-
-https://www.linkedin.com/feed/update/urn:li:activity:7340386826504876033/
-
-https://arxiv.org/pdf/2506.08872v1
-
 https://time.com/7295195/ai-chatgpt-google-learning-school/
-
-https://www.reuters.com/business/ai-slows-down-some-experienced-software-developers-study-finds-2025-07-10/
-
-https://arstechnica.com/ai/2025/07/study-finds-ai-tools-made-open-source-software-developers-19-percent-slower/
-
-- But the new METR study shows that those gains don’t apply to all software development scenarios. In particular, this study showed that experienced developers intimately familiar with the quirks and requirements of large, established open source codebases experienced a slowdown.
-- https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/
-
-https://arxiv.org/abs/2302.06590
 
 https://economics.mit.edu/sites/default/files/inline-files/draft_copilot_experiments.pdf
 

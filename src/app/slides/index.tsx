@@ -2,7 +2,7 @@ import { Image, Quote } from "summit-kit";
 import type { Slide } from "../types/slide.tsx";
 import { NotFound } from "./404.tsx";
 import { Leveraging } from "./Leveraging/index.tsx";
-import { Knowing, Mastering } from "./Mastering/index.tsx";
+import { Mastering } from "./Mastering/index.tsx";
 import { Meditate } from "./Meditate/index.tsx";
 import { PresentationLink, Social } from "./PresentationInfo/index.ts";
 import classes from "./Slides.module.css";
@@ -40,12 +40,6 @@ const slides: Slide[] = [
 	{
 		path: "/mastering",
 		element: <Mastering />,
-		children: [
-			{
-				path: "/knowing",
-				element: <Knowing />,
-			},
-		],
 	},
 	{
 		path: "/the-why",
