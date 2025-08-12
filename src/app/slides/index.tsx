@@ -2,11 +2,9 @@ import { Image, Quote } from "summit-kit";
 import type { Slide } from "../types/slide.tsx";
 import { NotFound } from "./404.tsx";
 import { Leveraging } from "./Leveraging/index.tsx";
-import { Mastering } from "./Mastering/index.tsx";
 import { Meditate } from "./Meditate/index.tsx";
 import { PresentationLink, Social } from "./PresentationInfo/index.ts";
 import classes from "./Slides.module.css";
-import { TheWhy } from "./TheWhy/index.tsx";
 import { CostumeChange, Title } from "./Title/index.tsx";
 
 const slides: Slide[] = [
@@ -39,11 +37,7 @@ const slides: Slide[] = [
 	},
 	{
 		path: "/mastering",
-		element: <Mastering />,
-	},
-	{
-		path: "/the-why",
-		element: <TheWhy />,
+		element: <Image src="/wizard_master.png" alt="The Project" width="100%" />,
 	},
 	{
 		path: "/inspire",

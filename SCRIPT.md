@@ -76,14 +76,6 @@ David called the project ProvelPrint and he explained that the project involved 
 
 ## Learning
 
-Right, I didn't know what problems I needed to solve. David talked about slicers, so I guessed I better learn the functions of a slicer. I searched around the internet for what slicers were and what projects used a slicing method. I found that a slicer was a way to divide up a 3D model into a pattern that makes it 3D-printable. This is usually done in layers at a time. In addition, I found out that infill was a way to build support for any hanging edges of a model. Some projects that I found involved Three.JS, so I would go in that direction first and use Three.JS.
-
-The more I explored slicers and had David explain to me what he wanted, bit by bit I started to understand the task. At this time, I still was in over my head though. In one attempted solution, I asked ChatGPT to create a slicer function using all the points of an STL file. I ended up getting something that worked on paper, but the more I examined the GCode output the more I realized that this output could not reasonably fit the customer needs. The hints that told me this wasn't the right way was: the output GCode file was immensely huge, and that just could not work in transmission; the print needed to be in vase mode where the nozzle height gradually increases; and the height difference between STL points was not configurable. I told David that I needed to redo the slicer and he did give me some pushback. I successfully convinced him that what I was doing wasn't the right way to go and I needed to pivot.
-
-Eventually, I started to teach myself some 3D animation principles, and I found out about raycasters. Raycasters are incredibly useful to help calculate intersections of light rays and 3D objects in a scene. Intersection calculation was what I needed, and Three.JS had a built-in raycaster object and intersection calculation! Taking this knowledge, I solved that I needed to place the raycaster origin at the center of an STL model and rotate the raycaster on its origin to find where the intersection point would be. After rotating the raycaster and gradually increasing in height, to imitate vase print mode, I would gather all the intersection points and process them into the desired GCode output.
-
-After a couple weeks of development, spending about 5-10 hours a week on the project, I finally got to the desired output. I felt so satisfied that I followed my gut instinct on how the original solution just wouldn't work. By this experience, it started to teach me the limitations of having AI do _all the work_ when I don't know myself what problem it is I needed to solve.
-
 ### Github Actions
 
 Utilizing AI to accelerate comprehension of unfamiliar technologies and
@@ -106,6 +98,16 @@ methodologies.
 Discuss the use of whooshes in the project and how AI didn't help. It
 was a basic React mistake by putting an array in an useEffect
 dependency.
+
+## Freelance Project
+
+Right, I didn't know what problems I needed to solve. David talked about slicers, so I guessed I better learn the functions of a slicer. I searched around the internet for what slicers were and what projects used a slicing method. I found that a slicer was a way to divide up a 3D model into a pattern that makes it 3D-printable. This is usually done in layers at a time. In addition, I found out that infill was a way to build support for any hanging edges of a model. Some projects that I found involved Three.JS, so I would go in that direction first and use Three.JS.
+
+The more I explored slicers and had David explain to me what he wanted, bit by bit I started to understand the task. At this time, I still was in over my head though. In one attempted solution, I asked ChatGPT to create a slicer function using all the points of an STL file. I ended up getting something that worked on paper, but the more I examined the GCode output the more I realized that this output could not reasonably fit the customer needs. The hints that told me this wasn't the right way was: the output GCode file was immensely huge, and that just could not work in transmission; the print needed to be in vase mode where the nozzle height gradually increases; and the height difference between STL points was not configurable. I told David that I needed to redo the slicer and he did give me some pushback. I successfully convinced him that what I was doing wasn't the right way to go and I needed to pivot.
+
+Eventually, I started to teach myself some 3D animation principles, and I found out about raycasters. Raycasters are incredibly useful to help calculate intersections of light rays and 3D objects in a scene. Intersection calculation was what I needed, and Three.JS had a built-in raycaster object and intersection calculation! Taking this knowledge, I solved that I needed to place the raycaster origin at the center of an STL model and rotate the raycaster on its origin to find where the intersection point would be. After rotating the raycaster and gradually increasing in height, to imitate vase print mode, I would gather all the intersection points and process them into the desired GCode output.
+
+After a couple weeks of development, spending about 5-10 hours a week on the project, I finally got to the desired output. I felt so satisfied that I followed my gut instinct on how the original solution just wouldn't work. By this experience, it started to teach me the limitations of having AI do _all the work_ when I don't know myself what problem it is I needed to solve.
 
 ## Leveraging
 
