@@ -155,10 +155,6 @@ Neil deGrasse Tyson isn't worried about people not having jobs, because industri
 
 I want to echo these exact same vibes. Exactly as I have learned in my freelance project and in these scientific studies, it is important to learn, leverage, and ultimately master an AI skill to speed up development.
 
-## Knowing
-
-## The Why
-
 ## Inspire
 
 Eventually with my freelance project, I accomplished something that no other software engineer had done previously for David. He explained to me on several occasions that I was the fifth software engineer to tackle this project. All the previous software engineers had various problems with the project, and they couldn't deliver a finished product for David. David also had been working on this project for about 8 years. But even when I was discouraged from the lack of help from AI technology and lack of knowledge, I tackled the problems head on and I learned how to solve the problems. On one occasion David said this quote to me, explaining his motivation for keeping on moving. He knew that I was a hiker, so the metaphor landed well with me.
@@ -186,3 +182,5 @@ https://arxiv.org/pdf/2503.07599
 
 A Psychiatrist Posed As a Teen With Therapy Chatbots. The Conversations Were Alarming
 https://time.com/7291048/ai-chatbot-therapy-kids/
+
+- Spoken languages have subtlety to it. programming usually doesn't have subtlety.
