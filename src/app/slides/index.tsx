@@ -1,20 +1,21 @@
-import { Image, Quote } from "summit-kit";
+import { H1, Image, Quote } from "summit-kit";
 import type { Slide } from "../types/slide.tsx";
 import { NotFound } from "./404.tsx";
 import { Leveraging } from "./Leveraging/index.tsx";
 import { Meditate } from "./Meditate/index.tsx";
 import { PresentationLink, Social } from "./PresentationInfo/index.ts";
 import classes from "./Slides.module.css";
-import { CostumeChange, Title } from "./Title/index.tsx";
 
 const slides: Slide[] = [
 	{
 		path: "/home",
-		element: <Title />,
+		element: <H1>AI-Powered Freelance Development</H1>,
 		children: [
 			{
 				path: "/costume-change",
-				element: <CostumeChange />, // TODO: a cyberpunk image of a wizard putting on his cloak.
+				element: (
+					<Image src="/wizard_cyberpunk.png" alt="Costume Change" width="100%" />
+				),
 			},
 		],
 	},
@@ -28,7 +29,7 @@ const slides: Slide[] = [
 	},
 	{
 		path: "/learning",
-		element: <Image src="/wizard_slicing.png" alt="The Project" width="100%" />,
+		element: <Image src="/wizard_slicing.png" alt="Learning how to work." width="100%" />,
 	},
 	{
 		path: "/leveraging",
@@ -57,7 +58,7 @@ const slides: Slide[] = [
 		path: "/finale",
 		element: (
 			<div style={{ textAlign: "center" }}>
-				<Image src="/wizard_hike.png" alt="The Project" width="50%" />
+				<Image src="/finale.webp" alt="Thank you for coming!" width="100%" />
 			</div>
 		),
 	},

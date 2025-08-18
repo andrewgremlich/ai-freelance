@@ -175,6 +175,18 @@ Thank you for coming to my presentation! Have a fantastic conference, and I hope
 
 https://time.com/7295195/ai-chatgpt-google-learning-school/
 
+https://www.reuters.com/business/ai-slows-down-some-experienced-software-developers-study-finds-2025-07-10/
+
+https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/
+
+https://arxiv.org/pdf/2507.09089
+
+- But the new METR study shows that those gains don’t apply to all software development scenarios. In particular, this study showed that experienced developers intimately familiar with the quirks and requirements of large, established open source codebases experienced a slowdown.
+- https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/
+
+https://arxiv.org/abs/2302.06590
+- https://arxiv.org/pdf/2302.06590
+
 https://economics.mit.edu/sites/default/files/inline-files/draft_copilot_experiments.pdf
 
 NeuroChat: A Neuroadaptive AI Chatbot for Customizing Learning Experiences
@@ -183,4 +195,4 @@ https://arxiv.org/pdf/2503.07599
 A Psychiatrist Posed As a Teen With Therapy Chatbots. The Conversations Were Alarming
 https://time.com/7291048/ai-chatbot-therapy-kids/
 
-- Spoken languages have subtlety to it. programming usually doesn't have subtlety.
+https://www.wosu.org/2025-07-29/study-shows-ais-negative-effects-as-ohio-state-university-requires-students-to-use-ai-in-classrooms
