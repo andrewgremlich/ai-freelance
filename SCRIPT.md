@@ -180,6 +180,18 @@ https://arxiv.org/abs/2302.06590
 
 https://arxiv.org/pdf/2508.06950
 
+### MIT report: 95% of generative AI pilots at companies are failing
+
+https://fortune.com/2025/08/21/an-mit-report-that-95-of-ai-pilots-fail-spooked-investors-but-the-reason-why-those-pilots-failed-is-what-should-make-the-c-suite-anxious/
+
+> But where it gets interesting is what the NANDA study said about the apparent reasons for these failures. The biggest problem, the report found, was not that the AI models weren’t capable enough (although execs tended to think that was the problem.) Instead, the researchers discovered a “learning gap”—people and organizations simply did not understand how to use the AI tools properly or how to design workflows that could capture the benefits of AI while minimizing downside risks.
+
+> Ethan Mollick has suggested that the real benefits of AI will come when companies abandon trying to get AI models to follow existing processes—many of which he argues reflect bureaucracy and office politics more than anything else—and simply let the models find their own way to produce the desired business outcomes.
+
+https://fortune.com/2025/08/18/mit-report-95-percent-generative-ai-pilots-at-companies-failing-cfo/
+
+> Some large companies’ pilots and younger startups are really excelling with generative AI,” Challapally said. Startups led by 19- or 20-year-olds, for example, “have seen revenues jump from zero to $20 million in a year,” he said. “It’s because they pick one pain point, execute well, and partner smartly with companies who use their tools [...] But for 95% of companies in the dataset, generative AI implementation is falling short. The core issue? Not the quality of the AI models, but the “learning gap” for both tools and organizations. While executives often blame regulation or model performance, MIT’s research points to flawed enterprise integration. Generic tools like ChatGPT excel for individuals because of their flexibility, but they stall in enterprise use since they don’t learn from or adapt to workflows
+
 ## Mastering
 
 Recent Hasan Minhaj had an interview with Neil deGrasse Tyson, and in one part of that interview Neil expressed his view of AI technology and how overrated the technology is becoming.
