@@ -133,15 +133,52 @@ This wasn't the only thing that I found.
 
 In another study, software engineers slowed down significantly when using AI on a large codebase, because the AI could not fully grasp the complexities of a large codebase. Other studies found that AI could definitely help speed up smaller more concise tasks. Other studies found that workers were less motivated for their job when using AI.
 
-https://www.reuters.com/business/ai-slows-down-some-experienced-software-developers-study-finds-2025-07-10/
+https://arxiv.org/pdf/2506.08872v1
+
+### Research: Gen AI Makes People More Productive—and Less Motivated 
 
 https://hbr.org/2025/05/research-gen-ai-makes-people-more-productive-and-less-motivated
 
+### The Effects of Generative AI on High-Skilled Work: Evidence from Three Field Experiments with Software Developers*
+
+https://economics.mit.edu/sites/default/files/inline-files/draft_copilot_experiments.pdf
+
+### Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity
+
+Using Cursor...
+
+> Before tasks are randomized, developers forecast that allowing AI will reduce completion time by 24%. After study participation, developers estimate that allowing AI reduced completion time by 20%. Surprisingly, we find that allowing AI actually increases completion time by 19%— developers are slower when using AI tooling.
+
+> Frontier AI systems demonstrate impressive capabilities on a wide range of software benchmarks [3; 4; 5; 6; 7; 8; 9] and in experiments measuring AI’s impact on developer productivity when completing synthetic tasks [10; 11]. However, tasks used in these lab experiments sacrifice realism for scale and efficiency: the tasks are typically self-contained, do not require much prior context/familiarity to understand and complete, and use algorithmic evaluation metrics which do not capture many important capabilities [12; 13; 14]. As a result, it can be difficult to draw inferences from results on these evaluations about AI’s impact in practice.
+
+https://www.reuters.com/business/ai-slows-down-some-experienced-software-developers-study-finds-2025-07-10/
+
 https://arstechnica.com/ai/2025/07/study-finds-ai-tools-made-open-source-software-developers-19-percent-slower/
 
-https://arxiv.org/pdf/2506.08872v1
+https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/
+
+https://arxiv.org/pdf/2507.09089
+
+
+### The Impact of AI on Developer Productivity: Evidence from GitHub Copilot
+
+Experiment performed before Copilot became widely available in 2022.
+
+> Abstract: Generative AI tools hold promise to increase human productivity. This paper presents results from a controlled experiment with GitHub Copilot, an AI pair programmer. Recruited software developers were asked to implement an HTTP server in JavaScript as quickly as possible. The treatment group, with access to the AI pair programmer, completed the task 55.8% faster than the control group. Observed heterogenous effects show promise for AI pair programmers to help people transition into software development careers.
+
+>  Developers with less programming experience, older programmers, and those who program more hours per day benefited the most.
+
+> Finally, this study does not examine the effects of AI on code quality. AI assistance can increase code quality if it suggests code better than the programmer writes, or it can reduce quality if the programmer pays less attention to code. The code quality can have performance and security considerations that can change the real-world impact of AI.
 
 https://arxiv.org/abs/2302.06590
+
+### Large Language Models Do Not Simulate Human Psychology
+
+> Still, the core function of any LLM is to simply predict the probability of each possible next word (more precisely: the next token), randomly select the next word according to the predicted probabilities, and continue until all desired text is generated – with no explicit regard for meaning or truth
+
+> However, the increased use of LLMs has also been accompanied by a wave of research regarding limitations and risks of such models, especially in terms of failures in reasoning, bias and de-skilling of researchers when over-relying on LLM assistance
+
+https://arxiv.org/pdf/2508.06950
 
 ## Mastering
 
@@ -170,29 +207,3 @@ Here is a QR code for this presentation, and here are the social networking link
 ## Finale
 
 Thank you for coming to my presentation! Have a fantastic conference, and I hope you all enjoyed my presentation. Thank you.
-
-## Sources
-
-https://time.com/7295195/ai-chatgpt-google-learning-school/
-
-https://www.reuters.com/business/ai-slows-down-some-experienced-software-developers-study-finds-2025-07-10/
-
-https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/
-
-https://arxiv.org/pdf/2507.09089
-
-- But the new METR study shows that those gains don’t apply to all software development scenarios. In particular, this study showed that experienced developers intimately familiar with the quirks and requirements of large, established open source codebases experienced a slowdown.
-- https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/
-
-https://arxiv.org/abs/2302.06590
-- https://arxiv.org/pdf/2302.06590
-
-https://economics.mit.edu/sites/default/files/inline-files/draft_copilot_experiments.pdf
-
-NeuroChat: A Neuroadaptive AI Chatbot for Customizing Learning Experiences
-https://arxiv.org/pdf/2503.07599
-
-A Psychiatrist Posed As a Teen With Therapy Chatbots. The Conversations Were Alarming
-https://time.com/7291048/ai-chatbot-therapy-kids/
-
-https://www.wosu.org/2025-07-29/study-shows-ais-negative-effects-as-ohio-state-university-requires-students-to-use-ai-in-classrooms
