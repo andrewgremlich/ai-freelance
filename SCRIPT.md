@@ -117,11 +117,21 @@ As I learned from my freelance job, I could only properly leverage AI technology
 
 I believe my experience in my freelance job isn't the only thing that have a say here.
 
+### Brain on LLM
+
 A research group at MIT wanted to find how students would perform when using an LLM and when not using an LLM on an essay. Students were separated into three different groups: able to use ChatGPT, able to use Google, and only write using their brain. Once the essays were written and submitted, the students were able to review their papers swapping tools. The students that used ChatGPT couldn't use ChatGPT, the people that used Google couldn't use Google, and the people that just used their brain could use ChatGPT.
 
 The group that only used an LLM in writing an essay demonstrated poor memory recall and less brain wave activity while writing and reviewig the essay. The group that did not write using an LLM but reviewed their work using an LLM showed higher memory recall and more brain activity. This study essentially found that group that defaulted to using the LLM performed worse than the group that didn't use an LLM. This does not mean that using an LLM makes you dumber, but rather in means that defaulting to an LLM first encourages you to not be invested in the work that you're doing.
 
 In the additional notes, graders found the LLM essays to be "soul-less". The essays also commonly used similar phrasing and structure patterns.
+
+> We believe that some of the most striking observations in our study stem from Session 4, where Brain-to-LLM participants showed higher neural connectivity than LLM Group's sessions 1, 2, 3 (network‑wide spike in alpha-, beta‑, theta‑, and delta-band directed connectivity). This suggests that rewriting an essay using AI tools (after prior AI-free writing) engaged more extensive brain network interactions. In contrast, the LLM-to-Brain group, being exposed to LLM use prior, demonstrated less coordinated neural effort in most bands, as well as bias in LLM specific vocabulary. Though scored high by both AI judge and human teachers, their essays stood out less in terms of the distance of NER/n-gram usage compared to other sessions in other groups. On the topic level, few topics deviated significantly and almost orthogonally (like HAPPINESS or PHILANTHROPY topics) in between LLM and Brain-only groups.
+
+> We found that the Brain-only group exhibited strong variability in how participants approached essay writing across most topics. In contrast, the LLM group produced statistically homogeneous essays within each topic, showing significantly less deviation compared to the other groups. The Search Engine group was likely, at least in part, influenced by the content that was promoted and optimized by a search engine (see Figure 90 below for PHILANTHROPY topic keywords), therefore, the keywords used to promote specific ideas within each topic were likely influenced more by the participants' own queries than by the prompts provided in the LLM group.
+
+> Participants in the LLM and Search Engine groups were more inclined to focus on the output of the tools they were using because of the added pressure of limited time (20 minutes). Most of them focused on reusing the tools' output, therefore staying focused on copying and pasting content, rather than incorporating their own original thoughts and editing those with their own perspectives and their own experiences.
+
+> The LLM undeniably reduced the friction involved in answering participants' questions compared to the Search Engine. However, this convenience came at a cognitive cost, diminishing users' inclination to critically evaluate the LLM's output or ”opinions” (probabilistic answers based on the training datasets). This highlights a concerning evolution of the 'echo chamber' effect: rather than disappearing, it has adapted to shape user exposure through algorithmically curated content. What is ranked as “top” is ultimately influenced by the priorities of the LLM's shareholders [123, 125]. Only a few participants in the interviews mentioned that they did not follow the “thinking” [124] aspect of the LLMs and pursued their line of ideation and thinking. Regarding ethical considerations, participants who were in the Brain-only group reported higher satisfaction and demonstrated higher brain connectivity, compared to other groups. Essays written with the help of LLM carried a lesser significance or value to the participants (impaired ownership, Figure 8), as they spent less time on writing (Figure 33), and mostly failed to provide a quote from theis essays (Session 1, Figure 6, Figure 7).
 
 https://www.brainonllm.com/
 
@@ -129,17 +139,31 @@ https://www.linkedin.com/feed/update/urn:li:activity:7340386826504876033/
 
 What do I think this means? I think it means software engineers shouldn't default to using AI first if they want to get better at their job. A software engineer needs to learn the task they're doing, and then code the task when they are solid in the idea they want. AI technology can be used as a supped up linter to suggest coding changes.
 
+https://arxiv.org/pdf/2506.08872v1
+
 This wasn't the only thing that I found.
 
 In another study, software engineers slowed down significantly when using AI on a large codebase, because the AI could not fully grasp the complexities of a large codebase. Other studies found that AI could definitely help speed up smaller more concise tasks. Other studies found that workers were less motivated for their job when using AI.
 
-https://arxiv.org/pdf/2506.08872v1
-
 ### Research: Gen AI Makes People More Productive—and Less Motivated 
+
+> Our findings consistently demonstrated that collaboration with GenAI enhanced immediate task performance. However, this performance augmentation effect did not persist in subsequent tasks performed independently by humans. Importantly, transitioning from collaboration with GenAI to solo work led to an increased sense of control of human workers, and was also accompanied by significant decreases in intrinsic motivation and increases in feelings of boredom. These results highlight the complex dual effects of human-GenAI collaboration: It enhances immediate task performance but can undermine long-term psychological experiences of human workers.
+
+> While no occupation exists where GenAI can entirely substitute human roles7, there remain tasks that can be better executed by human workers. The future of employment is more likely to evolve towards a hybrid model, where individuals switch between collaborating with GenAI and working independently8. This evolving hybrid work dynamic highlights the need for work redesign and effective task allocation within a job role9. In particular, GenAI is increasingly being integrated into tasks that require creativity and problem-solving, complementing human capabilities in producing high-quality outputs10,11.
+
+> While immediate performance benefits of collaborating with GenAI are evident, it is also important to examine its long-term effects on human workers’ psychological experiences and task performance. In occupational settings, tasks that allow for creative freedom and problem-solving are often inherently motivating18. However, as noted in the opening quote, GenAI may diminish the intrinsically motivating parts that are essential for human’s sustained work engagement. For example, creating a performance review enables evaluators to critically analyze an individual’s strengths and weaknesses and experience the fulfillment of offering tailored, constructive feedback. When GenAI takes over these aspects, it may reduce the analyzing and crafting processes that make such tasks engaging. Intrinsic motivation refers to the internal drive to engage in activities for people’s own sake, driven by personal interest, enjoyment, or the satisfaction derived from the activity itself, rather than external rewards or pressures19,20. Given the extensive research indicating the positive impact of GenAI on the immediate task performance, we believe it is necessary to assess its long-term effects on human workers’ psychological experiences and long-term performance.
+
+https://www.nature.com/articles/s41598-025-98385-2
 
 https://hbr.org/2025/05/research-gen-ai-makes-people-more-productive-and-less-motivated
 
-### The Effects of Generative AI on High-Skilled Work: Evidence from Three Field Experiments with Software Developers*
+### The Effects of Generative AI on High-Skilled Work: Evidence from Three Field Experiments with Software Developers
+
+> This study evaluates the impact of generative AI on software developer productivity via randomized controlled trials at Microsoft, Accenture, and an anonymous Fortune 100 company. These field experiments, run by the companies as part of their ordinary course of business, provided a random subset of developers with access to an AI-based coding assistant suggesting intelligent code completions. Though each experiment is noisy, when data is combined across three experiments and 4,867 developers, our analysis reveals a 26.08% increase (SE: 10.3%) in completed tasks among developers using the AI tool. Notably, less experienced developers had higher adoption rates and greater productivity gains
+
+> To date, there is still a dearth of experimental studies examining the effect of generative AI in a field setting
+
+> [...] we also find suggestive evidence that these gains are primarily driven by improved output from recent hires and employees in more junior roles.
 
 https://economics.mit.edu/sites/default/files/inline-files/draft_copilot_experiments.pdf
 
@@ -194,6 +218,10 @@ https://fortune.com/2025/08/18/mit-report-95-percent-generative-ai-pilots-at-com
 
 ## Mastering
 
+So with all the previously quoted studies, how should I master AI technology? Don't let the AI do all the work for you and engage with the AI. Start with an AI tool, review the work yourself, and review your work with AI. Engage with the AI responses.
+
+[expand above paragraph!]
+
 Recent Hasan Minhaj had an interview with Neil deGrasse Tyson, and in one part of that interview Neil expressed his view of AI technology and how overrated the technology is becoming.
 
 https://youtube.com/clip/UgkxtvyDjD-1rQFmjCcGQhibDGDGPMgqw6ea?si=u63QuTDtAAPAY1i4
@@ -206,11 +234,15 @@ I want to echo these exact same vibes. Exactly as I have learned in my freelance
 
 ## Inspire
 
-Eventually with my freelance project, I accomplished something that no other software engineer had done previously for David. He explained to me on several occasions that I was the fifth software engineer to tackle this project. All the previous software engineers had various problems with the project, and they couldn't deliver a finished product for David. David also had been working on this project for about 8 years. But even when I was discouraged from the lack of help from AI technology and lack of knowledge, I tackled the problems head on and I learned how to solve the problems. On one occasion David said this quote to me, explaining his motivation for keeping on moving. He knew that I was a hiker, so the metaphor landed well with me.
+Eventually with my freelance project, I accomplished something that no other software engineer had done previously for for my client, David. He explained to me on several occasions that I was the fifth software engineer to tackle this project. All the previous software engineers had various problems with the project, and they couldn't deliver a finished product for David. David had been working on this project for about 8 years. To be able to deliver a software product to help fulfill another person's dreams was a magical and reward experience.
+
+But even when I was discouraged from not using AI technology properly, I tackled the problems head on and I learned how to solve the problems. On one occasion David said this quote to me, explaining his motivation for keeping on moving. He knew that I was a hiker, so the metaphor landed well with me.
 
 > When you're hiking, those little steps might not seem like much — but they're exactly what get you to the top.
 
-The little things we do for our careers may not seem like much when compared to the massive driving force of AI technology, but it is precisely those small steps that make our own careers a human experience.
+The little things we do for our careers may not seem like much when compared to the massive driving force of AI technology, but it is precisely those small steps that make our own careers a human experience. Since tackling this project, I have now started to gain wisdom and knowledge in 3D-animation web technology, 3D printing, electronics, and trigonometry
+
+[SOLID CONCLUSION!]
 
 ## Presentation
 
