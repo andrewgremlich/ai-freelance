@@ -125,7 +125,15 @@ The group that only used an LLM in writing an essay demonstrated poor memory rec
 
 In the additional notes, graders found the LLM essays to be "soul-less". The essays also commonly used similar phrasing and structure patterns.
 
-> We believe that some of the most striking observations in our study stem from Session 4, where Brain-to-LLM participants showed higher neural connectivity than LLM Group's sessions 1, 2, 3 (network‑wide spike in alpha-, beta‑, theta‑, and delta-band directed connectivity). This suggests that rewriting an essay using AI tools (after prior AI-free writing) engaged more extensive brain network interactions. In contrast, the LLM-to-Brain group, being exposed to LLM use prior, demonstrated less coordinated neural effort in most bands, as well as bias in LLM specific vocabulary. Though scored high by both AI judge and human teachers, their essays stood out less in terms of the distance of NER/n-gram usage compared to other sessions in other groups. On the topic level, few topics deviated significantly and almost orthogonally (like HAPPINESS or PHILANTHROPY topics) in between LLM and Brain-only groups.
+TO ADD SOMEWHERE Explain that the research participants we obliged to follow a time constraint.
+
+> We believe that some of the most striking observations in our study [were] where Brain-to-LLM participants showed higher neural connectivity than LLM Group's [...]. This suggests that rewriting an essay using AI tools (after prior AI-free writing) engaged more extensive brain network interactions. In contrast, the LLM-to-Brain group, being exposed to LLM use prior, demonstrated less coordinated neural effort in most bands, as well as bias in LLM specific vocabulary. [...]
+
+I read this study as encouragement to use AI properly. Misusing AI meant to let AI do all the work, so an LLM-only research participant would not be engaged with their work at all. Whereas using AI to review their work naturally-made work caused higher engagement with the content being created.
+
+By extension, and using a weightlifting metaphor, it was by not using one's brain while creating content that their brain may atrophy and become weak. In another podcast I listened to, experts in the psychology field expressed concern about the mind atrophying while using LLMs for the same reason.
+
+As a software engineer, I feel it important to use tools the right way, and LLMs are no exception. Using tools properly will merit a higher increase of quality work, which hopefully means that work will be easier to debug and maintain.
 
 > We found that the Brain-only group exhibited strong variability in how participants approached essay writing across most topics. In contrast, the LLM group produced statistically homogeneous essays within each topic, showing significantly less deviation compared to the other groups. The Search Engine group was likely, at least in part, influenced by the content that was promoted and optimized by a search engine (see Figure 90 below for PHILANTHROPY topic keywords), therefore, the keywords used to promote specific ideas within each topic were likely influenced more by the participants' own queries than by the prompts provided in the LLM group.
 
