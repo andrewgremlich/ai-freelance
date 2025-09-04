@@ -1,4 +1,4 @@
-import { H1, Image, Quote } from "summit-kit";
+import { H1, Image, Link, Quote } from "summit-kit";
 import type { Slide } from "../types/slide.tsx";
 import { NotFound } from "./404.tsx";
 import { Meditate } from "./Meditate/index.tsx";
@@ -49,6 +49,20 @@ const slides: Slide[] = [
 	{
 		path: "/mastering",
 		element: <Image src="/wizard_master.png" alt="The Project" width="100%" />,
+		children: [
+			{
+				path: "/tyson",
+				element: (
+					<Link
+						target="_blank"
+						rel="noopener noreferrer"
+						href="https://youtube.com/clip/UgkxtvyDjD-1rQFmjCcGQhibDGDGPMgqw6ea?si=u63QuTDtAAPAY1i4"
+					>
+						Watch the clip
+					</Link>
+				),
+			},
+		],
 	},
 	{
 		path: "/inspire",
@@ -64,7 +78,11 @@ const slides: Slide[] = [
 		path: "/finale",
 		element: (
 			<div style={{ textAlign: "center" }}>
-				<Image src="/finale_bg_t.png" alt="Thank you for coming!" width="100%" />
+				<Image
+					src="/finale_bg_t.png"
+					alt="Thank you for coming!"
+					width="100%"
+				/>
 			</div>
 		),
 	},

@@ -130,35 +130,59 @@ https://arxiv.org/pdf/2506.08872v1
 
 ### Research: Gen AI Makes People More Productive—and Less Motivated 
 
-This wasn't the only thing that I found.
-
-> Our findings consistently demonstrated that collaboration with GenAI enhanced immediate task performance. However, this performance augmentation effect did not persist in subsequent tasks performed independently by humans. Importantly, transitioning from collaboration with GenAI to solo work led to an increased sense of control of human workers, and was also accompanied by significant decreases in intrinsic motivation and increases in feelings of boredom. These results highlight the complex dual effects of human-GenAI collaboration: It enhances immediate task performance but can undermine long-term psychological experiences of human workers.
-
-> While no occupation exists where GenAI can entirely substitute human roles, there remain tasks that can be better executed by human workers. The future of employment is more likely to evolve towards a hybrid model, where individuals switch between collaborating with GenAI and working independently. This evolving hybrid work dynamic highlights the need for work redesign and effective task allocation within a job role. In particular, GenAI is increasingly being integrated into tasks that require creativity and problem-solving, complementing human capabilities in producing high-quality outputs.
+This wasn't the only thing that I found. In a different study by Harvard Business Review, they found that long term use of AI for productivity gains might make workers less motivated for work.
 
 > While immediate performance benefits of collaborating with GenAI are evident, it is also important to examine its long-term effects on human workers’ psychological experiences and task performance. In occupational settings, tasks that allow for creative freedom and problem-solving are often inherently motivating. However, [...] GenAI may diminish the intrinsically motivating parts that are essential for human’s sustained work engagement. [...] When GenAI takes over these aspects [of critical thinking], it may reduce the analyzing and crafting processes that make such tasks engaging. [...]
+
+I believe I have experienced this first hand, and perhaps you have experienced this already. The previously mentioned study hinted at this too. When I am unable to exercise critical thinking and problem solving, then I am not really going to be excited for work. It risks something being mundane and boring. Isn't that one of the reasons why we go to work? We get to work on cool things and solve problems. I've often said that programming is like solving a problem with a 1000 different ways and I've got to figure out a better way to solve the problem. The best part of programming comes with finding a high quality solution and not something that just gets one by.
+
+Now finding solutions that get by even without the help of AI is a different issue that does happen. In my experience, it usually comes with business and product owners wanting to shorten the time to market. They press forward without realizing how much low-quality code they're generating. Even then, the end result is probably similar to generating code with AI. Whenever product owners or business leaders press forward with no regard to code quality, it's very hard to find motivation to work for that company.
 
 https://www.nature.com/articles/s41598-025-98385-2
 
 https://hbr.org/2025/05/research-gen-ai-makes-people-more-productive-and-less-motivated
 
+### The Impact of AI on Developer Productivity: Evidence from GitHub Copilot
+
+But wait, using AI technology isn't all doom and gloom. There is one study that shows faster time completion on software engineering tasks.
+
+> [...] Recruited software developers were asked to implement an HTTP server in JavaScript as quickly as possible. The treatment group, with access to the AI pair programmer, completed the task 55.8% faster than the control group. Observed heterogenous effects show promise for AI pair programmers to help people transition into software development careers.
+
+This is great! Two groups of software engineer were given a task and the group using AI completed the task faster than the other group. Faster time completion does mean better productivity. But there is still yet a catch.
+
+> Finally, this study does not examine the effects of AI on code quality. AI assistance can increase code quality if it suggests code better than the programmer writes, or it can reduce quality if the programmer pays less attention to code. The code quality can have performance and security considerations that can change the real-world impact of AI.
+
+In this lab setting, the study concluded that it was very hard to determine if there were any real-world benefit to using AI technology. If a developer writes poorly, then AI could write better, or if the developer knows how to write code the the AI could output low quality code.
+
+https://arxiv.org/abs/2302.06590
+
 ### The Effects of Generative AI on High-Skilled Work: Evidence from Three Field Experiments with Software Developers
 
-> This study evaluates the impact of generative AI on software developer productivity via randomized controlled trials at Microsoft, Accenture, and an anonymous Fortune 100 company. These field experiments, run by the companies as part of their ordinary course of business, provided a random subset of developers with access to an AI-based coding assistant suggesting intelligent code completions. Though each experiment is noisy, when data is combined across three experiments and 4,867 developers, our analysis reveals a 26.08% increase (SE: 10.3%) in completed tasks among developers using the AI tool. Notably, less experienced developers had higher adoption rates and greater productivity gains
+So here I've shared some gloomy studies about using AI technology. What about some good ones? Isn't there good news to be shared with this new productivity coming? Yes there is! Keep in mind, to quote another MIT study, "To date, there is still a dearth of experimental studies examining the effect of generative AI in a field setting". A lot of these studies are uncovering the affects AI may have. As studies go, there needs to be repetition to verify these positive and negative affects.
 
-> To date, there is still a dearth of experimental studies examining the effect of generative AI in a field setting
+As for productivity, an MIT study found that AI did help software engineers increase their output.
+
+> [...] when data is combined across three experiments and 4,867 developers, our analysis reveals a 26.08% increase (SE: 10.3%) in completed tasks among developers using the AI tool. Notably, less experienced developers had higher adoption rates and greater productivity gains
 
 > [...] we also find suggestive evidence that these gains are primarily driven by improved output from recent hires and employees in more junior roles.
+
+Now this is revealing. This study found that new hires or junior roles were more likely to be productive using AI technology. And this make sense doesn't it? If an AI tool has the context of a company's knowledge base or repositories, then the AI can point to where the resources are.
 
 https://economics.mit.edu/sites/default/files/inline-files/draft_copilot_experiments.pdf
 
 ### Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity
 
-Using Cursor...
+On the topic of junior developers and new hires, there is another caveat to using AI technology in the workplace. Particularly when a repository becomes large and complex.
 
-> Before tasks are randomized, developers forecast that allowing AI will reduce completion time by 24%. After study participation, developers estimate that allowing AI reduced completion time by 20%. Surprisingly, we find that allowing AI actually increases completion time by 19%— developers are slower when using AI tooling.
+> [..] developers forecast that allowing AI will reduce completion time by 24%. After study participation, developers estimate that allowing AI reduced completion time by 20%. Surprisingly, we find that allowing AI actually increases completion time by 19%— developers are slower when using AI tooling.
 
-> Frontier AI systems demonstrate impressive capabilities on a wide range of software benchmarks [3; 4; 5; 6; 7; 8; 9] and in experiments measuring AI’s impact on developer productivity when completing synthetic tasks [10; 11]. However, tasks used in these lab experiments sacrifice realism for scale and efficiency: the tasks are typically self-contained, do not require much prior context/familiarity to understand and complete, and use algorithmic evaluation metrics which do not capture many important capabilities [12; 13; 14]. As a result, it can be difficult to draw inferences from results on these evaluations about AI’s impact in practice.
+In this study, open source developers were allowed to do a handful of tasks with the assistance of AI technology. These developers thought they could complete the tasks relatively fast. It turned out to be the opposite. Using AI technology slowed these developers down because the AI had trouble parsing the entire context of the repository.
+
+And yet this study also acknowledge the difficulty of identifying the true impact of AI technology on work.
+
+> [...] tasks used in these lab experiments sacrifice realism for scale and efficiency: the tasks are typically self-contained, do not require much prior context/familiarity to understand and complete, [...]. As a result, it can be difficult to draw inferences from results on these evaluations about AI’s impact in practice.
+
+Situations may differ in all work types. AI could slow one down, or AI could speed up your work. It very well might be that discovering what kinds of work AI can do is still yet to be uncovered.
 
 https://www.reuters.com/business/ai-slows-down-some-experienced-software-developers-study-finds-2025-07-10/
 
@@ -168,52 +192,19 @@ https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/
 
 https://arxiv.org/pdf/2507.09089
 
-
-### The Impact of AI on Developer Productivity: Evidence from GitHub Copilot
-
-Experiment performed before Copilot became widely available in 2022.
-
-> Abstract: Generative AI tools hold promise to increase human productivity. This paper presents results from a controlled experiment with GitHub Copilot, an AI pair programmer. Recruited software developers were asked to implement an HTTP server in JavaScript as quickly as possible. The treatment group, with access to the AI pair programmer, completed the task 55.8% faster than the control group. Observed heterogenous effects show promise for AI pair programmers to help people transition into software development careers.
-
->  Developers with less programming experience, older programmers, and those who program more hours per day benefited the most.
-
-> Finally, this study does not examine the effects of AI on code quality. AI assistance can increase code quality if it suggests code better than the programmer writes, or it can reduce quality if the programmer pays less attention to code. The code quality can have performance and security considerations that can change the real-world impact of AI.
-
-https://arxiv.org/abs/2302.06590
-
-### Large Language Models Do Not Simulate Human Psychology
-
-> Still, the core function of any LLM is to simply predict the probability of each possible next word (more precisely: the next token), randomly select the next word according to the predicted probabilities, and continue until all desired text is generated – with no explicit regard for meaning or truth
-
-> However, the increased use of LLMs has also been accompanied by a wave of research regarding limitations and risks of such models, especially in terms of failures in reasoning, bias and de-skilling of researchers when over-relying on LLM assistance
-
-https://arxiv.org/pdf/2508.06950
-
-### MIT report: 95% of generative AI pilots at companies are failing
-
-https://fortune.com/2025/08/21/an-mit-report-that-95-of-ai-pilots-fail-spooked-investors-but-the-reason-why-those-pilots-failed-is-what-should-make-the-c-suite-anxious/
-
-> But where it gets interesting is what the NANDA study said about the apparent reasons for these failures. The biggest problem, the report found, was not that the AI models weren’t capable enough (although execs tended to think that was the problem.) Instead, the researchers discovered a “learning gap”—people and organizations simply did not understand how to use the AI tools properly or how to design workflows that could capture the benefits of AI while minimizing downside risks.
-
-> Ethan Mollick has suggested that the real benefits of AI will come when companies abandon trying to get AI models to follow existing processes—many of which he argues reflect bureaucracy and office politics more than anything else—and simply let the models find their own way to produce the desired business outcomes.
-
-https://fortune.com/2025/08/18/mit-report-95-percent-generative-ai-pilots-at-companies-failing-cfo/
-
-> Some large companies’ pilots and younger startups are really excelling with generative AI,” Challapally said. Startups led by 19- or 20-year-olds, for example, “have seen revenues jump from zero to $20 million in a year,” he said. “It’s because they pick one pain point, execute well, and partner smartly with companies who use their tools [...] But for 95% of companies in the dataset, generative AI implementation is falling short. The core issue? Not the quality of the AI models, but the “learning gap” for both tools and organizations. While executives often blame regulation or model performance, MIT’s research points to flawed enterprise integration. Generic tools like ChatGPT excel for individuals because of their flexibility, but they stall in enterprise use since they don’t learn from or adapt to workflows
-
 ## Mastering
 
-What do I think this means? I think it means software engineers shouldn't default to using AI first if they want to get better at their job. A software engineer needs to learn the task they're doing, and then code the task when they are solid in the idea they want. AI technology can be used as a supped up linter to suggest coding changes.
+How can I apply all these studies right now? There are so many thoughts. The most important priority must be being engaged with the work. A software engineer needs to make sure that they are actually solving problems and not letting anything else solve it. Otherwise the work might be slow and less enjoyable. I think it means software engineers shouldn't default to using AI first. Instead a software engineer needs to learn the task they're doing with the context provided, and then program the task when they are solid in the idea they want. While in the act of programming, there are many tools to use and AI may be one. AI technology can be used to review one's work and suggest coding changes. I particularly find that AI can be useful with predictive autofill or outputting very common design patterns or functions.
 
-As a software engineer, I feel it important to use tools the right way, and LLMs are no exception. Using tools properly will merit a higher increase of quality work, which hopefully means that work will be easier to debug and maintain.
+As a software engineer, I feel it important to use tools the right way, and LLMs are no exception. Using tools properly will merit a higher increase of quality work, which hopefully means that work will be easier to debug and maintain. A by-product hopefully will lead to higher engagement with the work as well and a healthier mind.
 
-So with all the previously quoted studies, how should I master AI technology? Don't let the AI do all the work for you and engage with the AI. Start with an AI tool, review the work yourself, and review your work with AI. Engage with the AI responses.
+Another note on mastering AI tools, is the need to be creative. Creative can set one apart from the rest, and that is where competition is. Competition is good for humankind, because in an optimistic sense we all come out better from competition. Better ideas should win.
 
-[expand above paragraph!]
-
-Recent Hasan Minhaj had an interview with Neil deGrasse Tyson, and in one part of that interview Neil expressed his view of AI technology and how overrated the technology is becoming.
+Hasan Minhaj had an interview with Neil deGrasse Tyson, and in one part of that interview Neil expressed his view of AI technology and how overrated the technology is becoming.
 
 https://youtube.com/clip/UgkxtvyDjD-1rQFmjCcGQhibDGDGPMgqw6ea?si=u63QuTDtAAPAY1i4
+
+Tyson pointed out how humankind has evolved in the last century to adapt to technologies to make things more productive. In particular he pointed out the time we stopped having horse and buggy and convereted to cars. Industries disappeared, but entire new ones appeared.
 
 "Be creative and find something that AI can't do, and make an industry out of that"
 
@@ -229,9 +220,7 @@ But even when I was discouraged from not using AI technology properly, I tackled
 
 > When you're hiking, those little steps might not seem like much — but they're exactly what get you to the top.
 
-The little things we do for our careers may not seem like much when compared to the massive driving force of AI technology, but it is precisely those small steps that make our own careers a human experience. Since tackling this project, I have now started to gain wisdom and knowledge in 3D-animation web technology, 3D printing, electronics, and trigonometry
-
-[SOLID CONCLUSION!]
+The little things we do for our careers may not seem like much when compared to the massive driving force of AI technology, but it is precisely those small steps that make our own careers a human experience. Since tackling this project, I have now started to gain wisdom and knowledge in 3D-animation web technology, 3D printing, electronics, and trigonometry. I have leveraged AI technology when I knew what I was doing, and I feel that AI technology helped me go faster. And the more I learn and leverage, the higher my mastery of AI technology will be.
 
 ## Presentation
 
