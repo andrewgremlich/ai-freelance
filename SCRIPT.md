@@ -106,19 +106,15 @@ Eventually, I learned I had to use a mix of SCP and SSH for my goals. I used the
 
 How can I properly leverage AI technology to help my work?
 
-As I learned from my freelance job, I could only properly leverage AI technology when I knew what I wanted to do. I had no idea on the technical aspects of a slicer. But once I learned the technical aspects of a slicer, then I would properly word directions to an AI bot to generate something for me. Additionally, I found that if I had no idea what the code was doing, it took me longer to figure out where a problem was.
+As I learned from my freelance job, I could only properly leverage AI technology when I knew what I wanted to do. I had no idea on the technical aspects of a slicer. But once I learned the technical aspects of a slicer, then I would properly word directions to an AI bot to generate something for me. Additionally, I found that if I had no idea what the AI generated code was doing, it took me longer to figure out where a problem was.
 
 I believe my experience in my freelance job isn't the only thing that have a say here.
 
 ### Brain on LLM
 
-A research group at MIT wanted to find how students would perform when using an LLM and when not using an LLM on an essay. Students were separated into three different groups: able to use ChatGPT, able to use Google, and only write using their brain. Once the essays were written and submitted, the students were able to review their papers swapping tools. The students that used ChatGPT couldn't use ChatGPT, the people that used Google couldn't use Google, and the people that just used their brain could use ChatGPT.
+A research group at MIT wanted to find how students would perform when using an LLM and when not using an LLM on an essay under a time constraint. Students were separated into three different groups: able to use ChatGPT, able to use a search engine, and only write using their brain. Once the essays were written and submitted, the students were able to review their papers swapping tools. The students that used ChatGPT couldn't use ChatGPT, the people that used a search engine couldn't use any search engine, and the people that just used their brain could use ChatGPT.
 
-The group that only used an LLM in writing an essay demonstrated poor memory recall and less brain wave activity while writing and reviewig the essay. The group that did not write using an LLM but reviewed their work using an LLM showed higher memory recall and more brain activity. This study essentially found that group that defaulted to using the LLM performed worse than the group that didn't use an LLM. This does not mean that using an LLM makes you dumber, but rather in means that defaulting to an LLM first encourages you to not be invested in the work that you're doing.
-
-In the additional notes, graders found the LLM essays to be "soul-less". The essays also commonly used similar phrasing and structure patterns.
-
-TO ADD SOMEWHERE Explain that the research participants we obliged to follow a time constraint.
+The group that only used an LLM in writing an essay demonstrated poor memory recall and less brain wave activity while writing and reviewing the essay. The group that did not write using an LLM but reviewed their work using an LLM showed higher memory recall and more brain activity. This study essentially found that the LLM-only group performed worse than the group that didn't use an LLM. This does not mean that using an LLM makes you dumber, but rather in means that defaulting to an LLM first encourages you to not be invested in the work that you're doing.
 
 > We believe that some of the most striking observations in our study [were] where Brain-to-LLM participants showed higher neural connectivity than LLM Group's [...]. This suggests that rewriting an essay using AI tools (after prior AI-free writing) engaged more extensive brain network interactions. In contrast, the LLM-to-Brain group, being exposed to LLM use prior, demonstrated less coordinated neural effort in most bands, as well as bias in LLM specific vocabulary. [...]
 
@@ -126,33 +122,21 @@ I read this study as encouragement to use AI properly. Misusing AI meant to let 
 
 By extension, and using a weightlifting metaphor, it was by not using one's brain while creating content that their brain may atrophy and become weak. In another podcast I listened to, experts in the psychology field expressed concern about the mind atrophying while using LLMs for the same reason.
 
-As a software engineer, I feel it important to use tools the right way, and LLMs are no exception. Using tools properly will merit a higher increase of quality work, which hopefully means that work will be easier to debug and maintain.
-
-> We found that the Brain-only group exhibited strong variability in how participants approached essay writing across most topics. In contrast, the LLM group produced statistically homogeneous essays within each topic, showing significantly less deviation compared to the other groups. The Search Engine group was likely, at least in part, influenced by the content that was promoted and optimized by a search engine (see Figure 90 below for PHILANTHROPY topic keywords), therefore, the keywords used to promote specific ideas within each topic were likely influenced more by the participants' own queries than by the prompts provided in the LLM group.
-
-> Participants in the LLM and Search Engine groups were more inclined to focus on the output of the tools they were using because of the added pressure of limited time (20 minutes). Most of them focused on reusing the tools' output, therefore staying focused on copying and pasting content, rather than incorporating their own original thoughts and editing those with their own perspectives and their own experiences.
-
-> The LLM undeniably reduced the friction involved in answering participants' questions compared to the Search Engine. However, this convenience came at a cognitive cost, diminishing users' inclination to critically evaluate the LLM's output or ”opinions” (probabilistic answers based on the training datasets). This highlights a concerning evolution of the 'echo chamber' effect: rather than disappearing, it has adapted to shape user exposure through algorithmically curated content. What is ranked as “top” is ultimately influenced by the priorities of the LLM's shareholders [123, 125]. Only a few participants in the interviews mentioned that they did not follow the “thinking” [124] aspect of the LLMs and pursued their line of ideation and thinking. Regarding ethical considerations, participants who were in the Brain-only group reported higher satisfaction and demonstrated higher brain connectivity, compared to other groups. Essays written with the help of LLM carried a lesser significance or value to the participants (impaired ownership, Figure 8), as they spent less time on writing (Figure 33), and mostly failed to provide a quote from theis essays (Session 1, Figure 6, Figure 7).
-
 https://www.brainonllm.com/
 
 https://www.linkedin.com/feed/update/urn:li:activity:7340386826504876033/
 
-What do I think this means? I think it means software engineers shouldn't default to using AI first if they want to get better at their job. A software engineer needs to learn the task they're doing, and then code the task when they are solid in the idea they want. AI technology can be used as a supped up linter to suggest coding changes.
-
 https://arxiv.org/pdf/2506.08872v1
-
-This wasn't the only thing that I found.
-
-In another study, software engineers slowed down significantly when using AI on a large codebase, because the AI could not fully grasp the complexities of a large codebase. Other studies found that AI could definitely help speed up smaller more concise tasks. Other studies found that workers were less motivated for their job when using AI.
 
 ### Research: Gen AI Makes People More Productive—and Less Motivated 
 
+This wasn't the only thing that I found.
+
 > Our findings consistently demonstrated that collaboration with GenAI enhanced immediate task performance. However, this performance augmentation effect did not persist in subsequent tasks performed independently by humans. Importantly, transitioning from collaboration with GenAI to solo work led to an increased sense of control of human workers, and was also accompanied by significant decreases in intrinsic motivation and increases in feelings of boredom. These results highlight the complex dual effects of human-GenAI collaboration: It enhances immediate task performance but can undermine long-term psychological experiences of human workers.
 
-> While no occupation exists where GenAI can entirely substitute human roles7, there remain tasks that can be better executed by human workers. The future of employment is more likely to evolve towards a hybrid model, where individuals switch between collaborating with GenAI and working independently8. This evolving hybrid work dynamic highlights the need for work redesign and effective task allocation within a job role9. In particular, GenAI is increasingly being integrated into tasks that require creativity and problem-solving, complementing human capabilities in producing high-quality outputs10,11.
+> While no occupation exists where GenAI can entirely substitute human roles, there remain tasks that can be better executed by human workers. The future of employment is more likely to evolve towards a hybrid model, where individuals switch between collaborating with GenAI and working independently. This evolving hybrid work dynamic highlights the need for work redesign and effective task allocation within a job role. In particular, GenAI is increasingly being integrated into tasks that require creativity and problem-solving, complementing human capabilities in producing high-quality outputs.
 
-> While immediate performance benefits of collaborating with GenAI are evident, it is also important to examine its long-term effects on human workers’ psychological experiences and task performance. In occupational settings, tasks that allow for creative freedom and problem-solving are often inherently motivating18. However, as noted in the opening quote, GenAI may diminish the intrinsically motivating parts that are essential for human’s sustained work engagement. For example, creating a performance review enables evaluators to critically analyze an individual’s strengths and weaknesses and experience the fulfillment of offering tailored, constructive feedback. When GenAI takes over these aspects, it may reduce the analyzing and crafting processes that make such tasks engaging. Intrinsic motivation refers to the internal drive to engage in activities for people’s own sake, driven by personal interest, enjoyment, or the satisfaction derived from the activity itself, rather than external rewards or pressures19,20. Given the extensive research indicating the positive impact of GenAI on the immediate task performance, we believe it is necessary to assess its long-term effects on human workers’ psychological experiences and long-term performance.
+> While immediate performance benefits of collaborating with GenAI are evident, it is also important to examine its long-term effects on human workers’ psychological experiences and task performance. In occupational settings, tasks that allow for creative freedom and problem-solving are often inherently motivating. However, [...] GenAI may diminish the intrinsically motivating parts that are essential for human’s sustained work engagement. [...] When GenAI takes over these aspects [of critical thinking], it may reduce the analyzing and crafting processes that make such tasks engaging. [...]
 
 https://www.nature.com/articles/s41598-025-98385-2
 
@@ -218,6 +202,10 @@ https://fortune.com/2025/08/18/mit-report-95-percent-generative-ai-pilots-at-com
 > Some large companies’ pilots and younger startups are really excelling with generative AI,” Challapally said. Startups led by 19- or 20-year-olds, for example, “have seen revenues jump from zero to $20 million in a year,” he said. “It’s because they pick one pain point, execute well, and partner smartly with companies who use their tools [...] But for 95% of companies in the dataset, generative AI implementation is falling short. The core issue? Not the quality of the AI models, but the “learning gap” for both tools and organizations. While executives often blame regulation or model performance, MIT’s research points to flawed enterprise integration. Generic tools like ChatGPT excel for individuals because of their flexibility, but they stall in enterprise use since they don’t learn from or adapt to workflows
 
 ## Mastering
+
+What do I think this means? I think it means software engineers shouldn't default to using AI first if they want to get better at their job. A software engineer needs to learn the task they're doing, and then code the task when they are solid in the idea they want. AI technology can be used as a supped up linter to suggest coding changes.
+
+As a software engineer, I feel it important to use tools the right way, and LLMs are no exception. Using tools properly will merit a higher increase of quality work, which hopefully means that work will be easier to debug and maintain.
 
 So with all the previously quoted studies, how should I master AI technology? Don't let the AI do all the work for you and engage with the AI. Start with an AI tool, review the work yourself, and review your work with AI. Engage with the AI responses.
 
