@@ -194,7 +194,9 @@ https://arxiv.org/pdf/2507.09089
 
 ## Mastering
 
-How can I apply all these studies right now? There are so many thoughts. The most important priority must be being engaged with the work. A software engineer needs to make sure that they are actually solving problems and not letting anything else solve it. Otherwise the work might be slow and less enjoyable. I think it means software engineers shouldn't default to using AI first. Instead a software engineer needs to learn the task they're doing with the context provided, and then program the task when they are solid in the idea they want. While in the act of programming, there are many tools to use and AI may be one. AI technology can be used to review one's work and suggest coding changes. I particularly find that AI can be useful with predictive autofill or outputting very common design patterns or functions.
+With a new tool that is coming out, and we are in the process of figuring it out, how can I master it? What does mastering even mean? I don't think mastering is an easy definition. If I can try and give a definition, mastery means to put one's head down and work on something in diligence and move forward. There really isn't an end in sight to the mastery. When I graduated BYU-Idaho, I was told to never stop learning, and I haven't since. There are just so many things to learn, and I'm excited to be smarter and wiser.
+
+How can I apply all these studies right now? There are so many thoughts. The most important priority must be being engaged with the work. A software engineer needs to make sure that they are actually solving problems and not letting anything else solve it. Otherwise the work might be slow and less enjoyable. I think it means software engineers shouldn't default to using AI first. Instead a software engineer needs to learn the task they're doing with the context provided and figure out an idea to program. While in the act of programming, there are many tools to use and AI may be one. AI technology can be used to review one's work and suggest coding changes. I particularly find that AI can be useful with predictive autofill or outputting very common design patterns or functions. I also find that AI may be good at reviewing, for example I love being able to assign Copilot as a reviewer on a PR on Github. Copilot will be able to review things a bit more accurately than any human could.
 
 As a software engineer, I feel it important to use tools the right way, and LLMs are no exception. Using tools properly will merit a higher increase of quality work, which hopefully means that work will be easier to debug and maintain. A by-product hopefully will lead to higher engagement with the work as well and a healthier mind.
 
@@ -206,7 +208,7 @@ https://youtube.com/clip/UgkxtvyDjD-1rQFmjCcGQhibDGDGPMgqw6ea?si=u63QuTDtAAPAY1i
 
 Tyson pointed out how humankind has evolved in the last century to adapt to technologies to make things more productive. In particular he pointed out the time we stopped having horse and buggy and convereted to cars. Industries disappeared, but entire new ones appeared.
 
-"Be creative and find something that AI can't do, and make an industry out of that"
+Tyson said, "Be creative and find something that AI can't do, and make an industry out of that"
 
 Neil deGrasse Tyson isn't worried about people not having jobs, because industries have been evolving and progressing for a while now.
 
@@ -222,10 +224,10 @@ But even when I was discouraged from not using AI technology properly, I tackled
 
 The little things we do for our careers may not seem like much when compared to the massive driving force of AI technology, but it is precisely those small steps that make our own careers a human experience. Since tackling this project, I have now started to gain wisdom and knowledge in 3D-animation web technology, 3D printing, electronics, and trigonometry. I have leveraged AI technology when I knew what I was doing, and I feel that AI technology helped me go faster. And the more I learn and leverage, the higher my mastery of AI technology will be.
 
-## Presentation
+### Presentation
 
 Here is a QR code for this presentation, and here are the social networking links to follow me.
 
-## Finale
+### Finale
 
 Thank you for coming to my presentation! Have a fantastic conference, and I hope you all enjoyed my presentation. Thank you.
