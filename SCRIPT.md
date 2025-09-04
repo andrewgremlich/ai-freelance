@@ -1,10 +1,10 @@
 Hello and welcome to my presentation! Thank you for coming!
 
-Today, I want to encourage Software Engineers everywhere to not be discouraged or stressed out with the rise of AI software. If anything, I want you to learn how to ride the wave of AI technology so that you can adapt just as fast as other AI-enabled software engineers and companies.
+Today, I want to encourage Software Engineers everywhere to not be discouraged or stressed out with the rise of AI software. If anything, I want you to learn how to ride the wave of AI technology so that you can adapt _correctly_ just as fast as other AI-enabled software engineers and companies.
 
 I'll share my first project as a freelance engineer and how I used AI tools, and, most importantly, how not to use AI technology. AI Technology is useful and impressive, but if it's misused it can hinder progress as a software engineer.
 
-I'll cover four key lessons.
+Subsequent to my story, I'll cover three key lessons.
 
 1. Learning the technology that you're developing with the assistance of AI.
 2. Leveraging AI technology in the most useful and beneficial why possible.
@@ -20,7 +20,7 @@ _PULL OUT WIZARD OUTFIT_
 
 A few months ago I fell in love with a cloak off of Etsy, so I purchased it. Naturally I also had to purchase a wizard hat.
 
-I'm in a wizard outfit! I hope this doesn't distract from my presentation too much, so I will try and make this presentation professional still.
+I hope this doesn't distract from my presentation too much, so I will try and make this presentation professional still.
 
 And yet, if I'm in a wizard outfit, I think there needs to be a little bit of _magic_ in this presentation. I'm here to have some fun, and I hope you all have some fun as well.
 
@@ -38,17 +38,19 @@ Ah it's working. Very good. Let's move on.
 
 I hope you guys in attendance won't mind that I do this next part. I've programmed this orb to the timing of _box breathing_.
 
-Box breathing is a form of breathing meditation where you inhale for 4 seconds, hold your breath for 4 seconds, exhale for 4 seconds, hold your breath for for seconds, and then repeat as many times as you like or need. Because each of the 4 steps is 4 seconds long is the reason why it's called box breathing, with a box having for equal length sides. There are other forms of breathing meditation, if you're curious to look at it later.
+Box breathing is a form of breathing meditation where you inhale for 4 seconds, hold your breath for 4 seconds, exhale for 4 seconds, hold your breath for 4 seconds, and then repeat as many times as you like or need. Because each of the 4 steps is 4 seconds long is the reason why it's called box breathing, with a box having 4 equal length sides. There are other forms of breathing meditation, if you're curious to look at it later.
 
-I want to introduce box breathing because one of the benefits of meditation is stress management. When I first started my career out of college, so many new things happened to cause me stress: I was going into something new and unfamiliar, I had to learn how to work in the software engineering field, and my mother had recently passed away. It seemed as if I could explode at the stress any minute. I complained and vented to my friends, and I felt deeply that I needed to get this handled, no matter how much I thought my stress was justified.
+I want to introduce box breathing because one of the benefits of meditation is stress management. When I first started my career out of college, so many new things happened to cause me stress: I was going into something new and unfamiliar; as such, I had to learn how to work in the software engineering field. It seemed as if I could explode at the stress any minute. I complained and vented to my friends, and I felt deeply that I needed to get this handled, no matter how much I thought my stress was justified.
 
 I went to a NodeJS conference in San Francisco where a speaker promoted meditation to help stress management. This did pique my interest, so I downloaded Headspace to try meditation. After one practice session, I immediately felt how relaxed I got. With this small segment, I hope to inspire proper stress management, and all the better if it's meditation.
 
-Now allow me to explain how breathing meditation works by the two sides of the nervous system, sympathetic and parasympathetic. Sympathetic nervous system is activated in the height of stress, so the heart rate increases and other factors occur to help an individual fight or flight. The parasympathetic nervous system is activated in rest periods. This is where the parasympathetic nervous system encourages the body to rest, rebuild, and recover. A good indicator of which nervous system is activated is how fast you're breathing. If you notice your breaths are short or you're holding your breath, then you're probably in a sympathetic nervous system state. If your breaths are long and relaxed, you're probably in the parasympathetic nervous system. And it is by being aware of one's own breathing one may trigger relaxation in the nervous system.
+Now allow me to explain how breathing meditation works by the two sides of the nervous system, sympathetic and parasympathetic. Sympathetic nervous system is activated in the height of stress, so the heart rate increases and other factors occur to help an individual fight or flight. The parasympathetic nervous system is activated in rest periods. This is where the parasympathetic nervous system encourages the body to rest, rebuild, and recover.
+
+A good indicator of which nervous system is activated is how fast you're breathing. If you notice your breaths are short or you're holding your breath, then you're probably in a sympathetic nervous system state and you're stressed. If your breaths are long and relaxed, you're probably in the parasympathetic nervous system and you're peaceful. And it is by being aware of one's own breathing one may trigger relaxation in the nervous system.
 
 *CAN SKIP* Sympathetic starts with "S" and "S" stands for stress, and "Parasympathetic" starts with "P" and "P" stands for peace. Or for imagery, a "S" could be for sprinting where the heart rate goes faster, and "P" can be for panda where a panda is peaceful.
 
-In today's age where the software engineering industry is in flux, things can be stressful. I would really enjoy it if I can get everyone here to do a quick one minute meditation with me following box breathing pattern in order to de-stress about the industry.
+In today's age where the software engineering industry is in flux, things can be stressful. There is a growing need to manage such stress or else burn out is a constant risk. I would really enjoy it if I can get everyone here to do a quick one minute meditation with me following box breathing pattern in order to de-stress about the industry.
 
 _ONE MINUTE BOX BREATHING_
 
@@ -72,42 +74,33 @@ A little while later, I got a message from this friend who introduced himself as
 
 As it turned out, about one year ago David reached out to me again asking if I would still have interest in taking the job but with the focus on starting a browser version. This was exciting. I've never done a freelance job before, neither have I done anything with 3D rendering in the browser. By my excitement, I agreed to take the job. David would pay me hourly, and I would send him invoices for the work that I did. I did come to realize that my excitement was probably a little faster than my realism.
 
-David called the project ProvelPrint and he explained that the project involved importing an STL file into the application and slicing that STL file so that a custom made 3D printer could render it.
+David called the project ProvelPrint and he explained that the project involved importing an STL file of a residual limb into the application and slicing that STL file so that a custom made 3D printer could render it. This would hopefully provide a faster turn-around time for amputees that needed a prosthetic limb.
 
 ## Learning
 
-### Github Actions
-
-Utilizing AI to accelerate comprehension of unfamiliar technologies and
-methodologies. I wrote a github action with the aid of AI. It didn't
-help much because I didn't know what I was doing, but it was a good
-learning.
-
-Converting a large JS file to TS was a challenge, because AI didn't
-convert the whole file. It missed some functions. I would have though
-this is a good implementation for AI, but it wasn't. I had to do it
-manually.
-
-### Whooshes
-
-Discuss the use of whooshes in the project and how AI didn't help. It was a basic React mistake by putting an array in an useEffect dependency.
-
-Utilizing AI to accelerate comprehension of unfamiliar technologies and
-methodologies.
-
-Discuss the use of whooshes in the project and how AI didn't help. It
-was a basic React mistake by putting an array in an useEffect
-dependency.
-
-## Freelance Project
+### Freelance Project
 
 Right, I didn't know what problems I needed to solve. David talked about slicers, so I guessed I better learn the functions of a slicer. I searched around the internet for what slicers were and what projects used a slicing method. I found that a slicer was a way to divide up a 3D model into a pattern that makes it 3D-printable. This is usually done in layers at a time. In addition, I found out that infill was a way to build support for any hanging edges of a model. Some projects that I found involved Three.JS, so I would go in that direction first and use Three.JS.
 
-The more I explored slicers and had David explain to me what he wanted, bit by bit I started to understand the task. At this time, I still was in over my head though. In one attempted solution, I asked ChatGPT to create a slicer function using all the points of an STL file. I ended up getting something that worked on paper, but the more I examined the GCode output the more I realized that this output could not reasonably fit the customer needs. The hints that told me this wasn't the right way was: the output GCode file was immensely huge, and that just could not work in transmission; the print needed to be in vase mode where the nozzle height gradually increases; and the height difference between STL points was not configurable. I told David that I needed to redo the slicer and he did give me some pushback. I successfully convinced him that what I was doing wasn't the right way to go and I needed to pivot.
+The more I explored slicers and had David explain to me what he wanted, bit by bit I started to understand the task. At this time, I still was in over my head though. In one attempted solution, I asked ChatGPT to create a slicer function using all the points of an STL file. I ended up getting something that worked on paper, but the more I examined the GCode output the more I realized that this output could not reasonably fit the customer needs for the custom printer.
 
-Eventually, I started to teach myself some 3D animation principles, and I found out about raycasters. Raycasters are incredibly useful to help calculate intersections of light rays and 3D objects in a scene. Intersection calculation was what I needed, and Three.JS had a built-in raycaster object and intersection calculation! Taking this knowledge, I solved that I needed to place the raycaster origin at the center of an STL model and rotate the raycaster on its origin to find where the intersection point would be. After rotating the raycaster and gradually increasing in height, to imitate vase print mode, I would gather all the intersection points and process them into the desired GCode output.
+The hints that told me this wasn't the right way was: the output GCode file was relatively huge, and that just could not work in transmission; the print needed to be in vase mode where the nozzle height gradually increases; and the height difference between STL points was not configurable. I told David that I needed to redo the slicer and he did give me some pushback. I successfully convinced him that what I was doing wasn't the right way to go and I needed to pivot.
+
+Eventually, I started to teach myself some 3D animation principles, and I found out about raycasters. Raycasters are incredibly useful to help calculate intersections of rays and 3D objects in a scene. Intersection calculation was what I needed, and Three.JS had a built-in raycaster object and intersection calculation! Taking this knowledge, I solved that I needed to place the raycaster origin at the center of an STL model and rotate the raycaster on its origin to find where the intersection point would be. After rotating the raycaster and gradually increasing in height, to imitate vase print mode, I would gather all the intersection points and process them into the desired GCode output.
 
 After a couple weeks of development, spending about 5-10 hours a week on the project, I finally got to the desired output. I felt so satisfied that I followed my gut instinct on how the original solution just wouldn't work. By this experience, it started to teach me the limitations of having AI do _all the work_ when I don't know myself what problem it is I needed to solve.
+
+These limitations I discovered with AI technology in my project wasn't the only time I came across them.
+
+### Github Actions
+
+At one point of my project, I found the need to deploy the web application on a DigitalOcean droplet. At first, I thought I could pull in the repository and build it on the droplet. As it turned out, the smallest DigitalOcean droplet did not have sufficient capactiy to build a Vite project. And I didn't want to get a higher capacity droplet because that means I would have to pay more. Is there a way to automated this build and deploy without paying much extra money?
+
+Turns out Github Actions was my answer. With every free account, a certain amount of Github Actions are given with plenty capactiy to build a Vite project. Again, I found out that I didn't know much about the technology, and I thought I could just let AI produce for me a file. The file produced did have some good content, but I had no context for what it was doing.
+
+After a moment of wrestling with the AI, and decided to drop the AI and actually teach myself how Github Actions work. Specifically, I had to learn why AI was recommending to use a SSH plugin. So I dove into that SSH plugin and I found out it was actually a popular one to use. I also found that author of the plugin had other well-used plugins related to SSH.
+
+Eventually, I learned I had to use a mix of SCP and SSH for my goals. I used the file the AI generated for me as a template, and I went through every step to make sure I knew what was there and I altered where needed. After some work, I got a Github Actions file that SCP my built repository into a DigitalOcean droplet, and the action would SSH unzip commands to the droplet.
 
 ## Leveraging
 
