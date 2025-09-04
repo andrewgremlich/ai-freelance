@@ -1,9 +1,8 @@
 import { H1, Image, Quote } from "summit-kit";
 import type { Slide } from "../types/slide.tsx";
 import { NotFound } from "./404.tsx";
-import { Leveraging } from "./Leveraging/index.tsx";
 import { Meditate } from "./Meditate/index.tsx";
-import { PresentationLink, Social } from "./PresentationInfo/index.ts";
+import { Social } from "./PresentationInfo/index.ts";
 import classes from "./Slides.module.css";
 
 const slides: Slide[] = [
@@ -14,7 +13,11 @@ const slides: Slide[] = [
 			{
 				path: "/costume-change",
 				element: (
-					<Image src="/wizard_cyberpunk.png" alt="Costume Change" width="100%" />
+					<Image
+						src="/wizard_cyberpunk.png"
+						alt="Costume Change"
+						width="100%"
+					/>
 				),
 			},
 		],
@@ -29,12 +32,19 @@ const slides: Slide[] = [
 	},
 	{
 		path: "/learning",
-		element: <Image src="/wizard_slicing.png" alt="Learning how to work." width="100%" />,
+		element: (
+			<Image
+				src="/wizard_slicing.png"
+				alt="Learning how to work."
+				width="100%"
+			/>
+		),
 	},
 	{
 		path: "/leveraging",
-		element: <Leveraging />,
-		children: [],
+		element: (
+			<Image src="/wizard_leveraging.png" alt="Leveraging" width="100%" />
+		),
 	},
 	{
 		path: "/mastering",
@@ -49,16 +59,12 @@ const slides: Slide[] = [
 			</Quote>
 		),
 	},
-	{
-		path: "/presentation",
-		element: <PresentationLink />,
-		children: [{ path: "/social", element: <Social /> }],
-	},
+	{ path: "/social", element: <Social /> },
 	{
 		path: "/finale",
 		element: (
 			<div style={{ textAlign: "center" }}>
-				<Image src="/finale.webp" alt="Thank you for coming!" width="100%" />
+				<Image src="/finale_bg_t.png" alt="Thank you for coming!" width="100%" />
 			</div>
 		),
 	},
