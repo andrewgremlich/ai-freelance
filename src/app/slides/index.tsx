@@ -73,7 +73,28 @@ const slides: Slide[] = [
 			</Quote>
 		),
 	},
-	{ path: "/social", element: <Social /> },
+	{
+		path: "/social",
+		element: <Social />,
+		children: [
+			{
+				path: "/resources",
+				element: (
+					<div>
+						<h2>Resources</h2>
+						<ul>
+							<li>
+								<Link href="https://example.com/resource1">Resource 1</Link>
+							</li>
+							<li>
+								<Link href="https://example.com/resource2">Resource 2</Link>
+							</li>
+						</ul>
+					</div>
+				),
+			},
+		],
+	},
 	{
 		path: "/finale",
 		element: (
