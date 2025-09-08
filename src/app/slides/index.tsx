@@ -94,7 +94,7 @@ const slides: Slide[] = [
 				),
 			},
 		],
-	},
+	}, // TODO: resources link to my blog for this.
 	{
 		path: "/finale",
 		element: (
