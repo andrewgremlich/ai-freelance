@@ -46,17 +46,15 @@ Just kidding.
 
 ## Project
 
-About a two years ago, I was visiting my in-laws in Washington. One of those in-laws was my wife's aunt and uncle. It was a nice visit; we got to talking about how life went. At one point of the conversation, my wife's aunt, Barbara, turned to me and asked if I knew anything about desktop software. This surprised me because I didn't think that Barbara knew much about software in general.
+About a two years ago, I was visiting my in-laws in Washington. One of those in-laws was my wife's aunt and uncle. It was a nice visit; we got to talking about how life went. At one point of the conversation, my wife's aunt, Barbara, turned to me and asked if I knew anything about desktop software.
 
-I replied that I didn't know much about desktop specifically because I haven't worked in it. But I imagine that I could learn it pretty quick if needed, because such is the nature of being a software engineer now-a-days. On top of that, I was familiar with Electron and various frameworks that could potentially help.
+I replied that I didn't know much specifically because I've mainly worked in web technology. But I imagine that I could learn it pretty quick if needed, because such is the nature of being a software engineer now-a-days. On top of that, I was familiar with Electron and various frameworks that could potentially help.
 
 Barbara told me that she discovered through a weird connection that I could have a freelance job. This connection was her friend's barber's other friend. Barbara asked if she could share my contact info with her friend's barber's other friend, and this friend would contact me.
 
-Side note, I have since learned that this mainly how networking works for me. The direct people I know rarely will be the ones that can offer a job.
+A little while later, I got a message from this friend who introduced himself as David. He asked if I knew much about desktop software and 3D rendering. I replied that I was more practiced in web technology, but I could learn desktop software if needed. David sighed saying that for the moment he would need to go in the direction of desktop software and not web.
 
-A little while later, I got a message from this friend who introduced himself as David. He asked if I knew much about desktop applications and 3D rendering. I responded that I didn't know much in a desktop specific environment, but I knew more related to web technology and I could learn more about desktop environments. David sighed saying that for the moment he would need to go in the direction of desktop specific technology.
-
-As it turned out, about one year ago David reached out to me again asking if I would still have interest in taking the job but starting a browser version. This was exciting. I've never done a freelance job before, neither have I done anything with 3D rendering in the browser. By my excitement, I agreed to take the job. David would pay me hourly, and I would send him invoices for the work that I did. I did come to realize that my excitement was probably a little faster than my realism.
+As it turned out, about one year later David reached out to me again asking if I would still have interest in taking the job but starting a web version. This was exciting. I've never done a freelance job before, neither have I done anything with 3D rendering in the broweser. By my excitement, I agreed to take the job. David would pay me hourly, and I would send him invoices for the work that I did. I did come to realize that my excitement was probably a little faster than my realism.
 
 David called the project ProvelPrint and he explained that the project involved importing an STL file of a residual limb into the application and slicing that STL file so that a custom made 3D printer could render it. This would hopefully provide a faster turn-around time for amputees that needed a prosthetic limb.
 
