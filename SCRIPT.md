@@ -158,7 +158,7 @@ But even when I was discouraged from not using AI technology properly, I tackled
 
 > When you're hiking, those little steps might not seem like much — but they're exactly what get you to the top.
 
-The little things we do for our careers may not seem like much when compared to the massive driving force of AI technology, but it is precisely those small steps that make our own careers a human experience. Since tackling this project, I have now started to gain wisdom and knowledge in 3D-animation web technology, 3D printing, electronics, and trigonometry. I have leveraged AI technology when I knew what I was doing, and I feel that AI technology helped me go faster. And the more I learn and leverage, the higher my mastery of AI technology will be.
+The little things we do for our careers may not seem like much when compared to the massive driving force of AI technology, but it is precisely those small steps that make our own careers a human experience. I hope software engineers will tackle problems head on in all types of work. Since tackling this project, I have now started to gain wisdom and knowledge in 3D-animation web technology, 3D printing, electronics, and trigonometry. I have leveraged AI technology when I knew what I was doing, and I feel that AI technology helped me go faster. And the more I learn and leverage, the higher my mastery of AI technology will be.
 
 ### Presentation
 
