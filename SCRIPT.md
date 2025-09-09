@@ -1,6 +1,6 @@
 Hello and welcome to my presentation! Thank you for coming!
 
-Today, I want to encourage everyone to not be discouraged or stressed out with the rise of AI software. As seen previously with Cory Brown's presentation, humankind has also evolved with industrial revolutions. With my presentation, I want to encourage to take advantage of AI technology _correctly_. With using AI properly, I believe that the future of softare engineering work can be democratized to where one doesn't have to work at a big tech company in order to have a successful career.
+Today, I want to encourage Software Engineers everywhere to not be discouraged or stressed out with the rise of AI software. If anything, I want you to learn how to ride the wave of AI technology so that you can adapt _correctly_ just as fast as other AI-enabled software engineers and companies. In fact, I want to encourage software engineers to explore freelance options using AI technology to assist.
 
 I'll share my first project as a freelance engineer and how I used AI tools. Honestly speaking, I have found AI technology to be incredibly helpful being a first-time freelance software engineer. Also, I have found that AI technology may inhibit my progress in a freelance project. I'll cover three key lessons that I learned while working on this project.
 
