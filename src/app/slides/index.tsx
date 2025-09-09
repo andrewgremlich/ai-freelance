@@ -4,7 +4,6 @@ import type { Slide } from "../types/slide.tsx";
 import { NotFound } from "./404.tsx";
 import { Meditate } from "./Meditate/index.tsx";
 import { BlogLink } from "./PresentationInfo/BlogLink.tsx";
-import { Social } from "./PresentationInfo/index.ts";
 import classes from "./Slides.module.css";
 
 const slides: Slide[] = [
