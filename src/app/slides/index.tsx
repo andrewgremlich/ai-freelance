@@ -78,12 +78,6 @@ const slides: Slide[] = [
 	{
 		path: "/blog-link",
 		element: <BlogLink />,
-		children: [
-			{
-				path: "/social",
-				element: <Social />,
-			},
-		],
 	},
 	{
 		path: "/finale",

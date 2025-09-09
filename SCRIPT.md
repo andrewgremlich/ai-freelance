@@ -164,7 +164,7 @@ The little things we do for our careers may not seem like much when compared to 
 
 ### Presentation
 
-Here is a QR code for the blog of this presentation. In my blog I included the referenences I used in this project.
+Here is a QR code for the blog of this presentation. In my blog I included the referenences I used in this project. You can follow my blog or find my socials there!
 
 ### Finale
 
