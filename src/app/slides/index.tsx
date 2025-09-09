@@ -1,7 +1,9 @@
 import { H1, Image, Link, Quote } from "summit-kit";
+
 import type { Slide } from "../types/slide.tsx";
 import { NotFound } from "./404.tsx";
 import { Meditate } from "./Meditate/index.tsx";
+import { BlogLink } from "./PresentationInfo/BlogLink.tsx";
 import { Social } from "./PresentationInfo/index.ts";
 import classes from "./Slides.module.css";
 
@@ -74,27 +76,15 @@ const slides: Slide[] = [
 		),
 	},
 	{
-		path: "/social",
-		element: <Social />,
+		path: "/blog-link",
+		element: <BlogLink />,
 		children: [
 			{
-				path: "/resources",
-				element: (
-					<div>
-						<h2>Resources</h2>
-						<ul>
-							<li>
-								<Link href="https://example.com/resource1">Resource 1</Link>
-							</li>
-							<li>
-								<Link href="https://example.com/resource2">Resource 2</Link>
-							</li>
-						</ul>
-					</div>
-				),
+				path: "/social",
+				element: <Social />,
 			},
 		],
-	}, // TODO: resources link to my blog for this.
+	},
 	{
 		path: "/finale",
 		element: (
