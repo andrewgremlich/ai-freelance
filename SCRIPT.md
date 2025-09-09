@@ -30,7 +30,7 @@ Ah it's working. Very good. Let's move on.
 
 I hope you guys in attendance won't mind that I do this next part. I've programmed this orb to the timing of _box breathing_.
 
-Box breathing is a form of breathing meditation where you inhale for 4 seconds, hold your breath for 4 seconds, exhale for 4 seconds, hold your breath for 4 seconds, and then repeat as many times as you like or need. Because each of the 4 steps is 4 seconds long that is the reason why it's called box breathing, with a box having 4 equal length sides. There are other forms of breathing meditation, if you're curious to look at it later. Meditation in general can help manage stress [1].
+Box breathing is a form of breathing meditation, and meditation in general is usually practiced to help manage stress. Because each of the 4 steps is 4 seconds long that is the reason why it's called box breathing, with a box having 4 equal length sides. There are other forms of breathing meditation, if you're curious to look at it later. [1].
 
 Now allow me to explain how breathing meditation works with the two sides of the nervous system, sympathetic and parasympathetic. Sympathetic nervous system is activated in the height of stress, so the heart rate and breath rate increases. This is usually done to help the fight or flight response. The parasympathetic nervous system is activated in rest periods. This is where the parasympathetic nervous system encourages the body to rest, rebuild, and recover. The bodily signs usally include a slower heart and breath rate.
 
