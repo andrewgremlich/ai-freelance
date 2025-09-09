@@ -7,6 +7,7 @@ export const Meditate = () => {
 		src: "calming-rain.webm",
 		volume: 0.5,
 		autoplay: true,
+		loop: true,
 	});
 
 	return (
