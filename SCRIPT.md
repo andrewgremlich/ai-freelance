@@ -1,6 +1,6 @@
 Hello and welcome to my presentation! Thank you for coming!
 
-Today, I want to encourage Software Engineers everywhere not to be discouraged with the rise of AI software. If anything, I want you to learn how to ride the wave of AI technology so that you can adapt _correctly_ just as fast as any other AI-enabled software engineers and companies. In fact, I want to encourage software engineers to explore freelance options using AI technology to assist.
+Today, I want to encourage developers everywhere not to be discouraged with the rise of AI software. If anything, I want you to learn how to ride the wave of AI technology so that you can adapt _correctly_ just as fast as any other AI-enabled software engineer or company. In fact, I want to encourage software engineers to explore freelancing with AI technology.
 
 I'll share my first project as a freelance engineer and how I used AI tools. Honestly speaking, I have found AI technology to be incredibly helpful and sometimes inhibiting to my progress. The results were a mixed bag. I'll cover three key lessons that I learned while working on this project.
 
@@ -76,7 +76,7 @@ At one point of my project, I found the need to deploy the web application in a 
 
 Turns out Github Actions was my answer. With every free account, a certain amount of Github Actions are given with plenty capactiy to build a Vite project. Again, I found out that I didn't know much about the technology, and I thought I could just let AI produce for me a file. The file produced did have some good content, but I had no context for what it was doing.
 
-After a moment of wrestling with the AI, and decided to drop the AI and actually teach myself how Github Actions work. Specifically, I had to learn why AI was recommending to use an SSH plugin when that plugin wasn't working right. So I dove into that SSH plugin and I found out it was actually a popular one to use. I also found that author of that plugin had other well-used plugins related to SSH like SCP.
+After a moment of wrestling with the AI, I decided to drop the AI and actually teach myself how Github Actions work. Specifically, I had to learn why AI was recommending to use an SSH plugin when that plugin wasn't working right. So I dove into that SSH plugin and I found out it was actually a popular one to use. I also found that author of that plugin had other well-used plugins related to SSH like SCP.
 
 Eventually, I learned I had to use a mix of SCP and SSH for my goals. I used the AI generated file as a template, and I went through the file to understand every step. After some work, I got a file that would SCP my built repository into a DigitalOcean droplet, and the action would SSH unzip commands to the droplet.
 
@@ -110,11 +110,11 @@ I believe I have experienced this first hand, and perhaps you have experienced t
 
 There is one study that shows faster time completion on software engineering tasks especially if a worker is new at a job. This study found a group of software engineers and tasked them to build an HTTP server quickly with an AI tool. Of course, this group completed the task quickly. This study especially found that newer software engineers were able to come up to speed faster while using AI technology. [10] This could prove especially beneficial for freelance work.
 
-This study also found a catch that they did not quantify. They did not measure code quality while using AI technology, and they did not find if a software engineer or an AI bot wrote better code. This study suggested that further studies should follow up measuring the impact of code quality. [11] [12]
+This study also found a catch that they did not quantify. They did not measure code quality while using AI technology, and they did not find if a software engineer or an AI bot wrote better code. This study suggested that further studies should follow up measuring code quality. [11] [12]
 
 ### The Effects of Generative AI on High-Skilled Work: Evidence from Three Field Experiments with Software Developers
 
-Another study from MIT found that using an AI tool did speed up programming. This study also found that when younger developers and new hires used AI at a new job, they could come up to speed faster.  This make sense doesn't it? If an AI tool has the context of a company's knowledge base or repositories, then the AI can point to where the resources are. [13] [14] [15]
+Another study from MIT found that using an AI tool did speed up programming. This study also found that when younger developers and new hires used AI at a new job, they could come up to speed faster.  This makes sense doesn't it? If an AI tool has the context of a company's knowledge base or repositories, then the AI can point to where the resources are. [13] [14] [15]
 
 ### Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity
 
@@ -148,7 +148,7 @@ Neil deGrasse Tyson isn't worried about people not having jobs, because industri
 
 ## Inspire
 
-Eventually with my freelance project, I finished something that no other software engineer had done previously for for my David. He explained to me on several occasions that I was the fifth software engineer to tackle this project. All the previous software engineers had various problems with the project, and they couldn't deliver anything for David. David had been working on this project for about 8 years. Delivering software to help fulfill another person's dream was a magical and rewarding experience.
+Eventually with my freelance project, I finished something that no other software engineer had done previously for David. He explained to me on several occasions that I was the fifth software engineer to tackle this project. All the previous software engineers had various problems with the project, and they couldn't deliver anything for David. David had been working on this project for about 8 years. Delivering software to help fulfill another person's dream was a magical and rewarding experience.
 
 But even when I was discouraged from not using AI tools properly, I tackled the problems head on and I learned how to solve the problems myself. On one occasion David said this quote to me, explaining his motivation for continuing to work on this project. He knew that I was a hiker, so the metaphor landed well with me.
 
