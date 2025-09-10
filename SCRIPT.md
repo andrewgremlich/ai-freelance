@@ -1,26 +1,26 @@
 Hello and welcome to my presentation! Thank you for coming!
 
-Today, I want to encourage Software Engineers everywhere to not be discouraged or stressed out with the rise of AI software. If anything, I want you to learn how to ride the wave of AI technology so that you can adapt _correctly_ just as fast as other AI-enabled software engineers and companies. In fact, I want to encourage software engineers to explore freelance options using AI technology to assist.
+Today, I want to encourage Software Engineers everywhere not to be discouraged with the rise of AI software. If anything, I want you to learn how to ride the wave of AI technology so that you can adapt _correctly_ just as fast as any other AI-enabled software engineers and companies. In fact, I want to encourage software engineers to explore freelance options using AI technology to assist.
 
-I'll share my first project as a freelance engineer and how I used AI tools. Honestly speaking, I have found AI technology to be incredibly helpful being a first-time freelance software engineer. Also, I have found that AI technology may inhibit my progress in a freelance project. I'll cover three key lessons that I learned while working on this project.
+I'll share my first project as a freelance engineer and how I used AI tools. Honestly speaking, I have found AI technology to be incredibly helpful and sometimes inhibiting to my progress. The results were a mixed bag. I'll cover three key lessons that I learned while working on this project.
 
-1. Learning the technology that you're developing with the assistance of AI.
-2. Leveraging AI technology in the most useful and beneficial why possible.
+1. Learning the problem to solve in order to properly get AI to assist.
+2. Leveraging AI technology in the most useful and beneficial way possible.
 3. Mastering software engineering so that the AI doesn't master you.
 
 I hope this presentation will be engaging, insightful, and memorable.
 
-## CostumeChange
+## Costume Change
 
-Speaking of fun, I recognize that we are in a movie theater. This is a place where people come to be told inspirational stories, and occasionally people dress up to participate in that story. I've never had that experience of dressing up for a movie, so I want to take that opportunity now seeing as I'm in a movie theater.
+Speaking of memorable, I recognize that we are in a movie theater. This is a place where people come to be told inspirational or entertaining stories, and occasionally people dress up to participate. I've never had that experience of dressing up for a movie, so I want to take that opportunity now seeing as I'm in a movie theater.
 
-_PULL OUT WIZARD OUTFIT and JOYCON WAND_
+_PULL OUT WIZARD OUTFIT and DRESS_
 
-A few months ago I fell in love with a cloak off of Etsy, so I purchased it. Naturally I also had to purchase a wizard hat. I hope this doesn't distract from my presentation, so I have tried to make this presentation professional still. And yet, if I'm in a wizard outfit, I think there needs to be a little bit of _magic_ in this presentation.
+A few months ago I fell in love with this cloak off of Etsy, so I bought it. Naturally I also had to purchase a wizard hat. I hope this doesn't distract from my presentation, so I have tried to make this presentation professional still. And yet, if I'm in a wizard outfit, I think there needs to be a little bit of _magic_ in this presentation.
 
 _PULL OUT JOYCON_
 
-It's taken me some time to learn how to use this to produce magic, but I believe I can have a go at it.
+It's taken me some time to learn how to use this wand to produce magic, and I hope this magic will work for my presentation.
 
 _ACTIVATE MAGIC MODE_
 
@@ -28,13 +28,11 @@ Ah it's working. Very good. Let's move on.
 
 ## Meditate
 
-I hope you guys in attendance won't mind that I do this next part. I've programmed this orb to the timing of _box breathing_.
+I've programmed this orb to the timing of _box breathing_. Box breathing is a form of meditation, and it has 4 steps that are 4 seconds long. That is the reason why it's called box breathing, with a box having 4 equal length sides. There are other forms of breathing meditation, if you're curious to look at it later. [1] In general people practice meditation to help manage stress. That's important.
 
-Box breathing is a form of breathing meditation, and meditation in general is usually practiced to help manage stress. Because each of the 4 steps is 4 seconds long that is the reason why it's called box breathing, with a box having 4 equal length sides. There are other forms of breathing meditation, if you're curious to look at it later. [1].
+Let me explain how meditation works with the two sides of the nervous system - sympathetic and parasympathetic. Sympathetic nervous system is activated in the height of stress, and the signs of stress are usually an elevated heart and breath rate. This is usually done to help the fight or flight response. The parasympathetic nervous system is activated in rest periods. This is where the parasympathetic nervous system encourages the body to rest, rebuild, and recover. The bodily signs usally include a slower heart and breath rate.
 
-Now allow me to explain how breathing meditation works with the two sides of the nervous system, sympathetic and parasympathetic. Sympathetic nervous system is activated in the height of stress, so the heart rate and breath rate increases. This is usually done to help the fight or flight response. The parasympathetic nervous system is activated in rest periods. This is where the parasympathetic nervous system encourages the body to rest, rebuild, and recover. The bodily signs usally include a slower heart and breath rate.
-
-In today's age where the software engineering industry is in flux, things can be stressful. There is a growing need to manage such stress or else burn out is a constant risk. I would really enjoy it if I can get everyone here to do a quick one minute meditation with me following box breathing pattern in order to de-stress about the industry.
+In today's age where software engineering industry is in flux, things can be stressful. There is a growing need to manage such stress or else burn out is a constant risk. I would really enjoy it if I can get everyone here to do a quick one minute meditation with me following the box breathing pattern.
 
 _ONE MINUTE BOX BREATHING_
 
@@ -46,119 +44,117 @@ Just kidding.
 
 ## Project
 
-About a two years ago, I was visiting my in-laws in Washington. One of those in-laws was my wife's aunt and uncle. It was a nice visit; we got to talking about how life went. At one point of the conversation, my wife's aunt, Barbara, turned to me and asked if I knew anything about desktop software.
+About two years ago, I was visiting my in-laws in Washington. One of those in-laws was my wife's aunt and uncle. It was a nice visit; we got talking about life. At one point of the conversation, my wife's aunt, Barbara, turned to me and asked if I knew anything about desktop software.
 
-I replied that I didn't know much specifically because I've mainly worked in web technology. But I imagine that I could learn it pretty quick if needed, because such is the nature of being a software engineer now-a-days. On top of that, I was familiar with Electron and various frameworks that could potentially help.
+I replied that I didn't know much, because I've mainly worked in web technology. But I imagine that I could learn desktop pretty quick if needed. Such is the nature of being a software engineer. On top of that, I was familiar with Electron and various frameworks that could potentially help.
 
 Barbara told me that she discovered through a weird connection that I could have a freelance job. This connection was her friend's barber's other friend. Barbara asked if she could share my contact info with her friend's barber's other friend, and this friend would contact me.
 
-A little while later, I got a message from this friend who introduced himself as David. He asked if I knew much about desktop software and 3D rendering. I replied that I was more practiced in web technology, but I could learn desktop software if needed. David sighed saying that for the moment he would need to go in the direction of desktop software and not web.
+A little while later, I got a message from this friend who introduced himself as David. He asked if I knew much about desktop software and 3D rendering. I replied the same response I gave to Barbara. David sighed saying that for the moment he would need to go in the direction of desktop software and not web. I would not have the freelance job. Yet.
 
-As it turned out, about one year later David reached out to me again asking if I would still have interest in taking the job but starting a web version. This was exciting. I've never done a freelance job before, neither have I done anything with 3D rendering in the broweser. By my excitement, I agreed to take the job. David would pay me hourly, and I would send him invoices for the work that I did. I did come to realize that my excitement was probably a little faster than my realism.
+As it turned out, about one year later David reached out to me again asking if I would still have interest in taking the job but starting a web version. This was exciting. I've never done a freelance job before, neither have I done anything with 3D rendering, even in the web. By my excitement for a freelance job, I agreed to take the job. David would pay me hourly, and I would send him invoices for the work. I did come to realize that my excitement probably clouded my realism.
 
-David called the project ProvelPrint and he explained that the project involved importing an STL file of a residual limb into the application and slicing that STL file so that a custom made 3D printer could render it. This would hopefully provide a faster turn-around time for amputees that needed a prosthetic limb.
+David called the project ProvelPrint and he explained that the project involved importing an STL file of a residual limb into the application and slicing that STL file so that a custom-made 3D printer could render it. This would hopefully provide a faster turn-around time for amputees that needed a prosthetic limb.
 
 ## Learning
 
-### Freelance Project
+I didn't know what problems I needed to solve. David talked about slicers, so I guessed I better learn the functions of a slicer. As I searched around the internet for what slicers were, I found that a slicer was a way to divide up a 3D model into a pattern that makes it 3D-printable. This is usually done in layers at a time.
 
-Right, I didn't know what problems I needed to solve. David talked about slicers, so I guessed I better learn the functions of a slicer. As I searched around the internet for what slicers were, I found that a slicer was a way to divide up a 3D model into a pattern that makes it 3D-printable. This is usually done in layers at a time. In addition, I found out that infill was a way to build support for any hanging edges of a model. Some projects that I found used Three.JS, so I would go in that direction first and use Three.JS.
+The more I explored slicers and had David explain to me what he wanted, bit by bit I started to understand the task. At this time, I was in over my head. In one attempted solution, I asked ChatGPT to create a slicer function using all the points of an STL file. I ended up getting something that worked on paper, but the more I examined the GCode output the more I realized that this output could not reasonably fit the customer's needs for the custom printer.
 
-The more I explored slicers and had David explain to me what he wanted, bit by bit I started to understand the task. At this time, I still was in over my head though. In one attempted solution, I asked ChatGPT to create a slicer function using all the points of an STL file. I ended up getting something that worked on paper, but the more I examined the GCode output the more I realized that this output could not reasonably fit the customer needs for the custom printer.
+The hints that told me that this wasn't the right way was: the output GCode file was relatively huge, and that could not work in transmission; the print needed to be in vase mode where the nozzle height gradually increases; and the height difference between STL points was not configurable. I told David that I needed to redo the slicer and he did give me some pushback. I successfully convinced him that what I was doing wasn't the right way to go and I needed to pivot.
 
-The hints that told me this wasn't the right way was: the output GCode file was relatively huge, and that just could not work in transmission; the print needed to be in vase mode where the nozzle height gradually increases; and the height difference between STL points was not configurable. I told David that I needed to redo the slicer and he did give me some pushback. I successfully convinced him that what I was doing wasn't the right way to go and I needed to pivot.
+Eventually, I started to teach myself some 3D animation principles, and I found out about raycasters. Raycasters are incredibly useful to help calculate intersections of rays on 3D objects. Intersection calculation was what I needed, and Three.JS had a built-in raycaster!
 
-Eventually, I started to teach myself some 3D animation principles, and I found out about raycasters. Raycasters are incredibly useful to help calculate intersections of rays and 3D objects in a scene. Intersection calculation was what I needed, and Three.JS had a built-in raycaster object and intersection calculation!
+Taking this knowledge, I knew that I needed to place the raycaster origin at the center of an STL model and rotate the raycaster on its origin to find where the intersection point would be on the STL model. After rotating the raycaster and gradually increasing in height, to imitate vase print mode, I would gather all the intersection points and process them into a GCode output.
 
-Taking this knowledge, I solved that I needed to place the raycaster origin at the center of an STL model and rotate the raycaster on its origin to find where the intersection point would be on the STL model. After rotating the raycaster and gradually increasing in height, to imitate vase print mode, I would gather all the intersection points and process them into the desired GCode output.
-
-After a couple weeks of development, spending about 5-10 hours a week on the project, I finally got to the desired output. I felt so satisfied that I followed my gut instinct on how the original solution just wouldn't work. By this experience, it started to teach me the limitations of having AI do _all the work_ when I don't know myself what problem it is I needed to solve.
-
-These limitations I discovered with AI technology in my project wasn't the only time I came across them.
+After a couple weeks of development, spending about 5-10 hours a week on the project, I finally got to the desired output. I felt satisfied that I followed my gut instinct on how the original solution just wouldn't work. This experience taught me the limitations of having AI do _all the work_ when I don't know the problem I needed to solve. These limitations I discovered with AI technology in my project wasn't the only thing that I came across.
 
 ### Github Actions
 
-At one point of my project, I found the need to deploy the web application on a DigitalOcean droplet. At first, I thought I could pull in the repository and build it on the droplet. As it turned out, the smallest DigitalOcean droplet did not have sufficient capactiy to build a Vite project. And I didn't want to get a higher capacity droplet because that means I would have to pay more. Was there a way to automate this build and deploy without paying much extra money?
+At one point of my project, I found the need to deploy the web application in a DigitalOcean droplet. At first, I thought I could pull the repository into the droplet and build the project there. As it turned out, the smallest DigitalOcean droplet did not have sufficient capactiy to build a Vite project. And I didn't want to get a higher capacity droplet because that would mean I have to pay more. Was there a way to automate this build and deploy without paying extra money?
 
 Turns out Github Actions was my answer. With every free account, a certain amount of Github Actions are given with plenty capactiy to build a Vite project. Again, I found out that I didn't know much about the technology, and I thought I could just let AI produce for me a file. The file produced did have some good content, but I had no context for what it was doing.
 
-After a moment of wrestling with the AI, and decided to drop the AI and actually teach myself how Github Actions work. Specifically, I had to learn why AI was recommending to use a SSH plugin. So I dove into that SSH plugin and I found out it was actually a popular one to use. I also found that author of the plugin had other well-used plugins related to SSH.
+After a moment of wrestling with the AI, and decided to drop the AI and actually teach myself how Github Actions work. Specifically, I had to learn why AI was recommending to use an SSH plugin when that plugin wasn't working right. So I dove into that SSH plugin and I found out it was actually a popular one to use. I also found that author of that plugin had other well-used plugins related to SSH like SCP.
 
-Eventually, I learned I had to use a mix of SCP and SSH for my goals. I used the file the AI generated for me as a template, and I went through every step to make sure I knew what was there and I altered where needed. After some work, I got a Github Actions file that SCP my built repository into a DigitalOcean droplet, and the action would SSH unzip commands to the droplet.
+Eventually, I learned I had to use a mix of SCP and SSH for my goals. I used the AI generated file as a template, and I went through the file to understand every step. After some work, I got a file that would SCP my built repository into a DigitalOcean droplet, and the action would SSH unzip commands to the droplet.
 
 ### Lessons Learned
 
-What did I learn with these anecdotes of using AI technology? I learned that when I had no idea of what I was doing, the AI technology was controlling me. I was shedding any responsibility of the work and I was hoping for a quick and easy fix to get projects done and over with. But it turned out that when I taught myself what it was that I probably needed, that was when I prompted AI properly for the things that I wanted. AI still didn't do all the work for me, instead I interacted with AI to make the project come to fruition faster.
+What did I learn with these anecdotes of using AI technology? I learned that when I don't know what I'm doing, the AI technology was controlling me. I was shedding any responsibility of work and I was hoping for a quick and easy fix to get projects done and over with. But it turned out that when I taught myself what what was needed, then I was able to prompt AI sufficiently. AI still didn't do all the work for me, instead I interacted with the AI to make the project come to fruition faster.
 
 ## Leveraging
 
-As I learned from my freelance job, I could only properly leverage AI technology when I knew what I wanted to do. I had no idea on the technical aspects of a slicer. But once I learned the technical aspects of a slicer, then I could properly word directions to an AI bot to generate something for me. Additionally, I found that if I had no idea what the AI generated code was doing, it took me longer to figure out where a problem was.
+As I learned from my freelance job, I could properly leverage AI technology when I knew what problem I needed to solve. I had no idea on the technical aspects of a slicer. But once I learned the technical aspects of a slicer, then I could properly word directions to an AI bot to generate something for me. Additionally, I found that if I had no idea what the AI generated code was doing, it took me longer to figure out where a bug existed.
 
-I believe my experience in my freelance job isn't the only thing that have a say here.
+I believe my experience isn't the only thing that have a say here. I have found several academic studies that were pretty mixed on the benefits of using AI tools.
 
 ### Brain on LLM
 
-A study at MIT gathered three different groups of students and assigned them a time constrained essay: one group could use ChatGPT, another was able to use a search engine, and the last group could only write using their brain. Once the essays were written and submitted, a second session was called for where the groups that used tools couldn't use the tool and the group without a tool could use a tool.
+A study at MIT gathered three different groups of students and assigned them a time constrained essay: one group could use ChatGPT, another could use a search engine, and the last group could only write using their brain. Once the essays were written and submitted, a second session was called for where the groups that used tools couldn't use the tool and the group without a tool could use ChatGPT.
 
-The group that only used an LLM in writing an essay demonstrated poor memory recall and less brain wave activity while writing and reviewing the essay. The group that did not write using an LLM but reviewed their work using an LLM showed higher memory recall and more brain activity. This study essentially found that the LLM-only group performed worse than the group that didn't use an LLM. This does not mean that using an LLM makes you dumber, but rather in means that defaulting to an LLM first encourages you to not be invested in the work that you're doing. [2] [3] [4] [5]
+The group that only used ChatGPT in writing an essay demonstrated poor memory recall and less brain wave activity. The group that did not write using ChatGPT, but reviewed their work using ChatGPT, showed higher memory recall and more brain activity. This study essentially found that the ChatGPT-first group performed worse than the group that didn't use ChatGPT while writing. This does not mean that using ChatGPT makes you dumber, but rather in means that defaulting to an AI tool first encourages you to not be invested in the work that you're doing. [2] [3] [4] [5]
 
-As I read this study, I sincerely felt that using AI could discourage me from becoming fully invested in my work. And that could mean I would have a harder time answering questions about my work or properly estimating feature completions. I could come off as a not very reliable engineer, and thus ruining any credible reputation that I have built. But this study also pointed out that engaging with AI to review and critique work could prove to be very beneficial.
+As I read this study, I sincerely felt that using AI could discourage me from becoming fully invested in my work. I could have a harder time answering questions about my work or I could not properly estimate feature completions. I could come off as an unreliable engineer; therefore, I would ruin any credible reputation in freelance. But this study also pointed out that engaging with AI to review and critique work could prove to be very beneficial.
 
-By extension, and using a weightlifting metaphor, it is by not using one's brain while creating work that their brain may atrophy and become weak. In another podcast I listened to, experts in the psychology field expressed concern about the mind atrophying while using LLMs for the same reason. These experts expressed confidence that the mind would not atrophy if the user engages with the AI instead of letting AI shortcut all the work needed. [6]
+By extension, and using a weightlifting metaphor, it is by not using one's brain while creating work that a brain may atrophy and become weak. In a podcast I listened to, experts in the psychology field expressed concern about the mind atrophying into dementia while using AI tools for the same reason. These experts expressed confidence that the mind would not atrophy if the user engages with the AI instead of letting AI shortcut all the work needed. [6]
 
 ### Research: Gen AI Makes People More Productive—and Less Motivated 
 
-This wasn't the only thing that I found. In a different study by Harvard Business Review, they found that long term use of AI for productivity gains might make workers less motivated for work. This study took a group of workers and found that while they were initially more productive, in the long run the worker would lose interest in the work that they were doing. Humans generate interest in their work by solving problems, and if AI is solving all the problems humans could get bored. [7] [8] [9]
+This wasn't the only thing that I found. In a different study by Harvard Business Review, they found that long term use of AI might make workers less motivated for work. This study took a group of workers and found that while they were initially more productive, in the long run the worker would lose interest in the work that they were doing. Humans generate interest in their work by solving problems, and if AI is solving all the problems humans could get bored. [7] [8] [9]
 
-I believe I have experienced this first hand, and perhaps you have experienced this already. The previously mentioned study hinted at this too. When I am unable to exercise critical thinking and problem solving, then I am not really going to be excited for work. It risks something being mundane and boring. Isn't that one of the reasons why we go to work? We get to work on cool things and solve problems. I've often said that programming is like solving a problem with a 1000 different ways and I've got to figure out a better way to solve the problem. The best part of programming comes with finding a high quality solution and not something that just gets one by.
+I believe I have experienced this first hand, and perhaps you have experienced this already. The previously mentioned study hinted at this too. When I am unable to exercise critical thinking and problem solving, then I am not really going to be excited for work. It risks something being mundane and boring. Isn't that one of the reasons why we go to work? We get to work on cool things and solve problems. I've often said that programming is like solving a problem with a 1000 different ways and I've got to figure which way is a better way to solve the problem. The best part of programming, for me, comes with finding a high quality solution and not something that just gets me by.
 
 ### The Impact of AI on Developer Productivity: Evidence from GitHub Copilot
 
-But wait, using AI technology isn't all doom and gloom. There is one study that shows faster time completion on software engineering tasks especially if a worker is new at a job. This study found a group of software engineers and tasked them to build an HTTP server quickly with an AI pair programmer. Of course, this group completed the task quickly. This study especially found that newer software engineers were able to come up to speed faster while using AI technology. [10]
+There is one study that shows faster time completion on software engineering tasks especially if a worker is new at a job. This study found a group of software engineers and tasked them to build an HTTP server quickly with an AI tool. Of course, this group completed the task quickly. This study especially found that newer software engineers were able to come up to speed faster while using AI technology. [10] This could prove especially beneficial for freelance work.
 
 This study also found a catch that they did not quantify. They did not measure code quality while using AI technology, and they did not find if a software engineer or an AI bot wrote better code. This study suggested that further studies should follow up measuring the impact of code quality. [11] [12]
 
 ### The Effects of Generative AI on High-Skilled Work: Evidence from Three Field Experiments with Software Developers
 
-Another study from MIT found that using an AI pair programmer did speed out programming output. This study also found that younger developers and new hires used AI more in order to achieve higher productivity.  This make sense doesn't it? If an AI tool has the context of a company's knowledge base or repositories, then the AI can point to where the resources are. [13] [14] [15]
+Another study from MIT found that using an AI tool did speed up programming. This study also found that when younger developers and new hires used AI at a new job, they could come up to speed faster.  This make sense doesn't it? If an AI tool has the context of a company's knowledge base or repositories, then the AI can point to where the resources are. [13] [14] [15]
 
 ### Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity
 
-On the topic of junior developers and new hires, there is another caveat to using AI technology in the workplace. Particularly when a repository becomes large and complex. A different study found that developers grossing overestimated how much an AI could help them program in a large and complex codebase. [16]
+On the topic of junior developers and new hires, there is another caveat to using AI technology in the workplace. Particularly when a repository becomes large and complex. A different study found that developers grossly overestimated how much an AI could help them program in a large and complex codebase. It would seem that a human could grasp the intricate patterns of a complex codebase better than AI ever could. [16]
 
-In this study, open source developers were allowed to do a handful of tasks with the assistance of AI technology. These developers thought they could complete the tasks relatively fast. It turned out to be the opposite. Using AI technology slowed these developers down because the AI had trouble parsing the entire context of the repository.
+In this study, open source software engineers were allowed to do a handful of tasks with the assistance of an AI tool. These developers thought they could complete the tasks relatively fast. It turned out to be the opposite. Using an AI tool slowed down these developers because the AI had trouble parsing the entire context of the repository.
 
-And yet this study also acknowledge the difficulty of identifying the true impact of AI technology on work. This study was done in a controlled lab setting, and the study recognized the difficulty of identifying real-world behavior. [17] [18] [19] [20] [21]
+And yet this study also acknowledges the difficulty of identifying the true impact of AI technology on work. This study was done in a controlled lab setting, and the study recognized the difficulty in identifying real-world behavior. [17] [18] [19] [20] [21]
 
 Situations may differ in all work types. AI could slow one down, or AI could speed up your work. It very well might be that discovering what kinds of work AI can do is still yet to be uncovered.
 
 ### Leveraging
 
-After reading into these studies, what is my take-away? It seems like it all depends. I think that leveraging AI technology means to recognize the potential affect on one's mental health with work output. Is most of your work AI based? Then you might need to find things to engage your attention and mind. Are you not using AI enough? Then you might need to find creative ways for AI to assist you in your work.
+After reading into these studies, what is my take-away? It seems like it all depends. I think that leveraging AI technology means to recognize the potential affect on one's mental health with work output. Is most of your work AI based? Then you might need to find things to engage your attention and mind. Are you not using AI enough? Then you might need to find creative ways for AI to assist you in your work and make bosses or clients more happy.
 
 ## Mastering
 
-We are in the process of figuring it out AI technology, and yet how can I master it? What does mastering even mean? I don't think mastering is an easy definition. If I can try and give a definition, mastery means to put one's head down and work on something in diligence and move forward. Eventually experience and knowledge is gained. There really isn't an end in sight to the mastery. When I graduated BYU-Idaho, I was told to never stop learning, and I haven't since. There are just so many things to learn, and I'm excited to be smarter and wiser.
+We are in the process of figuring out AI technology still, and yet how can I master it? What does mastering even mean? I don't think mastering is an easy definition. If I can try and give a definition, mastery means to diligently keep working, because eventually experience and knowledge is gained. There really isn't an end in sight to the mastery. I'm reminded of something impactful to me from when I graduated BYU-Idaho. I was told to never stop learning, and I haven't since. I have learned so many things and gained knowledge and wisdom over the years. As such I am excited to continue to learn and to grow.
 
-How can I apply all these studies right now? There are so many thoughts. The most important priority must be being engaged with the work. A software engineer needs to make sure that they are actually solving problems and not letting anything else solve it. Otherwise the work might be slow and less enjoyable. I think it means software engineers shouldn't default to using AI first. Instead a software engineer needs to learn the task they're doing with the context provided and figure out an idea to program. AI technology can be used to review one's work and suggest coding changes. I particularly find that AI can be useful with predictive autofill or outputting very common design patterns or functions. I also find that AI may be good at reviewing, for example I love being able to assign Copilot as a reviewer on a PR on Github. Copilot will be able to review things a bit more accurately than any human could.
+How can I apply all these studies right now? There are so many thoughts. I believe that the most important priority is being engaged in one's work. A software engineer has to be actually solving problems. Otherwise the work might be slow and less enjoyable. I think it means software engineers shouldn't default to using AI first. Instead a software engineer needs to learn the problem they're doing with the context provided and figure out a solution.
 
-As a software engineer, I feel it important to use tools the right way, and LLMs are no exception. Using tools properly will merit a higher increase of quality work, which hopefully means that work will be easier to debug and maintain. A by-product hopefully will lead to higher engagement with the work as well and a healthier mind.
+AI technology can be used to review one's work and suggest changes. I particularly find that AI can be useful with predictive autofill or outputting very common design patterns. I also find that AI may be good at reviewing, for example I love being able to assign Github Copilot as a reviewer on a PR. Copilot has been able to review things a bit more accurately than any human could.
 
-Another note on mastering AI tools, is the need to be creative. Creative can set one apart from the rest, and that is where competition is. Competition is good for humankind, because in an optimistic sense we all come out better from competition. Better ideas should win. Hasan Minhaj had an interview with Neil deGrasse Tyson, and in one part of that interview Neil expressed his view of AI technology and how overrated the technology is becoming. [22]
+As a software engineer, I feel it important to use tools the right way, and AI tools are no exception. Using tools properly will merit a higher increase of quality work, which hopefully means that work will be easier to debug and maintain. A by-product hopefully will lead to higher engagement with the work which would then lead to a healthier mind.
 
-Tyson pointed out how humankind has evolved in the last century to adapt to technologies to make things more productive. In particular he pointed out when humans converted to a car based industry instead of a horse and buggy industry. Industries disappeared, but entire new ones appeared. To seal his point, Tyson said, "Be creative and find something that AI can't do, and make an industry out of that"
+Another note on mastering AI tools, is the need to be creative. Creativity can set one apart from the rest, and that is where competition is. Competition is good for humankind; in an optimistic sense, we all come out better because of it. It should involve fair collaboration, and better ideas should win. Hasan Minhaj had an interview with Neil deGrasse Tyson, and in one part of the interview Neil expressed his view of AI technology and how overrated the technology is becoming. [22]
+
+Neil pointed out how humankind has evolved in the last century to adapt to technologies to make things more productive. In particular he pointed out when humans converted to a car based industry instead of a horse and buggy. Industries disappeared, but entire new ones appeared. To seal his point, Neil said, "Be creative and find something that AI can't do, and make an industry out of that!"
 
 Neil deGrasse Tyson isn't worried about people not having jobs, because industries have been evolving and progressing for a while now. Humans have just learned to evolve and take advantage of what the world is giving. I want to echo these exact same vibes. Exactly as I have learned in my freelance project and in these scientific studies, it is important to learn, leverage, and ultimately master an AI skill to speed up development.
 
 ## Inspire
 
-Eventually with my freelance project, I accomplished something that no other software engineer had done previously for for my client, David. He explained to me on several occasions that I was the fifth software engineer to tackle this project. All the previous software engineers had various problems with the project, and they couldn't deliver a finished product for David. David had been working on this project for about 8 years. To be able to deliver a software product to help fulfill another person's dreams was a magical and reward experience.
+Eventually with my freelance project, I finished something that no other software engineer had done previously for for my David. He explained to me on several occasions that I was the fifth software engineer to tackle this project. All the previous software engineers had various problems with the project, and they couldn't deliver anything for David. David had been working on this project for about 8 years. Delivering software to help fulfill another person's dream was a magical and rewarding experience.
 
-But even when I was discouraged from not using AI technology properly, I tackled the problems head on and I learned how to solve the problems. On one occasion David said this quote to me, explaining his motivation for keeping on moving. He knew that I was a hiker, so the metaphor landed well with me.
+But even when I was discouraged from not using AI tools properly, I tackled the problems head on and I learned how to solve the problems myself. On one occasion David said this quote to me, explaining his motivation for continuing to work on this project. He knew that I was a hiker, so the metaphor landed well with me.
 
 > When you're hiking, those little steps might not seem like much — but they're exactly what get you to the top.
 
-The little things we do for our careers may not seem like much when compared to the massive driving force of AI technology, but it is precisely those small steps that make our own careers a human experience. I hope software engineers will tackle problems head on in all types of work. Since tackling this project, I have now started to gain wisdom and knowledge in 3D-animation web technology, 3D printing, electronics, and trigonometry. I have leveraged AI technology when I knew what I was doing, and I feel that AI technology helped me go faster. And the more I learn and leverage, the higher my mastery of AI technology will be.
+The little things we do for our careers may not seem like much when compared to the massive driving force of AI technology, but it is precisely those small steps that make our own careers a human experience. I hope software engineers will tackle problems head on in all types of work. Since tackling this project, I have gained wisdom and knowledge in 3D-animation web technology, 3D printing, electronics, and trigonometry. I have leveraged AI technology when I knew what I was doing, and I feel that AI technology helped me to go faster. I know that the more I learned principles and leveraged AI tools, I was able to master the problem at hand and provide a solution.
 
 ### Presentation
 
