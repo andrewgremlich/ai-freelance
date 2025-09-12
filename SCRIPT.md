@@ -6,7 +6,7 @@ I'll share my first project as a freelance engineer and how I used AI tools. Hon
 
 1. Learning the problem to solve in order to properly get AI to assist.
 2. Leveraging AI technology in the most useful and beneficial way possible.
-3. Mastering software engineering so that the AI doesn't master you.
+3. Mastering the problem so that the AI doesn't master you.
 
 I hope this presentation will be engaging, insightful, and memorable.
 
