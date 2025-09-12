@@ -1,6 +1,6 @@
 Hello and welcome to my presentation! Thank you for coming!
 
-Today, I want to encourage developers everywhere not to be discouraged with the rise of AI software. If anything, I want you to learn how to ride the wave of AI technology so that you can adapt _correctly_ just as fast as any other AI-enabled software engineer or company. In fact, I want to encourage software engineers to explore freelancing with AI technology.
+Today, I want to the audience not to be discouraged with the rise of AI software. If anything, I want you to learn how to ride the wave of AI technology so that you can adapt _correctly_ just as fast as any other person. In fact, I want to encourage software engineers to explore freelancing with AI technology.
 
 I'll share my first project as a freelance engineer and how I used AI tools. Honestly speaking, I have found AI technology to be incredibly helpful and sometimes inhibiting to my progress. The results were a mixed bag. I'll cover three key lessons that I learned while working on this project.
 
